@@ -22,7 +22,7 @@ public class AppUserForm extends BaseForm<String> {
      */
     @Length(max = 50, message = "账号最长50位", groups = {InsertGroup.class})
     @NotNull(message = "请输入账号", groups = {LoginGroup.class})
-    @NotBlank(message = "请输入账号", groups = {InsertGroup.class,LoginGroup.class})
+    @NotBlank(message = "请输入账号", groups = {LoginGroup.class})
     private String account;
     /**
      * 密码
