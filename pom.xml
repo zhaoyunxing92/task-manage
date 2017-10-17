@@ -38,11 +38,7 @@
 	</properties>
 
 	<dependencies>
-		<!-- <dependency>
-             <groupId>org.springframework.boot</groupId>
-             <artifactId>spring-boot-starter</artifactId>
-         </dependency>-->
-
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -78,16 +74,16 @@
 		</dependency>
 
 		<!-- Swagger API文档 -->
-		<!-- <dependency>
-             <groupId>io.springfox</groupId>
-             <artifactId>springfox-swagger-ui</artifactId>
-             <version>${springfox.swagger.ui.version}</version>
-         </dependency>
-         <dependency>
-             <groupId>io.springfox</groupId>
-             <artifactId>springfox-swagger2</artifactId>
-             <version>${springfox.swagger.ui.version}</version>
-         </dependency>-->
+		 <!--<dependency>-->
+             <!--<groupId>io.springfox</groupId>-->
+             <!--<artifactId>springfox-swagger-ui</artifactId>-->
+             <!--<version>${springfox.swagger.ui.version}</version>-->
+         <!--</dependency>-->
+         <!--<dependency>-->
+             <!--<groupId>io.springfox</groupId>-->
+             <!--<artifactId>springfox-swagger2</artifactId>-->
+             <!--<version>${springfox.swagger.ui.version}</version>-->
+         <!--</dependency>-->
 
 		<!-- Mybatis -->
 		<dependency>
@@ -151,10 +147,7 @@
 			<artifactId>log4j</artifactId>
 			<version>${log4j.version}</version>
 		</dependency>
-		<!--  <dependency>
-              <groupId>org.springframework.boot</groupId>
-              <artifactId>spring-boot-starter-log4j2</artifactId>
-          </dependency>-->
+	
 		<!--<dependency>
             <groupId>com.alipay</groupId>
             <artifactId>alipay-sdk-java</artifactId>
@@ -173,18 +166,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
-
-		<!--springfox swagger 文档-->
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>${springfox.swagger.ui.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>${springfox.swagger.ui.version}</version>
-		</dependency>
+		
 	</dependencies>
 
 	<build>

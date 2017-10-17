@@ -76,7 +76,7 @@
         </javaClientGenerator>
 
         <!-- !!!! Table Configurations !!!! -->
-        <table tableName="app_user" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+        <table tableName="app_user_role" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
             <!-- optional   , only for mybatis3 runtime
                  自动生成的键值（identity,或者序列值）
@@ -108,34 +108,10 @@
             <!--<columnRenamingRule searchString="" replaceString=""/>-->
         </table>
 
-        <table tableName="app_role" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
+        <!--<table tableName="app_file" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--enableUpdateByExample="false">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
 
-        <table tableName="app_user_by_account" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-
-        <table tableName="app_user_by_email" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-
-        <table tableName="app_user_by_mobile" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-
-        <table tableName="app_user_extend" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-
-        <table tableName="app_user_role" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
     </context>
 </generatorConfiguration>
