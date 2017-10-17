@@ -58,9 +58,17 @@ public enum ResultEnum {
      */
     ADD_APP_USER_EXTEND_ERROR(10009, "添加用户扩展异常"),
     /**
+     *   注册账号可以
+     */
+    REG_APP_USER_ACCOUNT_NOT_EXIST(0,"ok" ),
+    /**
      * 创建用户异常
      */
     ADD_APP_USER_ERROR(10010, "创建用户异常"),
+    /**
+     * 注册账号已经存在
+     */
+    REG_APP_USER_ACCOUNT_EXIST(10011,"账号已经存在" ),
     /**
      * 账号不存在
      */

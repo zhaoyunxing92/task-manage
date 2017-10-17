@@ -1,8 +1,11 @@
 package com.sunny.task.user.service.impl;
 
 import com.sunny.task.common.base.BaseFields;
+import com.sunny.task.common.base.BaseResult;
 import com.sunny.task.common.base.ResultEnum;
 import com.sunny.task.common.utils.NullUtil;
+import com.sunny.task.common.utils.ResultUtils;
+import com.sunny.task.common.utils.StringUtils;
 import com.sunny.task.common.utils.UUIDUtills;
 import com.sunny.task.core.exception.TaskException;
 import com.sunny.task.user.form.AppUserForm;
@@ -58,12 +61,14 @@ public class AppUserServiceImpl implements AppUserService {
             appUser.setPassword2(password);
             appUser.setStatus(NullUtil.isNotNull(pwd) ? 1 : 9); //没有密码就是未激活用户
             appUserMapper.insertSelective(appUser);
-            //添加用户扩展数据
-             userId = appUser.getId();
-            addAppUserExtend(userId);
+
+            userId = appUser.getId();
+
         } catch (TaskException e) {
             throw new TaskException(ResultEnum.ADD_APP_USER_ERROR, e);
         }
+        //添加用户扩展数据
+        addAppUserExtend(userId);
         String account = form.getAccount();
         //添加账号搜索
         if (NullUtil.isNotNull(account)) {
@@ -94,5 +99,25 @@ public class AppUserServiceImpl implements AppUserService {
         } catch (TaskException e) {
             throw new TaskException(ResultEnum.ADD_APP_USER_EXTEND_ERROR, e);
         }
+    }
+
+    @Override
+    public BaseResult checkAccountIsExist(String account) {
+        Object object;
+
+        if (StringUtils.isEmail(account)) { //邮箱
+            object = appUserByEmailService.findAppUserByEmail(account);
+        } else if (StringUtils.isMobile(account)) {  //手机号
+            object = appUserByMobileService.findAppUserByMobile(account);
+        } else {  //账号
+            object = appUserByAccountService.findAppUserByAccount(account);
+        }
+
+        if (NullUtil.isNull(object)) {
+            return ResultUtils.success(ResultEnum.REG_APP_USER_ACCOUNT_NOT_EXIST);
+        } else {
+            return ResultUtils.success(ResultEnum.REG_APP_USER_ACCOUNT_EXIST);
+        }
+
     }
 }

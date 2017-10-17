@@ -7,6 +7,18 @@ spring:
     time-zone: GMT+8
 server:
   context-path: /task
+#swagger:
+#  docket:
+#    user:
+#      title: group-a
+#      version: 1.0.0-SNAPSHOT
+#      base-package: com.sunny.task.user
+#      exclude-path: /error
+#      contact:
+#          email: 2385585770@qq.com
+#          url: http://spring4all.com
+#      termsOfServiceUrl: https://gitee.com/didispace/spring-boot-starter-swagger
+
 
 
 

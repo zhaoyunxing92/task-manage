@@ -8,10 +8,7 @@ import com.sunny.task.user.form.AppUserForm;
 import com.sunny.task.user.service.AppUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -27,9 +24,26 @@ public class AppUserRegController {
     @Autowired
     private AppUserService appUserService;
 
+    /**
+     * 注册用户
+     *
+     * @param request
+     * @param form
+     * @return
+     */
     @PostMapping("/user")
     public BaseResult addAppUser(HttpServletRequest request, @RequestBody @Validated({InsertGroup.class}) AppUserForm form) {
         appUserService.addAppUser(request, form);
         return ResultUtils.success(ResultEnum.ADD_APP_USER_SUCCESS);
+    }
+
+    /**
+     * 判断用户是否存在
+     * @param account
+     * @return
+     */
+    @GetMapping("/check/{account:.+}")
+    public BaseResult checkAccountIsExist(@PathVariable("account") String account) {
+        return appUserService.checkAccountIsExist(account);
     }
 }

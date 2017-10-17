@@ -18,14 +18,10 @@ import java.util.List;
  * @author sunny
  * @className com.sunny.bugmanage.common.config.AppWebMvcConfig
  * @date 2017-07-04 16:27
- * @description: WebMvcConfigurationSupport
+ * @description: AppWebMvcConfig
  */
 public class AppWebMvcConfig extends WebMvcConfigurerAdapter {
     private static String UNIFIED_DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
-
-
-
-
     /**
      * 跨域配置
      *

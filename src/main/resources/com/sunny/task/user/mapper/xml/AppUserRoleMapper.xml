@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sunny.task.user.mapper.AppUserRoleMapper">
+  <resultMap id="BaseResultMap" type="com.sunny.task.user.model.AppUserRole">
+    <result column="USER_ID" jdbcType="BIGINT" property="userId" />
+    <result column="ROLE_ID" jdbcType="BIGINT" property="roleId" />
+    <result column="STATUS" jdbcType="TINYINT" property="status" />
+    <result column="CREATOR" jdbcType="BIGINT" property="creator" />
+    <result column="CREATION_DATE" jdbcType="TIMESTAMP" property="creationDate" />
+    <result column="MODIFIER" jdbcType="BIGINT" property="modifier" />
+    <result column="MODIFICATION_DATE" jdbcType="TIMESTAMP" property="modificationDate" />
+  </resultMap>
+  <insert id="insertSelective" parameterType="com.sunny.task.user.model.AppUserRole">
+    insert into app_user_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        USER_ID,
+      </if>
+      <if test="roleId != null">
+        ROLE_ID,
+      </if>
+      <if test="status != null">
+        STATUS,
+      </if>
+      <if test="creator != null">
+        CREATOR,
+      </if>
+      <if test="creationDate != null">
+        CREATION_DATE,
+      </if>
+      <if test="modifier != null">
+        MODIFIER,
+      </if>
+      <if test="modificationDate != null">
+        MODIFICATION_DATE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="roleId != null">
+        #{roleId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="creator != null">
+        #{creator,jdbcType=BIGINT},
+      </if>
+      <if test="creationDate != null">
+        #{creationDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifier != null">
+        #{modifier,jdbcType=BIGINT},
+      </if>
+      <if test="modificationDate != null">
+        #{modificationDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  
+</mapper>

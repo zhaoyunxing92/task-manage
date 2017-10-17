@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Import;
 @Import({/*Swagger2.class,*/ TaskConfig.class})
 public class TaskManageApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(TaskManageApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(TaskManageApplication.class, args);
+    }
 }
