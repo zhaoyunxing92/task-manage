@@ -49,4 +49,13 @@ public class AppUserByMobileServiceImpl implements AppUserByMobileService {
             throw new TaskException(ResultEnum.SELECT_APP_USER_BY_MOBILE_ERROR, e);
         }
     }
+
+    @Override
+    public Long findAppUserIdByMobile(String mobile) {
+        try {
+            return appUserByMobileMapper.selectAppUserIdByMobile(mobile);
+        } catch (TaskException e) {
+            throw new TaskException(ResultEnum.SELECT_APP_USER_BY_MOBILE_ERROR, e);
+        }
+    }
 }

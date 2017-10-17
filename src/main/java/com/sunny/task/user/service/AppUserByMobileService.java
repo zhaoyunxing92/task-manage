@@ -24,4 +24,12 @@ public interface AppUserByMobileService {
      * @return
      */
     AppUserByMobile findAppUserByMobile(String mobile);
+
+    /**
+     * 根据手机号获取用户id
+     *
+     * @param mobile
+     * @return
+     */
+    Long findAppUserIdByMobile(String mobile);
 }

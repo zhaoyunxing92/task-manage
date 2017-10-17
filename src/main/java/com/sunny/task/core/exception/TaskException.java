@@ -8,7 +8,8 @@ import com.sunny.task.common.base.ResultEnum;
  * @date 2017-10-16 10:24
  * @description:
  */
-public class TaskException extends RuntimeException{
+public class TaskException extends RuntimeException {
+    private static final long serialVersionUID = 4218386660227272072L;
     private Integer code;
 
     public TaskException(ResultEnum resultEnum) {
@@ -26,7 +27,7 @@ public class TaskException extends RuntimeException{
         this.code = resultEnum.getCode();
     }
 
-    public TaskException(Integer code,Throwable cause) {
+    public TaskException(Integer code, Throwable cause) {
         super(cause);
         this.code = code;
     }

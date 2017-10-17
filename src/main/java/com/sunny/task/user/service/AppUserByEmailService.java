@@ -24,4 +24,11 @@ public interface AppUserByEmailService {
      * @return
      */
     AppUserByEmail findAppUserByEmail(String email);
+
+    /**
+     * 根据邮箱获取用户id
+     * @param account
+     * @return
+     */
+    Long findAppUserIdByEmail(String email);
 }

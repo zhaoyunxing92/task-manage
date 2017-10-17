@@ -11,7 +11,7 @@ public enum ResultEnum {
      * 成功
      */
     SUCCESS(0, "成功!"),
-
+    LOGIN_SUCCESS(0, "登录成功"),
     /**
      * 注册成功
      */
@@ -58,9 +58,9 @@ public enum ResultEnum {
      */
     ADD_APP_USER_EXTEND_ERROR(10009, "添加用户扩展异常"),
     /**
-     *   注册账号可以
+     * 注册账号可以
      */
-    REG_APP_USER_ACCOUNT_NOT_EXIST(0,"ok" ),
+    REG_APP_USER_ACCOUNT_NOT_EXIST(0, "ok"),
     /**
      * 创建用户异常
      */
@@ -68,7 +68,28 @@ public enum ResultEnum {
     /**
      * 注册账号已经存在
      */
-    REG_APP_USER_ACCOUNT_EXIST(10011,"账号已经存在" ),
+    REG_APP_USER_ACCOUNT_EXIST(10011, "账号已经存在"),
+    /**
+     * 账号不存在
+     */
+    LOGIN_APP_USLOGINER_ACCOUNT_NOT_EXIST(10012, "账号不存在"),
+    /**
+     * 根据用户id查询用户异常
+     */
+    SELECT_APP_USER_BY_USERID_REEOR(10013, "查询用户异常"),
+    /**
+     * 账号锁定
+     */
+    APP_USER_LOCK_ERROR(10014, "账号锁定"),
+    /**
+     * 账号未激活
+     */
+    APP_USER_NOT_ACTIVATE_ERROR(10015, "账号未激活"),
+    /**
+     * 密码错误
+     */
+    APP_USER_PASSWORD_ERROR(10016, "密码错误"),
+
     /**
      * 账号不存在
      */

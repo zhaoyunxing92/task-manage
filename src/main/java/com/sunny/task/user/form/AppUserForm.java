@@ -2,6 +2,7 @@ package com.sunny.task.user.form;
 
 import com.sunny.task.common.base.BaseForm;
 import com.sunny.task.common.valid.InsertGroup;
+import com.sunny.task.common.valid.LoginGroup;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotNull;
@@ -19,11 +20,12 @@ public class AppUserForm extends BaseForm<String> {
      * 用户名
      */
     @Length(max = 50, message = "账号最长50位", groups = {InsertGroup.class})
+    @NotNull(message = "请输入账号", groups = {LoginGroup.class})
     private String account;
     /**
      * 密码
      */
-    @NotNull(message = "请输入密码", groups = {InsertGroup.class})
+    @NotNull(message = "请输入密码", groups = {InsertGroup.class, LoginGroup.class})
     @Length(max = 50, min = 6, message = "密码长度在6-50位字符", groups = {InsertGroup.class})
     private String password;
 

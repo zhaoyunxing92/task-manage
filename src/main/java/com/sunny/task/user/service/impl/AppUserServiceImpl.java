@@ -1,18 +1,18 @@
 package com.sunny.task.user.service.impl;
 
-import com.sunny.task.common.base.BaseFields;
-import com.sunny.task.common.base.BaseResult;
-import com.sunny.task.common.base.ResultEnum;
+import com.sunny.task.common.base.*;
 import com.sunny.task.common.utils.NullUtil;
 import com.sunny.task.common.utils.ResultUtils;
 import com.sunny.task.common.utils.StringUtils;
 import com.sunny.task.common.utils.UUIDUtills;
 import com.sunny.task.core.exception.TaskException;
+import com.sunny.task.core.exception.TaskUserAuthException;
 import com.sunny.task.user.form.AppUserForm;
 import com.sunny.task.user.mapper.AppUserExtendMapper;
 import com.sunny.task.user.mapper.AppUserMapper;
 import com.sunny.task.user.model.AppUser;
 import com.sunny.task.user.model.AppUserExtend;
+import com.sunny.task.user.model.vo.AppUserVo;
 import com.sunny.task.user.service.AppUserByAccountService;
 import com.sunny.task.user.service.AppUserByEmailService;
 import com.sunny.task.user.service.AppUserByMobileService;
@@ -37,7 +37,6 @@ public class AppUserServiceImpl implements AppUserService {
     private AppUserMapper appUserMapper;
     @Autowired
     private AppUserExtendMapper appUserExtendMapper;
-
     @Autowired
     private AppUserByAccountService appUserByAccountService;
     @Autowired
@@ -59,7 +58,7 @@ public class AppUserServiceImpl implements AppUserService {
             appUser.setUniqueId(UUIDUtills.getPrefixUUID("task"));
             appUser.setPassword1(password);
             appUser.setPassword2(password);
-            appUser.setStatus(NullUtil.isNotNull(pwd) ? 1 : 9); //没有密码就是未激活用户
+            appUser.setStatus(NullUtil.isNotNull(pwd) ? AppUserStatus.NORMALITY_STATUS : AppUserStatus.NOT_ACTIVATE_STATUS); //没有密码就是未激活用户
             appUserMapper.insertSelective(appUser);
 
             userId = appUser.getId();
@@ -101,6 +100,12 @@ public class AppUserServiceImpl implements AppUserService {
         }
     }
 
+    /**
+     * 检测账号是否存在
+     *
+     * @param account
+     * @return
+     */
     @Override
     public BaseResult checkAccountIsExist(String account) {
         Object object;
@@ -118,6 +123,66 @@ public class AppUserServiceImpl implements AppUserService {
         } else {
             return ResultUtils.success(ResultEnum.REG_APP_USER_ACCOUNT_EXIST);
         }
+    }
 
+    @Override
+    public TaskManageUser login(AppUserForm form) {
+        String account = form.getAccount();
+        Long userId;
+        if (StringUtils.isEmail(account)) { //邮箱
+            userId = appUserByEmailService.findAppUserIdByEmail(account);
+        } else if (StringUtils.isMobile(account)) {  //手机号
+            userId = appUserByMobileService.findAppUserIdByMobile(account);
+        } else {  //账号
+            userId = appUserByAccountService.findAppUserIdByAccount(account);
+        }
+        //账号不存在
+        if (NullUtil.isNull(userId)) {
+            throw new TaskException(ResultEnum.LOGIN_APP_USLOGINER_ACCOUNT_NOT_EXIST);
+        }
+        //密码
+        String pwd = form.getPassword();
+        TaskManageUser taskManageUser = new TaskManageUser();
+
+        AppUserVo appUserVo = findAppUserVoByUserId(userId);
+        //密码错误
+        if (!pwd.equals(appUserVo.getPassword1())) {
+            throw new TaskUserAuthException(ResultEnum.APP_USER_PASSWORD_ERROR);
+        }
+
+        BeanUtils.copyProperties(appUserVo, taskManageUser);
+        taskManageUser.setUid(appUserVo.getUniqueId());//设置唯一id
+        //taskManageUser.setCreationDate(null);//创建时间
+        return taskManageUser;
+    }
+
+    /**
+     * 根据用户id获取用户
+     *
+     * @param userId
+     * @return
+     */
+    private AppUserVo findAppUserVoByUserId(Long userId) {
+        AppUserVo appUserVo;
+        try {
+            appUserVo = appUserMapper.selectTaskManageUserByUserIdAndPassword(userId);
+        } catch (TaskException e) {
+            throw new TaskException(ResultEnum.SELECT_APP_USER_BY_USERID_REEOR, e);
+        }
+        //账号不存在
+        if (NullUtil.isNull(appUserVo)) {
+            throw new TaskException(ResultEnum.LOGIN_APP_USLOGINER_ACCOUNT_NOT_EXIST);
+        }
+
+        Integer status = appUserVo.getStatus();
+
+        if (AppUserStatus.ACCOUNT_LOCK_STATUS.equals(status)) { //账号锁定
+            throw new TaskUserAuthException(ResultEnum.APP_USER_LOCK_ERROR);
+        } else if (AppUserStatus.NOT_ACTIVATE_STATUS.equals(status)) {  //账号未激活
+            throw new TaskUserAuthException(ResultEnum.APP_USER_NOT_ACTIVATE_ERROR);
+        }
+
+
+        return appUserVo;
     }
 }

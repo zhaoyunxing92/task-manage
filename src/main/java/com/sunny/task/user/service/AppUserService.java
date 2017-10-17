@@ -1,6 +1,7 @@
 package com.sunny.task.user.service;
 
 import com.sunny.task.common.base.BaseResult;
+import com.sunny.task.common.base.TaskManageUser;
 import com.sunny.task.user.form.AppUserForm;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,8 +23,17 @@ public interface AppUserService {
 
     /**
      * 判断账号是否存在
+     *
      * @param account
      * @return
      */
     BaseResult checkAccountIsExist(String account);
+
+    /**
+     * 登录
+     *
+     * @param form
+     * @return
+     */
+    TaskManageUser login(AppUserForm form);
 }

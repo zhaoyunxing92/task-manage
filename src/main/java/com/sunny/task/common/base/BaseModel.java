@@ -29,7 +29,7 @@ public class BaseModel<ID extends Serializable> implements Serializable {
     }
 
     public Long getCreator() {
-        return creator == null ? 0L : creator;
+        return creator;
     }
 
     public void setCreator(Long creator) {
@@ -37,7 +37,7 @@ public class BaseModel<ID extends Serializable> implements Serializable {
     }
 
     public Date getCreationDate() {
-        return creationDate == null ? new Date() : creationDate;
+        return creationDate;
     }
 
     public void setCreationDate(Date creationDate) {
@@ -45,7 +45,7 @@ public class BaseModel<ID extends Serializable> implements Serializable {
     }
 
     public Long getModifier() {
-        return modifier == null ? 0L : modifier;
+        return modifier;
     }
 
     public void setModifier(Long modifier) {
@@ -53,7 +53,7 @@ public class BaseModel<ID extends Serializable> implements Serializable {
     }
 
     public Date getModificationDate() {
-        return modificationDate == null ? new Date() : modificationDate;
+        return modificationDate;
     }
 
     public void setModificationDate(Date modificationDate) {

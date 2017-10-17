@@ -24,4 +24,11 @@ public interface AppUserByAccountService {
      * @return
      */
     AppUserByAccount findAppUserByAccount(String account);
+
+    /**
+     * 根据账号查询用户id
+     * @param account
+     * @return
+     */
+    Long findAppUserIdByAccount(String account);
 }

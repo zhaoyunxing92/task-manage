@@ -44,4 +44,13 @@ public class AppUserByAccountServiceImpl implements AppUserByAccountService {
             throw new TaskException(ResultEnum.SELECT_APP_USER_BY_ACCOUNT_REEOR, e);
         }
     }
+
+    @Override
+    public Long findAppUserIdByAccount(String account) {
+        try {
+            return appUserByAccountMapper.selectAppUserIdByPrimaryKey(account);
+        } catch (TaskException e) {
+            throw new TaskException(ResultEnum.SELECT_APP_USER_BY_ACCOUNT_REEOR, e);
+        }
+    }
 }

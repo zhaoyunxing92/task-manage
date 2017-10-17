@@ -5,8 +5,10 @@ import com.sunny.task.common.base.BaseResult;
 import com.sunny.task.common.base.ResultEnum;
 import com.sunny.task.common.utils.ResultUtils;
 import com.sunny.task.core.exception.TaskException;
+import com.sunny.task.core.exception.TaskUserAuthException;
 import org.apache.ibatis.binding.BindingException;
 import org.mybatis.spring.MyBatisSystemException;
+import org.springframework.dao.TransientDataAccessResourceException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindException;
@@ -26,8 +28,8 @@ import javax.validation.UnexpectedTypeException;
  * @description:
  */
 @ControllerAdvice
-public class BugManageHandle {
-    private final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(BugManageHandle.class);
+public class TaskManageHandle {
+    private final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(TaskManageHandle.class);
 
     // MyBatisSystemException nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'open' in 'class com.sunny.bugmanage.project.form.ProjectForm
     @ExceptionHandler({BindException.class, MethodArgumentNotValidException.class, HttpMessageNotReadableException.class, MyBatisSystemException.class})
@@ -52,7 +54,7 @@ public class BugManageHandle {
 		}*/
     }
 
-    @ExceptionHandler({TaskException.class, BindingException.class, UnexpectedTypeException.class})
+    @ExceptionHandler({TaskException.class, BindingException.class, UnexpectedTypeException.class, TransientDataAccessResourceException.class})
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
     public BaseResult ExceptionHandle(Exception ex) {
@@ -62,28 +64,32 @@ public class BugManageHandle {
         } else if (ex instanceof UnexpectedTypeException) {   //没有对应的类型
             UnexpectedTypeException unType = (UnexpectedTypeException) ex;
             return ResultUtils.error(100, unType.getMessage());
+
+        } else if (ex instanceof TransientDataAccessResourceException) {
+            TransientDataAccessResourceException transientDataAccessResour = (TransientDataAccessResourceException) ex;
+            return ResultUtils.error(100, transientDataAccessResour.getMessage());
         } else {
             TaskException bugManageException = (TaskException) ex;
             return ResultUtils.error(bugManageException.getCode(), bugManageException.getMessage());
         }
 
     }
-    //METHOD_NOT_ALLOWED
 
     @ExceptionHandler({HttpRequestMethodNotSupportedException.class})
     @ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
     @ResponseBody
     public BaseResult methodNotAllOwed(HttpRequestMethodNotSupportedException ex) {
-          //Request method 'POST' not supported
+        //Request method 'POST' not supported
         return ResultUtils.error(100, ex.getMessage());
     }
-/*
-	@ExceptionHandler({ Exception.class })
-	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-	@ResponseBody
-	public BaseResult systemExceptionHandle(Exception ex) {
-		return ResultUtils.error(200, ex.getMessage());
-	}
-*/
+
+    @ExceptionHandler({TaskUserAuthException.class})
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    @ResponseBody
+    public BaseResult TaskUserAuthException(TaskUserAuthException ex) {
+
+        return ResultUtils.error(ex.getCode(), ex.getMessage());
+    }
+
 
 }

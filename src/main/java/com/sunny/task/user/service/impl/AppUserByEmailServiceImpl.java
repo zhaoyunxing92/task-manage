@@ -33,19 +33,28 @@ public class AppUserByEmailServiceImpl implements AppUserByEmailService {
             appUserByEmail = new AppUserByEmail(email, userId);
             appUserByEmailMapper.insertSelective(appUserByEmail);
         } catch (TaskException e) {
-            throw new TaskException(ResultEnum.ADD_APP_USER_BY_EMAIL_ERROR,e);
+            throw new TaskException(ResultEnum.ADD_APP_USER_BY_EMAIL_ERROR, e);
         }
     }
 
     @Override
     public AppUserByEmail findAppUserByEmail(String email) {
-        if (!StringUtils.isEmail(email)){
-             throw new  TaskException(ResultEnum.EMAIL_FORMAT_ERROR);
+        if (!StringUtils.isEmail(email)) {
+            throw new TaskException(ResultEnum.EMAIL_FORMAT_ERROR);
         }
         try {
             return appUserByEmailMapper.selectByPrimaryKey(email);
         } catch (TaskException e) {
-            throw new TaskException(ResultEnum.SELECT_APP_USER_BY_EMAIL_ERROR,e);
+            throw new TaskException(ResultEnum.SELECT_APP_USER_BY_EMAIL_ERROR, e);
+        }
+    }
+
+    @Override
+    public Long findAppUserIdByEmail(String email) {
+        try {
+            return appUserByEmailMapper.selectAppUserIdByEmail(email);
+        } catch (TaskException e) {
+            throw new TaskException(ResultEnum.SELECT_APP_USER_BY_EMAIL_ERROR, e);
         }
     }
 }
