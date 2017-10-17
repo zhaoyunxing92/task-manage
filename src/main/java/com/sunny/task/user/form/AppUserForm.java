@@ -22,13 +22,13 @@ public class AppUserForm extends BaseForm<String> {
      */
     @Length(max = 50, message = "账号最长50位", groups = {InsertGroup.class})
     @NotNull(message = "请输入账号", groups = {LoginGroup.class})
-    @NotBlank(message = "请输入账号", groups = {LoginGroup.class})
+    @NotBlank(message = "请输入账号", groups = {InsertGroup.class,LoginGroup.class})
     private String account;
     /**
      * 密码
      */
     @NotNull(message = "请输入密码", groups = {InsertGroup.class, LoginGroup.class})
-    @NotBlank(message = "请输入密码", groups = {LoginGroup.class})
+    @NotBlank(message = "请输入密码", groups = {InsertGroup.class,LoginGroup.class})
     @Length(max = 50, min = 6, message = "密码长度在6-50位字符", groups = {InsertGroup.class})
     private String password;
 
@@ -36,7 +36,8 @@ public class AppUserForm extends BaseForm<String> {
      * 邮箱
      */
     @NotNull(message = "请输入邮箱", groups = {InsertGroup.class})
-    @Length(max = 128, min = 3, message = "邮箱长度{min}~{max}位字符", groups = {InsertGroup.class})
+    @NotBlank(message = "请输入密码", groups = {InsertGroup.class})
+    @Length(max = 64, min = 3, message = "邮箱长度{min}~{max}位字符", groups = {InsertGroup.class})
     @Pattern(regexp = "^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)$", message = "请输入正确的邮箱地址", groups = {InsertGroup.class})
     private String email;
 
