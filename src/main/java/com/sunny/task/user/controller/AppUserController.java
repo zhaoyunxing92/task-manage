@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author sunny
@@ -29,13 +30,13 @@ public class AppUserController {
 
     /**
      * 登录
-     *
-     * @param request
+     * @param req
+     * @param res
      * @param form
      * @return
      */
     @PostMapping("/login")
-    BaseResult login(HttpServletRequest request, @RequestBody @Validated({LoginGroup.class}) AppUserForm form) {
-        return ResultUtils.success(ResultEnum.LOGIN_SUCCESS,appUserService.login(form));
+    BaseResult login(HttpServletRequest req, HttpServletResponse res,@RequestBody @Validated({LoginGroup.class}) AppUserForm form) {
+        return ResultUtils.success(ResultEnum.LOGIN_SUCCESS,appUserService.login(req,res,form));
     }
 }

@@ -7,18 +7,18 @@ import java.util.Map;
 
 /**
  * @author sunny
- * @className com.sunny.task.common.utils.NullUtil
+ * @className com.sunny.task.common.utils.NullUtils
  * @date 2017-10-16 11:23
  * @description:
  */
-public final class NullUtil implements Serializable {
+public final class NullUtils implements Serializable {
     private static final long serialVersionUID = 1L;
-    public static final String NULL_STRING = "null";
-    public static final int NULL_STRING_LENGTH = NULL_STRING.length();
-    public static final NullUtil NULL_OBJECT = new NullUtil();
+    static final String NULL_STRING = "null";
+    static final int NULL_STRING_LENGTH = NULL_STRING.length();
+    static final NullUtils NULL_OBJECT = new NullUtils();
 
     // Allow instantiation for serialization
-    public NullUtil() {
+    NullUtils() {
         super();
     }
 
@@ -36,8 +36,7 @@ public final class NullUtil implements Serializable {
     /**
      * A Null object is equal to the null value and to itself.
      *
-     * @param object
-     *            An object to test for nullness.
+     * @param object An object to test for nullness.
      * @return true if the object parameter is the JSONObject.NULL object or null.
      */
     @Override
@@ -56,7 +55,6 @@ public final class NullUtil implements Serializable {
     }
 
     /**
-     *
      * @param s
      * @return 如果 s 为空值(null)、空串("")或"null"，则返回 true，否则返回 false
      */
@@ -74,7 +72,6 @@ public final class NullUtil implements Serializable {
     }
 
     /**
-     *
      * @param o
      * @return 如果 o 为空值(null)、空串("")或"null"，则返回 true，否则返回 false
      */
@@ -105,7 +102,6 @@ public final class NullUtil implements Serializable {
     }
 
     /**
-     *
      * @param s
      * @return 如果 s 为空值(null)、空串("")或"null"，则返回 false，否则返回 true
      */
@@ -123,7 +119,6 @@ public final class NullUtil implements Serializable {
     }
 
     /**
-     *
      * @param o
      * @return 如果 o 为空值(null)、空串("")或"null"，则返回 false，否则返回 true
      */
@@ -154,14 +149,13 @@ public final class NullUtil implements Serializable {
     }
 
     /**
-     *
      * @param s
      * @param nullValue
      * @param emptyStrValue
      * @param nullStrValue
      * @param elseValue
      * @return 如果 s 为空值(null)、空串("")或"null"，则分别返回 nullValue, emptyStrValue, nullStrValue, 否则返回
-     *         elseValue
+     * elseValue
      */
     public static String ifNull(String s, String nullValue, String emptyStrValue, String nullStrValue, String elseValue) {
         if (null != s) {
@@ -178,7 +172,6 @@ public final class NullUtil implements Serializable {
     }
 
     /**
-     *
      * @param s
      * @param thenValue
      * @return 如果 s 为空值(null)、空串("")或"null"，则返回 thenValue，否则返回 s
@@ -191,7 +184,6 @@ public final class NullUtil implements Serializable {
     }
 
     /**
-     *
      * @param s
      * @return 如果 s 为空值(null)、空串("")或"null"，则返回 null，否则返回 s
      */
@@ -203,14 +195,13 @@ public final class NullUtil implements Serializable {
     }
 
     /**
-     *
      * @param o
      * @param nullValue
      * @param emptyStrValue
      * @param nullStrValue
      * @param elseValue
      * @return 如果 o 为空值(null)、空串("")或"null"，则分别返回 nullValue, emptyStrValue, nullStrValue, 否则返回
-     *         elseValue
+     * elseValue
      */
     public static String ifNull(Object o, String nullValue, String emptyStrValue, String nullStrValue, String elseValue) {
         if (null != o) {
@@ -233,7 +224,6 @@ public final class NullUtil implements Serializable {
     }
 
     /**
-     *
      * @param o
      * @param thenValue
      * @return 如果 o 为空值(null)、空串("")或"null"，则返回 thenValue，否则返回 (String)o
@@ -249,7 +239,6 @@ public final class NullUtil implements Serializable {
     }
 
     /**
-     *
      * @param o
      * @return 如果 o 为空值(null)、空串("")或"null"，则返回 null，否则返回 (String)o
      */
@@ -264,7 +253,6 @@ public final class NullUtil implements Serializable {
     }
 
     /**
-     *
      * @param s1
      * @param s2
      * @return 如果 isNull(s1) && isNull(s2) 或者 s1 等于(equals) s2，则返回 null，否则返回 s1
@@ -281,7 +269,6 @@ public final class NullUtil implements Serializable {
     }
 
     /**
-     *
      * @param o1
      * @param o2
      * @return 如果 isNull(o1) && isNull(o2) 或者 o1 等于(equals) o2，则返回 null，否则返回 o1
@@ -302,7 +289,6 @@ public final class NullUtil implements Serializable {
     }
 
     /**
-     *
      * @param s1
      * @param s2
      * @return 如果 isNull(s1) && isNull(s2) 或者 s1 等于(equals) s2，则返回 true，否则返回 flase
@@ -319,7 +305,6 @@ public final class NullUtil implements Serializable {
     }
 
     /**
-     *
      * @param o1
      * @param o2
      * @return 如果 isNull(o1) && isNull(o2) 或者 o1 等于(equals) o2，则返回 true，否则返回 flase

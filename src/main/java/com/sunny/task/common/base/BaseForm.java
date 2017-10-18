@@ -1,5 +1,6 @@
 package com.sunny.task.common.base;
 
+import com.sunny.task.common.context.TaskAppUserContext;
 import com.sunny.task.common.utils.StringUtils;
 import com.sunny.task.common.valid.SelectGroup;
 import com.sunny.task.common.valid.UpdateGroup;
@@ -115,7 +116,7 @@ public class BaseForm<T extends Serializable> implements Serializable {
     }
 
     public Long getCreator() {
-        return creator == null ? 0L : creator;
+        return creator == null ? TaskAppUserContext.getTaskUserId() : creator;
     }
 
     public void setCreator(Long creator) {
@@ -131,7 +132,7 @@ public class BaseForm<T extends Serializable> implements Serializable {
     }
 
     public Long getModifier() {
-        return modifier == null ? 0L : modifier;
+        return modifier == null ? TaskAppUserContext.getTaskUserId() : modifier;
     }
 
     public void setModifier(Long modifier) {

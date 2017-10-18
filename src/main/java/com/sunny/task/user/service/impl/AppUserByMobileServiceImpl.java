@@ -1,7 +1,7 @@
 package com.sunny.task.user.service.impl;
 
 import com.sunny.task.common.base.ResultEnum;
-import com.sunny.task.common.utils.NullUtil;
+import com.sunny.task.common.utils.NullUtils;
 import com.sunny.task.common.utils.StringUtils;
 import com.sunny.task.core.exception.TaskException;
 import com.sunny.task.user.mapper.AppUserByMobileMapper;
@@ -25,7 +25,7 @@ public class AppUserByMobileServiceImpl implements AppUserByMobileService {
     public void addAppUserByMobile(String mobile, Long userId) {
         AppUserByMobile appUserByMobile = findAppUserByMobile(mobile);
 
-        if (NullUtil.isNotNull(appUserByMobile)) {
+        if (NullUtils.isNotNull(appUserByMobile)) {
             throw new TaskException(ResultEnum.ADD_APP_USER_BY_MOBILE_EXIST_MOBILE);
         }
 

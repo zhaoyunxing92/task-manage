@@ -13,7 +13,12 @@ public class BaseFields implements Serializable {
 
     public static String DEFAULT_PASSWORD = "{taks/null}";
     /**
-     * 用户唯一id
+     * 用户唯一id 前缀
      */
-    public static String app_user_prefix_unq_id="task";
+    public final static String app_user_prefix_unq_id = "task";
+    /**
+     * cookie 的key
+     */
+    public final static String app_user_cookie_key = "task_user_token";
+
 }

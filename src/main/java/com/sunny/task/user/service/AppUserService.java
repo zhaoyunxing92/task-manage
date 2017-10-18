@@ -5,6 +5,7 @@ import com.sunny.task.common.base.TaskManageUser;
 import com.sunny.task.user.form.AppUserForm;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author sunny
@@ -32,8 +33,10 @@ public interface AppUserService {
     /**
      * 登录
      *
-     * @param form
-     * @return
+     *
+     * @param req
+     * @param res
+     *@param form  @return
      */
-    TaskManageUser login(AppUserForm form);
+    TaskManageUser login(HttpServletRequest req, HttpServletResponse res, AppUserForm form);
 }

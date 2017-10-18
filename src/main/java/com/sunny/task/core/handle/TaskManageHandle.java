@@ -11,6 +11,7 @@ import org.mybatis.spring.MyBatisSystemException;
 import org.springframework.dao.TransientDataAccessResourceException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.security.authentication.InsufficientAuthenticationException;
 import org.springframework.validation.BindException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -83,12 +84,23 @@ public class TaskManageHandle {
         return ResultUtils.error(100, ex.getMessage());
     }
 
-    @ExceptionHandler({TaskUserAuthException.class})
+    /**
+     * 401权限不足
+     *
+     * @param ex
+     * @return
+     */
+    @ExceptionHandler({TaskUserAuthException.class, InsufficientAuthenticationException.class})
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     @ResponseBody
-    public BaseResult TaskUserAuthException(TaskUserAuthException ex) {
-
-        return ResultUtils.error(ex.getCode(), ex.getMessage());
+    public BaseResult TaskUserAuthException(Exception ex) {
+        if (ex instanceof InsufficientAuthenticationException) {
+            InsufficientAuthenticationException iae = (InsufficientAuthenticationException) ex;
+            return ResultUtils.error(200, iae.getMessage());
+        } else {
+            TaskUserAuthException taskUserAuthException = (TaskUserAuthException) ex;
+            return ResultUtils.error(taskUserAuthException.getCode(), taskUserAuthException.getMessage());
+        }
     }
 
 

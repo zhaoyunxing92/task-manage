@@ -1,7 +1,7 @@
 package com.sunny.task.user.service.impl;
 
 import com.sunny.task.common.base.ResultEnum;
-import com.sunny.task.common.utils.NullUtil;
+import com.sunny.task.common.utils.NullUtils;
 import com.sunny.task.core.exception.TaskException;
 import com.sunny.task.user.mapper.AppUserByAccountMapper;
 import com.sunny.task.user.model.AppUserByAccount;
@@ -24,7 +24,7 @@ public class AppUserByAccountServiceImpl implements AppUserByAccountService {
     public void addAppUserByAccount(String account, Long userId) {
         AppUserByAccount appUserByAccount = findAppUserByAccount(account);
 
-        if (NullUtil.isNotNull(appUserByAccount)) {
+        if (NullUtils.isNotNull(appUserByAccount)) {
             throw new TaskException(ResultEnum.ADD_APP_USER_BY_ACCOUNT_EXIST_ACCOUNT);
         }
            

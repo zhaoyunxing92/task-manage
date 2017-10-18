@@ -1,7 +1,7 @@
 package com.sunny.task.user.service.impl;
 
 import com.sunny.task.common.base.ResultEnum;
-import com.sunny.task.common.utils.NullUtil;
+import com.sunny.task.common.utils.NullUtils;
 import com.sunny.task.common.utils.StringUtils;
 import com.sunny.task.core.exception.TaskException;
 import com.sunny.task.user.mapper.AppUserByEmailMapper;
@@ -24,8 +24,8 @@ public class AppUserByEmailServiceImpl implements AppUserByEmailService {
     @Override
     public void addAppUserByEmail(String email, Long userId) {
         AppUserByEmail appUserByEmail = findAppUserByEmail(email);
-        System.out.println(NullUtil.isNotNull(appUserByEmail));
-        if (NullUtil.isNotNull(appUserByEmail)) {
+        System.out.println(NullUtils.isNotNull(appUserByEmail));
+        if (NullUtils.isNotNull(appUserByEmail)) {
             throw new TaskException(ResultEnum.ADD_APP_USER_BY_EMAIL_EXIST_EMAIL);
         }
 

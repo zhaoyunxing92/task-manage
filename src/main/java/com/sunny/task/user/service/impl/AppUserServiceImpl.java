@@ -1,10 +1,7 @@
 package com.sunny.task.user.service.impl;
 
 import com.sunny.task.common.base.*;
-import com.sunny.task.common.utils.NullUtil;
-import com.sunny.task.common.utils.ResultUtils;
-import com.sunny.task.common.utils.StringUtils;
-import com.sunny.task.common.utils.UUIDUtills;
+import com.sunny.task.common.utils.*;
 import com.sunny.task.core.exception.TaskException;
 import com.sunny.task.core.exception.TaskUserAuthException;
 import com.sunny.task.user.form.AppUserForm;
@@ -23,6 +20,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author sunny
@@ -51,14 +51,14 @@ public class AppUserServiceImpl implements AppUserService {
         try {
             email = form.getEmail(); //邮箱
             String pwd = form.getPassword(); //密码
-            String password = NullUtil.isNotNull(pwd) ? pwd : BaseFields.DEFAULT_PASSWORD;
+            String password = NullUtils.isNotNull(pwd) ? pwd : BaseFields.DEFAULT_PASSWORD;
 
             AppUser appUser = new AppUser();
             BeanUtils.copyProperties(form, appUser);
-            appUser.setUniqueId(UUIDUtills.getPrefixUUID("task"));
+            appUser.setUniqueId(UUIDUtills.getPrefixUUID(BaseFields.app_user_prefix_unq_id));
             appUser.setPassword1(password);
             appUser.setPassword2(password);
-            appUser.setStatus(NullUtil.isNotNull(pwd) ? AppUserStatus.NORMALITY_STATUS : AppUserStatus.NOT_ACTIVATE_STATUS); //没有密码就是未激活用户
+            appUser.setStatus(AppUserStatus.NOT_ACTIVATE_STATUS); //默认未激活用户
             appUserMapper.insertSelective(appUser);
 
             userId = appUser.getId();
@@ -70,17 +70,17 @@ public class AppUserServiceImpl implements AppUserService {
         addAppUserExtend(userId);
         String account = form.getAccount();
         //添加账号搜索
-        if (NullUtil.isNotNull(account)) {
+        if (NullUtils.isNotNull(account)) {
             appUserByAccountService.addAppUserByAccount(account, userId);
         }
         //添加邮箱搜索
-        if (NullUtil.isNotNull(email)) {
+        if (NullUtils.isNotNull(email)) {
             appUserByEmailService.addAppUserByEmail(email, userId);
         }
         //添加手机号搜索
         String mobile = form.getMobile();
 
-        if (NullUtil.isNotNull(mobile)) {
+        if (NullUtils.isNotNull(mobile)) {
             appUserByMobileService.addAppUserByMobile(mobile, userId);
         }
     }
@@ -118,7 +118,7 @@ public class AppUserServiceImpl implements AppUserService {
             object = appUserByAccountService.findAppUserByAccount(account);
         }
 
-        if (NullUtil.isNull(object)) {
+        if (NullUtils.isNull(object)) {
             return ResultUtils.success(ResultEnum.REG_APP_USER_ACCOUNT_NOT_EXIST);
         } else {
             return ResultUtils.success(ResultEnum.REG_APP_USER_ACCOUNT_EXIST);
@@ -126,7 +126,7 @@ public class AppUserServiceImpl implements AppUserService {
     }
 
     @Override
-    public TaskManageUser login(AppUserForm form) {
+    public TaskManageUser login(HttpServletRequest req, HttpServletResponse res, AppUserForm form) {
         String account = form.getAccount();
         Long userId;
         if (StringUtils.isEmail(account)) { //邮箱
@@ -137,7 +137,7 @@ public class AppUserServiceImpl implements AppUserService {
             userId = appUserByAccountService.findAppUserIdByAccount(account);
         }
         //账号不存在
-        if (NullUtil.isNull(userId)) {
+        if (NullUtils.isNull(userId)) {
             throw new TaskException(ResultEnum.LOGIN_APP_USLOGINER_ACCOUNT_NOT_EXIST);
         }
         //密码
@@ -152,8 +152,23 @@ public class AppUserServiceImpl implements AppUserService {
 
         BeanUtils.copyProperties(appUserVo, taskManageUser);
         taskManageUser.setUid(appUserVo.getUniqueId());//设置唯一id
-        //taskManageUser.setCreationDate(null);//创建时间
+        //设置token
+        generateToken(res, taskManageUser);
         return taskManageUser;
+    }
+
+    /**
+     * 设置token 保存到cookie里面
+     *
+     * @param taskManageUser
+     */
+    private void generateToken(HttpServletResponse res, TaskManageUser taskManageUser) {
+        Map<String, Object> claims = new HashMap<>();
+        claims.put("uid", taskManageUser.getUid());
+        claims.put("id", taskManageUser.getId());
+        String token = TokenUtils.generateToken(claims);
+        // res.setHeader(BaseFields.app_cookie_key,token);
+        CookiesUtils.setCookie(res, BaseFields.app_user_cookie_key, token);
     }
 
     /**
@@ -170,7 +185,7 @@ public class AppUserServiceImpl implements AppUserService {
             throw new TaskException(ResultEnum.SELECT_APP_USER_BY_USERID_REEOR, e);
         }
         //账号不存在
-        if (NullUtil.isNull(appUserVo)) {
+        if (NullUtils.isNull(appUserVo)) {
             throw new TaskException(ResultEnum.LOGIN_APP_USLOGINER_ACCOUNT_NOT_EXIST);
         }
 
