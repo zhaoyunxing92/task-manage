@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sunny.task.org.mapper.OrganizationResourceMapper" >
+  <resultMap id="BaseResultMap" type="com.sunny.task.org.model.OrganizationResource" >
+    <result column="ORG_ID" property="orgId" jdbcType="BIGINT" />
+    <result column="CORP_NAME" property="corpName" jdbcType="VARCHAR" />
+    <result column="CORP_ID" property="corpId" jdbcType="VARCHAR" />
+    <result column="CORP_SECRET" property="corpSecret" jdbcType="VARCHAR" />
+    <result column="SOURCE" property="source" jdbcType="TINYINT" />
+    <result column="SOURCE_NAME" property="sourceName" jdbcType="VARCHAR" />
+    <result column="SSO_SECRET" property="ssoSecret" jdbcType="VARCHAR" />
+    <result column="PERMANENT_CODE" property="permanentCode" jdbcType="VARCHAR" />
+    <result column="IS_PRIMARY" property="isPrimary" jdbcType="BIT" />
+    <result column="CREATOR" property="creator" jdbcType="BIGINT" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+    <result column="MODIFIER" property="modifier" jdbcType="BIGINT" />
+    <result column="MODIFICATION_DATE" property="modificationDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <insert id="insert" parameterType="com.sunny.task.org.model.OrganizationResource" >
+    insert into organization_resource (ORG_ID, CORP_NAME, CORP_ID, 
+      CORP_SECRET, SOURCE, SOURCE_NAME, 
+      SSO_SECRET, PERMANENT_CODE, IS_PRIMARY, 
+      CREATOR, CREATION_DATE, MODIFIER, 
+      MODIFICATION_DATE)
+    values (#{orgId,jdbcType=BIGINT}, #{corpName,jdbcType=VARCHAR}, #{corpId,jdbcType=VARCHAR}, 
+      #{corpSecret,jdbcType=VARCHAR}, #{source,jdbcType=TINYINT}, #{sourceName,jdbcType=VARCHAR}, 
+      #{ssoSecret,jdbcType=VARCHAR}, #{permanentCode,jdbcType=VARCHAR}, #{isPrimary,jdbcType=BIT}, 
+      #{creator,jdbcType=BIGINT}, #{creationDate,jdbcType=TIMESTAMP}, #{modifier,jdbcType=BIGINT}, 
+      #{modificationDate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.sunny.task.org.model.OrganizationResource" >
+    insert into organization_resource
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orgId != null" >
+        ORG_ID,
+      </if>
+      <if test="corpName != null" >
+        CORP_NAME,
+      </if>
+      <if test="corpId != null" >
+        CORP_ID,
+      </if>
+      <if test="corpSecret != null" >
+        CORP_SECRET,
+      </if>
+      <if test="source != null" >
+        SOURCE,
+      </if>
+      <if test="sourceName != null" >
+        SOURCE_NAME,
+      </if>
+      <if test="ssoSecret != null" >
+        SSO_SECRET,
+      </if>
+      <if test="permanentCode != null" >
+        PERMANENT_CODE,
+      </if>
+      <if test="isPrimary != null" >
+        IS_PRIMARY,
+      </if>
+      <if test="creator != null" >
+        CREATOR,
+      </if>
+      <if test="creationDate != null" >
+        CREATION_DATE,
+      </if>
+      <if test="modifier != null" >
+        MODIFIER,
+      </if>
+      <if test="modificationDate != null" >
+        MODIFICATION_DATE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="orgId != null" >
+        #{orgId,jdbcType=BIGINT},
+      </if>
+      <if test="corpName != null" >
+        #{corpName,jdbcType=VARCHAR},
+      </if>
+      <if test="corpId != null" >
+        #{corpId,jdbcType=VARCHAR},
+      </if>
+      <if test="corpSecret != null" >
+        #{corpSecret,jdbcType=VARCHAR},
+      </if>
+      <if test="source != null" >
+        #{source,jdbcType=TINYINT},
+      </if>
+      <if test="sourceName != null" >
+        #{sourceName,jdbcType=VARCHAR},
+      </if>
+      <if test="ssoSecret != null" >
+        #{ssoSecret,jdbcType=VARCHAR},
+      </if>
+      <if test="permanentCode != null" >
+        #{permanentCode,jdbcType=VARCHAR},
+      </if>
+      <if test="isPrimary != null" >
+        #{isPrimary,jdbcType=BIT},
+      </if>
+      <if test="creator != null" >
+        #{creator,jdbcType=BIGINT},
+      </if>
+      <if test="creationDate != null" >
+        #{creationDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifier != null" >
+        #{modifier,jdbcType=BIGINT},
+      </if>
+      <if test="modificationDate != null" >
+        #{modificationDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>

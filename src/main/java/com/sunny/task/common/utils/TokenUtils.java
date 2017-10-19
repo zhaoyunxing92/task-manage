@@ -20,7 +20,7 @@ public class TokenUtils {
     //@Value("${token.default_secret_key}")
     public final static String default_secret_key = "task-sunny"; //密钥
 
-    //@Value("${token.default_expiration}")  3600
+    //单位秒
     public final static Long default_expiration = 60 * 60 * 24 * 30L; //token过期时间  一个月
 
 
@@ -36,10 +36,11 @@ public class TokenUtils {
             String key = (String) subject.getOrDefault("default_secret_key", default_secret_key);
             Date expiration = (Date) subject.getOrDefault("default_expiration", tokenExpirationDate());
             return Jwts.builder()
-                    //.setIssuedAt(generateCurrentDate())
+                    .setIssuedAt(new Date())
                     .setSubject(GsonUtils.getGson().toJson(subject))
                     .setExpiration(expiration)//过期时间
                     .signWith(SignatureAlgorithm.HS256, key)
+                    .setIssuer("task")
                     .compact();
         } catch (Exception e) {
             return Jwts.builder()
@@ -84,11 +85,11 @@ public class TokenUtils {
                     .getSubject();
         } catch (ExpiredJwtException e) {  //token过时
             json = "{\"error_type\":\"ExpiredJwtException\",\"error_token\":" + token + "}";
-        } catch (UnsupportedJwtException e) {
+        } catch (UnsupportedJwtException e) { //不支持
             json = "{\"error_type\":\"UnsupportedJwtException\",\"error_token\":" + token + "}";
-        } catch (MalformedJwtException e) {
+        } catch (MalformedJwtException e) {  //格式错误
             json = "{\"error_type\":\"MalformedJwtException\",\"error_token\":" + token + "}";
-        } catch (SignatureException e) {
+        } catch (SignatureException e) {   //解密异常
             json = "{\"error_type\":\"SignatureException\",\"error_token\":" + token + "}";
         } catch (IllegalArgumentException e) {
             json = "{\"error_type\":\"IllegalArgumentException\",\"error_token\":" + token + "}";
@@ -102,8 +103,7 @@ public class TokenUtils {
      * @return
      */
     public static Date tokenExpirationDate() {
-        return new Date(System.currentTimeMillis() + default_expiration);
+        return new Date(System.currentTimeMillis() + default_expiration * 1000);
     }
-
 
 }

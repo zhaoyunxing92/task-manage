@@ -51,6 +51,8 @@ public class BaseForm<T extends Serializable> implements Serializable {
      */
     private T id;
 
+    private String uid;
+
     private Long creator;
 
     private Date creationDate;
@@ -97,6 +99,14 @@ public class BaseForm<T extends Serializable> implements Serializable {
 
     public void setId(T id) {
         this.id = id;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public Boolean getFunzzy() {

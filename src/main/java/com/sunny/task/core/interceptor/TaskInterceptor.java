@@ -2,16 +2,21 @@ package com.sunny.task.core.interceptor;
 
 import com.google.gson.JsonObject;
 import com.sunny.task.common.base.BaseFields;
+import com.sunny.task.common.base.ResultEnum;
 import com.sunny.task.common.context.TaskAppUserContext;
 import com.sunny.task.common.utils.CookiesUtils;
+import com.sunny.task.common.utils.GsonUtils;
 import com.sunny.task.common.utils.NullUtils;
 import com.sunny.task.common.utils.TokenUtils;
+import com.sunny.task.core.exception.TaskException;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
 
 /**
  * @author sunny
@@ -29,7 +34,13 @@ public class TaskInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest req, HttpServletResponse res, Object o) throws Exception {
 
         String path = req.getServletPath();
-        if (isInterceptor(path) && setTaskAppUserContext(path, req)) {
+        if (isInterceptor(path) && !setTaskAppUserContext(path, req)) {
+            //返回json形式的错误信息
+            res.setCharacterEncoding("UTF-8");
+            res.setContentType("application/json");
+            res.setStatus(SC_UNAUTHORIZED); //返回401状态码
+            res.getWriter().println(GsonUtils.getGson().toJson(ResultEnum.TASK_TOKEN_LOGIN_REJECT_ERROR));
+            res.getWriter().flush();
             return false;
         } else {
             return true;
@@ -54,12 +65,6 @@ public class TaskInterceptor implements HandlerInterceptor {
      * @return
      */
     private boolean setTaskAppUserContext(String path, HttpServletRequest req) {
-        for (String exclude : EXCLUDES) {
-            if (path.startsWith(exclude)) {
-                return false;
-            }
-        }
-
 
         Cookie app_user_cookie = CookiesUtils.getCookie(req, BaseFields.APP_USER_COOKIE_KEY);
         String user_token;
@@ -68,8 +73,20 @@ public class TaskInterceptor implements HandlerInterceptor {
             user_token = app_user_cookie.getValue();
             parseToken = TokenUtils.parseToken(user_token);
             if (NullUtils.isNotNull(parseToken.get("error_type"))) {
-                System.out.println("解密异常");
-                return false;
+                switch (parseToken.get("error_type").getAsString()) {
+                    case "ExpiredJwtException":
+                        throw new TaskException(ResultEnum.TASK_TOKEN_EXPIRED_ERROR);
+                    case "UnsupportedJwtException":
+                        throw new TaskException(ResultEnum.TASK_TOKEN_UNSUPPORTED_ERROR);
+                    case "MalformedJwtException":
+                        throw new TaskException(ResultEnum.TASK_TOKEN_MALFORME_ERROR);
+                    case "SignatureException":
+                        throw new TaskException(ResultEnum.TASK_TOKEN_SIGNATURE_ERROR);
+                    case "IllegalArgumentException":
+                        throw new TaskException(ResultEnum.TASK_TOKEN_ILLEGAL_ARGUMENT_ERROR);
+                    default:
+                        throw new TaskException(ResultEnum.TASK_TOKEN_UNKNOWN_ERROR);
+                }
             } else {
                 //用户id
                 Long id = parseToken.get("id").getAsLong();

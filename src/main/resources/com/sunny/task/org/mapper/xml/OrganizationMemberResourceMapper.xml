@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sunny.task.org.mapper.OrganizationMemberResourceMapper" >
+  <resultMap id="BaseResultMap" type="com.sunny.task.org.model.OrganizationMemberResource" >
+    <result column="ORG_ID" property="orgId" jdbcType="BIGINT" />
+    <result column="USER_ID" property="userId" jdbcType="BIGINT" />
+    <result column="CORP_ID" property="corpId" jdbcType="VARCHAR" />
+    <result column="CORP_USER_ID" property="corpUserId" jdbcType="VARCHAR" />
+    <result column="CORP_USER_OPENID" property="corpUserOpenid" jdbcType="VARCHAR" />
+    <result column="CORP_USER_NAME" property="corpUserName" jdbcType="VARCHAR" />
+    <result column="CORP_USER_EMAIL" property="corpUserEmail" jdbcType="VARCHAR" />
+    <result column="CORP_USER_MOBILE" property="corpUserMobile" jdbcType="VARCHAR" />
+    <result column="CORP_USER_ORGEMAIL" property="corpUserOrgemail" jdbcType="VARCHAR" />
+    <result column="CORP_USER_AVATAR" property="corpUserAvatar" jdbcType="VARCHAR" />
+    <result column="CREATOR" property="creator" jdbcType="BIGINT" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+    <result column="MODIFIER" property="modifier" jdbcType="BIGINT" />
+    <result column="MODIFICATION_DATE" property="modificationDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <insert id="insert" parameterType="com.sunny.task.org.model.OrganizationMemberResource" >
+    insert into organization_member_resource (ORG_ID, USER_ID, CORP_ID, 
+      CORP_USER_ID, CORP_USER_OPENID, CORP_USER_NAME, 
+      CORP_USER_EMAIL, CORP_USER_MOBILE, CORP_USER_ORGEMAIL, 
+      CORP_USER_AVATAR, CREATOR, CREATION_DATE, 
+      MODIFIER, MODIFICATION_DATE)
+    values (#{orgId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, #{corpId,jdbcType=VARCHAR}, 
+      #{corpUserId,jdbcType=VARCHAR}, #{corpUserOpenid,jdbcType=VARCHAR}, #{corpUserName,jdbcType=VARCHAR}, 
+      #{corpUserEmail,jdbcType=VARCHAR}, #{corpUserMobile,jdbcType=VARCHAR}, #{corpUserOrgemail,jdbcType=VARCHAR}, 
+      #{corpUserAvatar,jdbcType=VARCHAR}, #{creator,jdbcType=BIGINT}, #{creationDate,jdbcType=TIMESTAMP}, 
+      #{modifier,jdbcType=BIGINT}, #{modificationDate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.sunny.task.org.model.OrganizationMemberResource" >
+    insert into organization_member_resource
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orgId != null" >
+        ORG_ID,
+      </if>
+      <if test="userId != null" >
+        USER_ID,
+      </if>
+      <if test="corpId != null" >
+        CORP_ID,
+      </if>
+      <if test="corpUserId != null" >
+        CORP_USER_ID,
+      </if>
+      <if test="corpUserOpenid != null" >
+        CORP_USER_OPENID,
+      </if>
+      <if test="corpUserName != null" >
+        CORP_USER_NAME,
+      </if>
+      <if test="corpUserEmail != null" >
+        CORP_USER_EMAIL,
+      </if>
+      <if test="corpUserMobile != null" >
+        CORP_USER_MOBILE,
+      </if>
+      <if test="corpUserOrgemail != null" >
+        CORP_USER_ORGEMAIL,
+      </if>
+      <if test="corpUserAvatar != null" >
+        CORP_USER_AVATAR,
+      </if>
+      <if test="creator != null" >
+        CREATOR,
+      </if>
+      <if test="creationDate != null" >
+        CREATION_DATE,
+      </if>
+      <if test="modifier != null" >
+        MODIFIER,
+      </if>
+      <if test="modificationDate != null" >
+        MODIFICATION_DATE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="orgId != null" >
+        #{orgId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="corpId != null" >
+        #{corpId,jdbcType=VARCHAR},
+      </if>
+      <if test="corpUserId != null" >
+        #{corpUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="corpUserOpenid != null" >
+        #{corpUserOpenid,jdbcType=VARCHAR},
+      </if>
+      <if test="corpUserName != null" >
+        #{corpUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="corpUserEmail != null" >
+        #{corpUserEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="corpUserMobile != null" >
+        #{corpUserMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="corpUserOrgemail != null" >
+        #{corpUserOrgemail,jdbcType=VARCHAR},
+      </if>
+      <if test="corpUserAvatar != null" >
+        #{corpUserAvatar,jdbcType=VARCHAR},
+      </if>
+      <if test="creator != null" >
+        #{creator,jdbcType=BIGINT},
+      </if>
+      <if test="creationDate != null" >
+        #{creationDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifier != null" >
+        #{modifier,jdbcType=BIGINT},
+      </if>
+      <if test="modificationDate != null" >
+        #{modificationDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>

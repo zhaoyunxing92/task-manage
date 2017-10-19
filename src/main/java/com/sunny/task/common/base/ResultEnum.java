@@ -89,64 +89,53 @@ public enum ResultEnum {
      * 密码错误
      */
     APP_USER_PASSWORD_ERROR(10016, "密码错误"),
+    /**
+     * 邮箱格式不正确
+     */
+    EMAIL_FORMAT_ERROR(10017, "邮箱格式不正确"),
+    /**
+     * 手机格式不正确
+     */
+    MOBILE_FORMAT_ERROR(10018, "手机格式不正确"),
+    /*===================================== token ===============================================*/
+    /**
+     * 未知异常，请联系管理员
+     */
+    TASK_TOKEN_UNKNOWN_ERROR(1000, "未知异常，请联系管理员"),
 
     /**
-     * 账号不存在
+     * token过时
      */
-    USER_NAME_NOT_EXIST(1, "账号不存在"),
+    TASK_TOKEN_EXPIRED_ERROR(1001, "token失效"),
+
     /**
-     * 账号不存在
+     * 不支持的格式
      */
-    POSSWORD_ERROR(2, "密码错误"),
+    TASK_TOKEN_UNSUPPORTED_ERROR(1002, "token不合法"),
+
     /**
-     * 注册用户异常
+     * token不合法
      */
-    INSERT_APP_USER_ERROR(3, "注册用户异常"),
+    TASK_TOKEN_MALFORME_ERROR(1003, "token不合法"),
+
     /**
-     * 账号存在
+     * token签名异常
      */
-    USER_NAME_EXIST(4, "账号已经存在"),
+    TASK_TOKEN_SIGNATURE_ERROR(1004, "token不合法"),
+
     /**
-     * 权限不足，请联系管理员
+     * token不合法
      */
-    PERMISSION_DENIED(5, "权限不足，请联系管理员"),
+    TASK_TOKEN_ILLEGAL_ARGUMENT_ERROR(1005, "token不合法"),
+    /**
+     * token登录拒绝
+     */
+    TASK_TOKEN_LOGIN_REJECT_ERROR(1006, "请先登录"),
     /**
      * 参数异常
      */
-    PARAMETER_ERROR(100, "参数异常!"),
-    /**
-     * 邮箱格式异常
-     */
-    EMAIL_FORMAT_ERROR(100, "邮箱格式异常"),
-    /**
-     * 手机格式异常
-     */
-    MOBILE_FORMAT_ERROR(100, "手机格式异常"),
+    PARAMETER_ERROR(2000, "参数错误！");
 
-    /**
-     * 组织名称存在
-     */
-    ORG_NAME_EXIST(200, "组织名称存在"),
-    /**
-     * 组织名称不存在
-     */
-    ORG_NAME_NOT_EXIST(201, "组织名称不存在"),
-    /**
-     * 组织成员已经添加
-     */
-    ORG_USER_EXIST(202, "成员已经添加"),
-    /**
-     * 组织成员人员达到上限
-     */
-    ORG_USER_EXCEED_LIMIT(202, "组织成员人员达到上限"),
-    /**
-     * 组织项目个数达到上限
-     */
-    ORG_PRO_EXCEED_LIMIT(203, "组织项目个数达到上限"),
-    /**
-     * 项目成员达到上限
-     */
-    PRO_USER_EXCEED_LIMIT(300, "项目成员达到上限");
     private Integer code;
     private String msg;
 
