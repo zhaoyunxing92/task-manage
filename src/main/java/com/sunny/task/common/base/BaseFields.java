@@ -15,10 +15,34 @@ public class BaseFields implements Serializable {
     /**
      * 用户唯一id 前缀
      */
-    public final static String app_user_prefix_unq_id = "task";
+    public final static String APP_USER_PREFIX_UNQ_ID = "task";
     /**
      * cookie 的key
      */
-    public final static String app_user_cookie_key = "task_user_token";
+    public final static String APP_USER_COOKIE_KEY = "task_user_token";
+    /**
+     * 发送激活账号邮箱模板
+     */
+    public final static String TASK_EMAIL_ACTIVE_ACCOUNT_TMP = "email/active-account-email.ftl";
+
+    /**
+     * 发送激活账号邮箱主题
+     */
+    public final static String TASK_EMAIL_ACTIVE_ACCOUNT_THEME = "欢迎使用task";
+
+    /**
+     * 激活成功回调url
+     */
+    public final static String task_email_active_assount_success_back_url = "";
+
+    /**
+     * 激活失败回调url
+     */
+    public final static String task_email_active_assount_error_back_url = "";
+
+    /**
+     * 服务器地址
+     */
+    public final static String task_email_host = "http://localhost:8088/task/";
 
 }

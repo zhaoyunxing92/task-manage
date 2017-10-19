@@ -244,7 +244,7 @@
             app_user a left join app_user_extend b on
             a.id = b.user_id left join app_file_relate c on
             a.icon_file_id = c.unique_id
-        where a.id=10005 and a.status!=0
+        where a.id=#{id,jdbcType=BIGINT} and a.status!=0
     </select>
 
 </mapper>

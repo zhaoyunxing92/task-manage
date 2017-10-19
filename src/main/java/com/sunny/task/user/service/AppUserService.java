@@ -39,4 +39,10 @@ public interface AppUserService {
      *@param form  @return
      */
     TaskManageUser login(HttpServletRequest req, HttpServletResponse res, AppUserForm form);
+
+    /**
+     * 根据token激活用户
+     * @param token
+     */
+    void activeAccountByTaskToken( HttpServletResponse res,String token);
 }

@@ -1,9 +1,11 @@
 package com.sunny.task.user.service.impl;
 
+import com.google.gson.JsonObject;
 import com.sunny.task.common.base.*;
 import com.sunny.task.common.utils.*;
 import com.sunny.task.core.exception.TaskException;
 import com.sunny.task.core.exception.TaskUserAuthException;
+import com.sunny.task.core.service.TaskEmailService;
 import com.sunny.task.user.form.AppUserForm;
 import com.sunny.task.user.mapper.AppUserExtendMapper;
 import com.sunny.task.user.mapper.AppUserMapper;
@@ -14,13 +16,19 @@ import com.sunny.task.user.service.AppUserByAccountService;
 import com.sunny.task.user.service.AppUserByEmailService;
 import com.sunny.task.user.service.AppUserByMobileService;
 import com.sunny.task.user.service.AppUserService;
+import freemarker.template.TemplateException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,7 +40,7 @@ import java.util.Map;
  */
 @Service
 public class AppUserServiceImpl implements AppUserService {
-
+    final static Logger log = LoggerFactory.getLogger(AppUserServiceImpl.class);
     @Autowired
     private AppUserMapper appUserMapper;
     @Autowired
@@ -43,6 +51,8 @@ public class AppUserServiceImpl implements AppUserService {
     private AppUserByEmailService appUserByEmailService;
     @Autowired
     private AppUserByMobileService appUserByMobileService;
+    @Autowired
+    private TaskEmailService taskEmailService;
 
     @Transactional(rollbackFor = Exception.class)
     public void addAppUser(HttpServletRequest request, AppUserForm form) {
@@ -55,7 +65,7 @@ public class AppUserServiceImpl implements AppUserService {
 
             AppUser appUser = new AppUser();
             BeanUtils.copyProperties(form, appUser);
-            appUser.setUniqueId(UUIDUtills.getPrefixUUID(BaseFields.app_user_prefix_unq_id));
+            appUser.setUniqueId(UUIDUtills.getPrefixUUID(BaseFields.APP_USER_PREFIX_UNQ_ID));
             appUser.setPassword1(password);
             appUser.setPassword2(password);
             appUser.setStatus(AppUserStatus.NOT_ACTIVATE_STATUS); //默认未激活用户
@@ -75,7 +85,9 @@ public class AppUserServiceImpl implements AppUserService {
         }
         //添加邮箱搜索
         if (NullUtils.isNotNull(email)) {
+
             appUserByEmailService.addAppUserByEmail(email, userId);
+            sendActiveToken(email, userId);
         }
         //添加手机号搜索
         String mobile = form.getMobile();
@@ -97,6 +109,30 @@ public class AppUserServiceImpl implements AppUserService {
             appUserExtendMapper.insertSelective(appUserExtend);
         } catch (TaskException e) {
             throw new TaskException(ResultEnum.ADD_APP_USER_EXTEND_ERROR, e);
+        }
+    }
+
+    /**
+     * 发送激活邮件
+     *
+     * @param email
+     * @param userId
+     */
+    @Async
+    private void sendActiveToken(String email, Long userId) {
+        try {
+            Map<String, Object> map = new HashMap<>();
+            map.put("account", userId);
+            String token = TokenUtils.generateToken(map);
+            map.put("activeUrl", BaseFields.task_email_host + "auth/active?token=" + token);
+
+            taskEmailService.sendActiveAccountEmail(new String[]{email}, map);
+        } catch (MessagingException e) {
+            log.error("发送激活邮件异常:email--{},id--{},{}", email, userId, e);
+        } catch (IOException e) {
+            log.error("io异常:{}", e);
+        } catch (TemplateException e) {
+            log.error("模板异常:{}", e);
         }
     }
 
@@ -145,15 +181,21 @@ public class AppUserServiceImpl implements AppUserService {
         TaskManageUser taskManageUser = new TaskManageUser();
 
         AppUserVo appUserVo = findAppUserVoByUserId(userId);
+        Integer status = appUserVo.getStatus();
+        if (AppUserStatus.ACCOUNT_LOCK_STATUS.equals(status)) { //账号锁定
+            throw new TaskUserAuthException(ResultEnum.APP_USER_LOCK_ERROR);
+        } else if (AppUserStatus.NOT_ACTIVATE_STATUS.equals(status)) {  //账号未激活
+            throw new TaskUserAuthException(ResultEnum.APP_USER_NOT_ACTIVATE_ERROR);
+        }
         //密码错误
         if (!pwd.equals(appUserVo.getPassword1())) {
             throw new TaskUserAuthException(ResultEnum.APP_USER_PASSWORD_ERROR);
         }
-
         BeanUtils.copyProperties(appUserVo, taskManageUser);
         taskManageUser.setUid(appUserVo.getUniqueId());//设置唯一id
         //设置token
         generateToken(res, taskManageUser);
+        taskManageUser.setId(null);
         return taskManageUser;
     }
 
@@ -167,8 +209,8 @@ public class AppUserServiceImpl implements AppUserService {
         claims.put("uid", taskManageUser.getUid());
         claims.put("id", taskManageUser.getId());
         String token = TokenUtils.generateToken(claims);
-        // res.setHeader(BaseFields.app_cookie_key,token);
-        CookiesUtils.setCookie(res, BaseFields.app_user_cookie_key, token);
+        res.setHeader(BaseFields.APP_USER_COOKIE_KEY, token);
+        CookiesUtils.setCookie(res, BaseFields.APP_USER_COOKIE_KEY, token);
     }
 
     /**
@@ -189,15 +231,27 @@ public class AppUserServiceImpl implements AppUserService {
             throw new TaskException(ResultEnum.LOGIN_APP_USLOGINER_ACCOUNT_NOT_EXIST);
         }
 
-        Integer status = appUserVo.getStatus();
-
-        if (AppUserStatus.ACCOUNT_LOCK_STATUS.equals(status)) { //账号锁定
-            throw new TaskUserAuthException(ResultEnum.APP_USER_LOCK_ERROR);
-        } else if (AppUserStatus.NOT_ACTIVATE_STATUS.equals(status)) {  //账号未激活
-            throw new TaskUserAuthException(ResultEnum.APP_USER_NOT_ACTIVATE_ERROR);
-        }
-
-
         return appUserVo;
+    }
+
+    @Override
+    public void activeAccountByTaskToken(HttpServletResponse res, String token) {
+        //appUserMapper.updateByPrimaryKey();
+        JsonObject parseToken = TokenUtils.parseToken(token);
+        if (NullUtils.isNotNull(parseToken.get("error_type"))) {
+            log.error("io异常:{}", parseToken.get("error_type"));
+        } else {
+            //用户id
+            Long id = parseToken.get("account").getAsLong();
+            AppUserVo appUserVo = findAppUserVoByUserId(id);
+            Integer status = appUserVo.getStatus();
+            if (AppUserStatus.NOT_ACTIVATE_STATUS.equals(status)) {  //账号未激活
+                AppUser appUser = new AppUser();
+                appUser.setId(id);
+                appUser.setModifier(id);
+                appUser.setStatus(AppUserStatus.NORMALITY_STATUS);
+                appUserMapper.updateByPrimaryKeySelective(appUser);
+            }
+        }
     }
 }

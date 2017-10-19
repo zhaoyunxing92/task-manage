@@ -4,6 +4,7 @@ import com.sunny.task.common.base.BaseMapper;
 import com.sunny.task.core.exception.TaskException;
 import com.sunny.task.user.model.AppUser;
 import com.sunny.task.user.model.vo.AppUserVo;
+import org.apache.ibatis.annotations.Param;
 
 public interface AppUserMapper extends BaseMapper<AppUser, Long> {
     /**
@@ -13,5 +14,5 @@ public interface AppUserMapper extends BaseMapper<AppUser, Long> {
      * @return
      * @throws TaskException
      */
-    AppUserVo selectTaskManageUserByUserIdAndPassword(Long userId) throws TaskException;
+    AppUserVo selectTaskManageUserByUserIdAndPassword(@Param("id") Long userId) throws TaskException;
 }

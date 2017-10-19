@@ -27,7 +27,7 @@ public interface AppUserByEmailService {
 
     /**
      * 根据邮箱获取用户id
-     * @param account
+     * @param email
      * @return
      */
     Long findAppUserIdByEmail(String email);

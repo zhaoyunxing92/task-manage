@@ -61,7 +61,7 @@ public class TaskInterceptor implements HandlerInterceptor {
         }
 
 
-        Cookie app_user_cookie = CookiesUtils.getCookie(req, BaseFields.app_user_cookie_key);
+        Cookie app_user_cookie = CookiesUtils.getCookie(req, BaseFields.APP_USER_COOKIE_KEY);
         String user_token;
         JsonObject parseToken;
         if (NullUtils.isNotNull(app_user_cookie)) {

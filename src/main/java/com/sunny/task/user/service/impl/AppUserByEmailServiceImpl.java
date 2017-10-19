@@ -8,6 +8,7 @@ import com.sunny.task.user.mapper.AppUserByEmailMapper;
 import com.sunny.task.user.model.AppUserByEmail;
 import com.sunny.task.user.service.AppUserByEmailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 /**
@@ -22,6 +23,7 @@ public class AppUserByEmailServiceImpl implements AppUserByEmailService {
     private AppUserByEmailMapper appUserByEmailMapper;
 
     @Override
+    @Async
     public void addAppUserByEmail(String email, Long userId) {
         AppUserByEmail appUserByEmail = findAppUserByEmail(email);
         System.out.println(NullUtils.isNotNull(appUserByEmail));
