@@ -2,8 +2,6 @@ package com.sunny.task.org.model;
 
 import com.sunny.task.common.base.BaseModel;
 
-import java.util.Date;
-
 public class OrganizationMember extends BaseModel<Long> {
 
     private Long orgId;
@@ -29,14 +27,6 @@ public class OrganizationMember extends BaseModel<Long> {
     private Boolean rejectEmailMsg;
 
     private Boolean hideAll;
-
-    private Long creator;
-
-    private Date creationDate;
-
-    private Long modifier;
-
-    private Date modificationDate;
 
 
     public Long getOrgId() {

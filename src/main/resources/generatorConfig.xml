@@ -29,7 +29,7 @@
 
         <!-- !!!! Model Configurations !!!! -->
         <!-- 生成实体类地址 -->
-        <javaModelGenerator targetPackage="com.sunny.task.org.model" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.sunny.task.unique.model" targetProject="src/main/java">
             <!-- 是否对model添加 构造函数 -->
             <property name="constructorBased" value="false"/>
             <!-- 是否允许子包，即targetPackage.schemaName.tableName -->
@@ -44,7 +44,7 @@
 
         <!-- !!!! Mapper XML Configurations !!!! -->
         <!-- 生成mapxml文件 -->
-        <sqlMapGenerator targetPackage="com.sunny.task.org.mapper.xml" targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="com.sunny.task.unique.mapper.xml" targetProject="src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
@@ -55,7 +55,7 @@
                 type="MIXEDMAPPER",生成基于注解的Java Model 和相应的Mapper对象
                 type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口
         -->
-       <javaClientGenerator targetPackage="com.sunny.task.org.mapper" targetProject="src/main/java" type="XMLMAPPER">
+       <javaClientGenerator targetPackage="com.sunny.task.unique.mapper" targetProject="src/main/java" type="XMLMAPPER">
             <property name="enableSubPackages" value="true"/>
             <!--
                     定义Maper.java 源代码中的ByExample() 方法的可视性，可选的值有：
@@ -76,7 +76,7 @@
         </javaClientGenerator>
 
         <!-- !!!! Table Configurations !!!! -->
-        <table tableName="organization" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+        <table tableName="primary_key_by_unique_id" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
             <!-- optional   , only for mybatis3 runtime
                  自动生成的键值（identity,或者序列值）
@@ -107,35 +107,6 @@
             -->
             <!--<columnRenamingRule searchString="" replaceString=""/>-->
         </table>
-
-        <table tableName="organization_app" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-
-        <table tableName="organization_chat" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-
-        <table tableName="organization_chat_user" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-
-        <table tableName="organization_member" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-
-        <table tableName="organization_member_resource" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-
-        <table tableName="organization_resource" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
+        
     </context>
 </generatorConfiguration>

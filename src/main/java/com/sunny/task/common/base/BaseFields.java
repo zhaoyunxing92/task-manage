@@ -16,6 +16,8 @@ public class BaseFields implements Serializable {
      * 用户唯一id 前缀
      */
     public final static String APP_USER_PREFIX_UNQ_ID = "task";
+
+    public final static String TASK_ORG_PREFIX_UNQ_ID="org";
     /**
      * cookie 的key
      */

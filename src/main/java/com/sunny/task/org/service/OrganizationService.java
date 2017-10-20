@@ -17,4 +17,10 @@ public interface OrganizationService {
      * @return
      */
     OrganizationVo addOrganization(OrgForm form);
+
+    /**
+     * 获取组织详情
+     * @param form
+     */
+    OrganizationVo getOrganizationDetail(Long id);
 }

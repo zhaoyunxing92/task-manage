@@ -6,6 +6,7 @@ import com.sunny.task.common.utils.*;
 import com.sunny.task.core.exception.TaskException;
 import com.sunny.task.core.exception.TaskUserAuthException;
 import com.sunny.task.core.service.TaskEmailService;
+import com.sunny.task.unique.service.PrimaryKeyByUniqueIdService;
 import com.sunny.task.user.form.AppUserForm;
 import com.sunny.task.user.mapper.AppUserExtendMapper;
 import com.sunny.task.user.mapper.AppUserMapper;
@@ -52,19 +53,25 @@ public class AppUserServiceImpl implements AppUserService {
     private AppUserByMobileService appUserByMobileService;
     @Autowired
     private TaskEmailService taskEmailService;
+    @Autowired
+    private PrimaryKeyByUniqueIdService primaryKeyByUniqueIdService;
+
 
     @Transactional(rollbackFor = Exception.class)
+    @Override
     public void addAppUser(HttpServletRequest request, AppUserForm form) {
         String email;
         Long userId;
+        String uId;
         try {
             email = form.getEmail(); //邮箱
+            uId = UUIDUtills.getPrefixUUID(BaseFields.APP_USER_PREFIX_UNQ_ID);
             String pwd = form.getPassword(); //密码
             String password = NullUtils.isNotNull(pwd) ? pwd : BaseFields.DEFAULT_PASSWORD;
 
             AppUser appUser = new AppUser();
             BeanUtils.copyProperties(form, appUser);
-            appUser.setUniqueId(UUIDUtills.getPrefixUUID(BaseFields.APP_USER_PREFIX_UNQ_ID));
+            appUser.setUniqueId(uId);
             appUser.setPassword1(password);
             appUser.setPassword2(password);
             appUser.setStatus(AppUserStatus.NOT_ACTIVATE_STATUS); //默认未激活用户
@@ -94,6 +101,8 @@ public class AppUserServiceImpl implements AppUserService {
         if (NullUtils.isNotNull(mobile)) {
             appUserByMobileService.addAppUserByMobile(mobile, userId);
         }
+        /**添加unq搜索*/
+        primaryKeyByUniqueIdService.addPrimaryKeyByUniqueId(uId, userId);
     }
 
     /**

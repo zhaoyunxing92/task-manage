@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sunny.task.unique.mapper.PrimaryKeyByUniqueIdMapper" >
+  <resultMap id="BaseResultMap" type="com.sunny.task.unique.model.PrimaryKeyByUniqueId" >
+    <id column="UNIQUE_ID" property="uniqueId" jdbcType="VARCHAR" />
+    <result column="PRIMARY_KEY" property="primaryKey" jdbcType="BIGINT" />
+    <result column="KEY_TYPE" property="keyType" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    UNIQUE_ID, PRIMARY_KEY, KEY_TYPE
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from primary_key_by_unique_id
+    where UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from primary_key_by_unique_id
+    where UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.sunny.task.unique.model.PrimaryKeyByUniqueId" >
+    insert into primary_key_by_unique_id (UNIQUE_ID, PRIMARY_KEY, KEY_TYPE
+      )
+    values (#{uniqueId,jdbcType=VARCHAR}, #{primaryKey,jdbcType=BIGINT}, #{keyType,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.sunny.task.unique.model.PrimaryKeyByUniqueId" >
+    insert into primary_key_by_unique_id
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uniqueId != null" >
+        UNIQUE_ID,
+      </if>
+      <if test="primaryKey != null" >
+        PRIMARY_KEY,
+      </if>
+      <if test="keyType != null" >
+        KEY_TYPE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uniqueId != null" >
+        #{uniqueId,jdbcType=VARCHAR},
+      </if>
+      <if test="primaryKey != null" >
+        #{primaryKey,jdbcType=BIGINT},
+      </if>
+      <if test="keyType != null" >
+        #{keyType,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.unique.model.PrimaryKeyByUniqueId" >
+    update primary_key_by_unique_id
+    <set >
+      <if test="primaryKey != null" >
+        PRIMARY_KEY = #{primaryKey,jdbcType=BIGINT},
+      </if>
+      <if test="keyType != null" >
+        KEY_TYPE = #{keyType,jdbcType=TINYINT},
+      </if>
+    </set>
+    where UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.sunny.task.unique.model.PrimaryKeyByUniqueId" >
+    update primary_key_by_unique_id
+    set PRIMARY_KEY = #{primaryKey,jdbcType=BIGINT},
+      KEY_TYPE = #{keyType,jdbcType=TINYINT}
+    where UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR}
+  </update>
+</mapper>

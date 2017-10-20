@@ -49,4 +49,52 @@ public class OrgForm extends BaseForm<Long> {
      * 是否自动加入
      */
     private Boolean autoAdd;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getIntro() {
+        return intro;
+    }
+
+    public void setIntro(String intro) {
+        this.intro = intro;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Boolean getOpen() {
+        return open;
+    }
+
+    public void setOpen(Boolean open) {
+        this.open = open;
+    }
+
+    public Boolean getAutoAdd() {
+        return autoAdd;
+    }
+
+    public void setAutoAdd(Boolean autoAdd) {
+        this.autoAdd = autoAdd;
+    }
 }

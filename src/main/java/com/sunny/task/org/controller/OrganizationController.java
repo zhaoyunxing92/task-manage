@@ -38,8 +38,8 @@ public class OrganizationController {
 
     //团队详情
     @GetMapping("/info")
-    BaseResult getOrganizationDetail(@RequestBody @Validated({InsertGroup.class}) OrgForm form) {
-        return ResultUtils.success(ResultEnum.SUCCESS, organizationService.addOrganization(form));
+    BaseResult getOrganizationDetail(@RequestParam("id") Long id) {
+        return ResultUtils.success(ResultEnum.SUCCESS, organizationService.getOrganizationDetail(id));
     }
 
 }
