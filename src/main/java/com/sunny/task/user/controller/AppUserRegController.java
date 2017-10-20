@@ -7,18 +7,13 @@ import com.sunny.task.common.valid.InsertGroup;
 import com.sunny.task.core.service.TaskEmailService;
 import com.sunny.task.user.form.AppUserForm;
 import com.sunny.task.user.service.AppUserService;
-import freemarker.template.TemplateException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author sunny
@@ -58,22 +53,5 @@ public class AppUserRegController {
     public BaseResult checkAccountIsExist(@PathVariable("account") String account) {
         return appUserService.checkAccountIsExist(account);
     }
-
-    @GetMapping("/send")
-    public void send() {
-        
-        try {
-            Map<String, Object> model=new HashMap<>();
-            model.put("activeUrl","http://www.jianshu.com/bookmarks");
-            taskEmailService.sendActiveAccountEmail(new String[]{"zhaoyunxing5837@dingtalk.com"},model);
-        } catch (MessagingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (TemplateException e) {
-            e.printStackTrace();
-        }
-
-
-    }
+    
 }
