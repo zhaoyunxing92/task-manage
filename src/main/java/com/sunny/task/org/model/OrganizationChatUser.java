@@ -2,15 +2,13 @@ package com.sunny.task.org.model;
 
 import com.sunny.task.common.base.BaseModel;
 
-import java.util.Date;
-
 public class OrganizationChatUser extends BaseModel<Long> {
-
-    private Long orgId;
+    private static final long serialVersionUID = 5708935860551922438L;
+    private String orgId;
 
     private String name;
 
-    private Long userId;
+    private String userId;
 
     private String chatId;
 
@@ -20,21 +18,12 @@ public class OrganizationChatUser extends BaseModel<Long> {
 
     private Byte addWay;
 
-    private Long creator;
-
-    private Date creationDate;
-
-    private Long modifier;
-
-    private Date modificationDate;
-
-
-    public Long getOrgId() {
+    public String getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
-        this.orgId = orgId;
+    public void setOrgId(String orgId) {
+        this.orgId = orgId == null ? null : orgId.trim();
     }
 
     public String getName() {
@@ -45,12 +34,12 @@ public class OrganizationChatUser extends BaseModel<Long> {
         this.name = name == null ? null : name.trim();
     }
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUserId(String userId) {
+        this.userId = userId == null ? null : userId.trim();
     }
 
     public String getChatId() {

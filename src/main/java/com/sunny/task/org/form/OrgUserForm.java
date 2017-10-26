@@ -18,12 +18,12 @@ public class OrgUserForm extends BaseForm<Long> {
      * 组织id
      */
     @NotNull(message = "请输入组织id", groups = {InsertGroup.class})
-    private Long orgId;
+    private String orgId;
     /**
      * 用户id
      */
     @NotNull(message = "请输入组织成员id", groups = {InsertGroup.class})
-    private Long userId;
+    private String userId;
     /**
      * 昵称
      */
@@ -44,19 +44,20 @@ public class OrgUserForm extends BaseForm<Long> {
      */
     private Boolean defaultAdd;
 
-    public Long getOrgId() {
+
+    public String getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
+    public void setOrgId(String orgId) {
         this.orgId = orgId;
     }
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

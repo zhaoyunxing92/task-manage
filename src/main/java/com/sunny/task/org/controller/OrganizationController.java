@@ -2,6 +2,7 @@ package com.sunny.task.org.controller;
 
 import com.sunny.task.common.base.BaseResult;
 import com.sunny.task.common.base.ResultEnum;
+import com.sunny.task.common.context.TaskAppUserContext;
 import com.sunny.task.common.utils.ResultUtils;
 import com.sunny.task.common.valid.InsertGroup;
 import com.sunny.task.org.form.OrgForm;
@@ -32,14 +33,24 @@ public class OrganizationController {
     BaseResult addOrganization(@RequestBody @Validated({InsertGroup.class}) OrgForm form) {
         return ResultUtils.success(ResultEnum.SUCCESS, organizationService.addOrganization(form));
     }
+
+    /**
+     * 获取当前登录人的组织
+     *
+     * @return
+     */
+    @PostMapping("/current")
+    BaseResult findCurrentAppUserOrgs() {
+        return ResultUtils.success(ResultEnum.SUCCESS, organizationService.getAppUserOrgsByUserId(TaskAppUserContext.getTaskUserUNQId()));
+    }
     //修改团队
 
     //删除团队
 
     //团队详情
     @GetMapping("/info")
-    BaseResult getOrganizationDetail(@RequestParam("id") Long id) {
-        return ResultUtils.success(ResultEnum.SUCCESS, organizationService.getOrganizationDetail(id));
+    BaseResult getOrganizationDetail(@RequestParam("uId") String uId) {
+        return ResultUtils.success(ResultEnum.SUCCESS, organizationService.getOrganizationDetail(uId));
     }
 
 }

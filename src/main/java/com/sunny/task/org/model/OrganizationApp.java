@@ -3,12 +3,13 @@ package com.sunny.task.org.model;
 import com.sunny.task.common.base.BaseModel;
 
 public class OrganizationApp extends BaseModel<Long> {
+    private static final long serialVersionUID = 1417039304954361862L;
 
     private String uniqueId;
 
-    private Long orgId;
+    private String orgId;
 
-    private Long appId;
+    private String appId;
 
     private String appName;
 
@@ -18,7 +19,7 @@ public class OrganizationApp extends BaseModel<Long> {
 
     private String appPcHomeUrl;
 
-    private Long iconFileId;
+    private String iconFileId;
 
     private Boolean isUse;
 
@@ -34,20 +35,20 @@ public class OrganizationApp extends BaseModel<Long> {
         this.uniqueId = uniqueId == null ? null : uniqueId.trim();
     }
 
-    public Long getOrgId() {
+    public String getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
-        this.orgId = orgId;
+    public void setOrgId(String orgId) {
+        this.orgId = orgId == null ? null : orgId.trim();
     }
 
-    public Long getAppId() {
+    public String getAppId() {
         return appId;
     }
 
-    public void setAppId(Long appId) {
-        this.appId = appId;
+    public void setAppId(String appId) {
+        this.appId = appId == null ? null : appId.trim();
     }
 
     public String getAppName() {
@@ -82,12 +83,12 @@ public class OrganizationApp extends BaseModel<Long> {
         this.appPcHomeUrl = appPcHomeUrl == null ? null : appPcHomeUrl.trim();
     }
 
-    public Long getIconFileId() {
+    public String getIconFileId() {
         return iconFileId;
     }
 
-    public void setIconFileId(Long iconFileId) {
-        this.iconFileId = iconFileId;
+    public void setIconFileId(String iconFileId) {
+        this.iconFileId = iconFileId == null ? null : iconFileId.trim();
     }
 
     public Boolean getIsUse() {

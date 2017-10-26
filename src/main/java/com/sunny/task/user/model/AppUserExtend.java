@@ -5,8 +5,7 @@ import com.sunny.task.common.base.BaseModel;
 import java.util.Date;
 
 public class AppUserExtend extends BaseModel<Long> {
-    private static final long serialVersionUID = -8893753294027368001L;
-    private Long userId;
+    private String userId;
 
     private Byte sex;
 
@@ -22,12 +21,12 @@ public class AppUserExtend extends BaseModel<Long> {
 
     private String url;
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUserId(String userId) {
+        this.userId = userId == null ? null : userId.trim();
     }
 
     public Byte getSex() {
@@ -86,5 +85,4 @@ public class AppUserExtend extends BaseModel<Long> {
         this.url = url == null ? null : url.trim();
     }
 
-   
 }

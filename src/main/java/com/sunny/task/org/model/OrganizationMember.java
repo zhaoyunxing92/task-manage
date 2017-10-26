@@ -3,46 +3,34 @@ package com.sunny.task.org.model;
 import com.sunny.task.common.base.BaseModel;
 
 public class OrganizationMember extends BaseModel<Long> {
-
-    private Long orgId;
-
-    private Long userId;
-
+    private static final long serialVersionUID = 571341925503658859L;
+    private String orgId;
+    private String userId;
     private String nickName;
-
     private String position;
-
     private Boolean manager;
-
     private String remark;
-
     private Byte status;
-
     private Boolean hideEmail;
-
     private Boolean hideMobile;
-
     private Boolean rejectTask;
-
     private Boolean rejectEmailMsg;
-
     private Boolean hideAll;
 
-
-    public Long getOrgId() {
+    public String getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
-        this.orgId = orgId;
+    public void setOrgId(String orgId) {
+        this.orgId = orgId == null ? null : orgId.trim();
     }
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUserId(String userId) {
+        this.userId = userId == null ? null : userId.trim();
     }
 
     public String getNickName() {
@@ -124,5 +112,5 @@ public class OrganizationMember extends BaseModel<Long> {
     public void setHideAll(Boolean hideAll) {
         this.hideAll = hideAll;
     }
-
+    
 }

@@ -2,21 +2,21 @@ package com.sunny.task.org.model;
 
 import com.sunny.task.common.base.BaseModel;
 
-public class Organization extends BaseModel<Long>{
-
+public class Organization extends BaseModel<Long> {
+    private static final long serialVersionUID = 4356137616144347164L;
     private String uniqueId;
 
-    private Long ownerId;
+    private String ownerId;
 
     private String name;
 
-    private Long iconFileId;
+    private String iconFileId;
 
     private String description;
 
     private String intro;
 
-    private String type;
+    private Byte type;
 
     private Byte status;
 
@@ -39,12 +39,12 @@ public class Organization extends BaseModel<Long>{
         this.uniqueId = uniqueId == null ? null : uniqueId.trim();
     }
 
-    public Long getOwnerId() {
+    public String getOwnerId() {
         return ownerId;
     }
 
-    public void setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public void setOwnerId(String ownerId) {
+        this.ownerId = ownerId == null ? null : ownerId.trim();
     }
 
     public String getName() {
@@ -55,12 +55,12 @@ public class Organization extends BaseModel<Long>{
         this.name = name == null ? null : name.trim();
     }
 
-    public Long getIconFileId() {
+    public String getIconFileId() {
         return iconFileId;
     }
 
-    public void setIconFileId(Long iconFileId) {
-        this.iconFileId = iconFileId;
+    public void setIconFileId(String iconFileId) {
+        this.iconFileId = iconFileId == null ? null : iconFileId.trim();
     }
 
     public String getDescription() {
@@ -79,12 +79,12 @@ public class Organization extends BaseModel<Long>{
         this.intro = intro == null ? null : intro.trim();
     }
 
-    public String getType() {
+    public Byte getType() {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type == null ? null : type.trim();
+    public void setType(Byte type) {
+        this.type = type;
     }
 
     public Byte getStatus() {
@@ -134,5 +134,5 @@ public class Organization extends BaseModel<Long>{
     public void setCreateMode(Byte createMode) {
         this.createMode = createMode;
     }
-    
+
 }

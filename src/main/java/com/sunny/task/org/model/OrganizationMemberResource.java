@@ -3,40 +3,32 @@ package com.sunny.task.org.model;
 import com.sunny.task.common.base.BaseModel;
 
 public class OrganizationMemberResource extends BaseModel<Long> {
-    private Long orgId;
-
-    private Long userId;
-
+    private static final long serialVersionUID = 6357599978060349283L;
+    private String orgId;
+    private String userId;
     private String corpId;
-
     private String corpUserId;
-
     private String corpUserOpenid;
-
     private String corpUserName;
-
     private String corpUserEmail;
-
     private String corpUserMobile;
-
     private String corpUserOrgemail;
-
     private String corpUserAvatar;
-
-    public Long getOrgId() {
+    
+    public String getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
-        this.orgId = orgId;
+    public void setOrgId(String orgId) {
+        this.orgId = orgId == null ? null : orgId.trim();
     }
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUserId(String userId) {
+        this.userId = userId == null ? null : userId.trim();
     }
 
     public String getCorpId() {
@@ -102,5 +94,4 @@ public class OrganizationMemberResource extends BaseModel<Long> {
     public void setCorpUserAvatar(String corpUserAvatar) {
         this.corpUserAvatar = corpUserAvatar == null ? null : corpUserAvatar.trim();
     }
-    
 }

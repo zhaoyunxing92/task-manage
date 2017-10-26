@@ -1,234 +1,261 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sunny.task.org.mapper.OrganizationMapper" >
-  <resultMap id="BaseResultMap" type="com.sunny.task.org.model.Organization" >
-    <id column="ID" property="id" jdbcType="BIGINT" />
-    <result column="UNIQUE_ID" property="uniqueId" jdbcType="VARCHAR" />
-    <result column="OWNER_ID" property="ownerId" jdbcType="BIGINT" />
-    <result column="NAME" property="name" jdbcType="VARCHAR" />
-    <result column="ICON_FILE_ID" property="iconFileId" jdbcType="BIGINT" />
-    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
-    <result column="INTRO" property="intro" jdbcType="VARCHAR" />
-    <result column="TYPE" property="type" jdbcType="CHAR" />
-    <result column="STATUS" property="status" jdbcType="TINYINT" />
-    <result column="AUTO_ADD" property="autoAdd" jdbcType="BIT" />
-    <result column="OPEN" property="open" jdbcType="BIT" />
-    <result column="MEMBER_LIMIT" property="memberLimit" jdbcType="INTEGER" />
-    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
-    <result column="CREATE_MODE" property="createMode" jdbcType="TINYINT" />
-    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
-    <result column="MODIFIER" property="modifier" jdbcType="BIGINT" />
-    <result column="MODIFICATION_DATE" property="modificationDate" jdbcType="TIMESTAMP" />
-  </resultMap>
-  <sql id="Base_Column_List" >
-    ID, UNIQUE_ID, OWNER_ID, NAME, ICON_FILE_ID, DESCRIPTION, INTRO, TYPE, STATUS, AUTO_ADD, 
-    OPEN, MEMBER_LIMIT, ADDRESS, CREATE_MODE, CREATION_DATE, MODIFIER, MODIFICATION_DATE
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sunny.task.org.mapper.OrganizationMapper">
+    <resultMap id="BaseResultMap" type="com.sunny.task.org.model.Organization">
+        <id column="ID" jdbcType="BIGINT" property="id"/>
+        <result column="UNIQUE_ID" jdbcType="VARCHAR" property="uniqueId"/>
+        <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId"/>
+        <result column="NAME" jdbcType="VARCHAR" property="name"/>
+        <result column="ICON_FILE_ID" jdbcType="VARCHAR" property="iconFileId"/>
+        <result column="DESCRIPTION" jdbcType="VARCHAR" property="description"/>
+        <result column="INTRO" jdbcType="VARCHAR" property="intro"/>
+        <result column="TYPE" jdbcType="TINYINT" property="type"/>
+        <result column="STATUS" jdbcType="TINYINT" property="status"/>
+        <result column="AUTO_ADD" jdbcType="BIT" property="autoAdd"/>
+        <result column="OPEN" jdbcType="BIT" property="open"/>
+        <result column="MEMBER_LIMIT" jdbcType="INTEGER" property="memberLimit"/>
+        <result column="ADDRESS" jdbcType="VARCHAR" property="address"/>
+        <result column="CREATE_MODE" jdbcType="TINYINT" property="createMode"/>
+        <result column="CREATOR" jdbcType="BIGINT" property="creator"/>
+        <result column="CREATION_DATE" jdbcType="TIMESTAMP" property="creationDate"/>
+        <result column="MODIFIER" jdbcType="BIGINT" property="modifier"/>
+        <result column="MODIFICATION_DATE" jdbcType="TIMESTAMP" property="modificationDate"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    ID, UNIQUE_ID, OWNER_ID, NAME, ICON_FILE_ID, DESCRIPTION, INTRO, TYPE, STATUS, AUTO_ADD,
+    OPEN, MEMBER_LIMIT, ADDRESS, CREATE_MODE, CREATOR, CREATION_DATE, MODIFIER, MODIFICATION_DATE
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
-    select 
-    <include refid="Base_Column_List" />
-    from organization
-    where ID = #{id,jdbcType=BIGINT}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from organization
+        where ID = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from organization
     where ID = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.sunny.task.org.model.Organization" >
-    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into organization (UNIQUE_ID, OWNER_ID, NAME, 
-      ICON_FILE_ID, DESCRIPTION, INTRO, 
-      TYPE, STATUS, AUTO_ADD, OPEN, 
-      MEMBER_LIMIT, ADDRESS, CREATE_MODE, 
-      CREATION_DATE, MODIFIER, MODIFICATION_DATE
-      )
-    values (#{uniqueId,jdbcType=VARCHAR}, #{ownerId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, 
-      #{iconFileId,jdbcType=BIGINT}, #{description,jdbcType=VARCHAR}, #{intro,jdbcType=VARCHAR}, 
-      #{type,jdbcType=CHAR}, #{status,jdbcType=TINYINT}, #{autoAdd,jdbcType=BIT}, #{open,jdbcType=BIT}, 
-      #{memberLimit,jdbcType=INTEGER}, #{address,jdbcType=VARCHAR}, #{createMode,jdbcType=TINYINT}, 
-      #{creationDate,jdbcType=TIMESTAMP}, #{modifier,jdbcType=BIGINT}, #{modificationDate,jdbcType=TIMESTAMP}
-      )
-  </insert>
-  <insert id="insertSelective" parameterType="com.sunny.task.org.model.Organization" >
-    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into organization
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="uniqueId != null" >
-        UNIQUE_ID,
-      </if>
-      <if test="ownerId != null" >
-        OWNER_ID,
-      </if>
-      <if test="name != null" >
-        NAME,
-      </if>
-      <if test="iconFileId != null" >
-        ICON_FILE_ID,
-      </if>
-      <if test="description != null" >
-        DESCRIPTION,
-      </if>
-      <if test="intro != null" >
-        INTRO,
-      </if>
-      <if test="type != null" >
-        TYPE,
-      </if>
-      <if test="status != null" >
-        STATUS,
-      </if>
-      <if test="autoAdd != null" >
-        AUTO_ADD,
-      </if>
-      <if test="open != null" >
-        OPEN,
-      </if>
-      <if test="memberLimit != null" >
-        MEMBER_LIMIT,
-      </if>
-      <if test="address != null" >
-        ADDRESS,
-      </if>
-      <if test="createMode != null" >
-        CREATE_MODE,
-      </if>
-      <if test="creationDate != null" >
-        CREATION_DATE,
-      </if>
-      <if test="modifier != null" >
-        MODIFIER,
-      </if>
-      <if test="modificationDate != null" >
-        MODIFICATION_DATE,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="uniqueId != null" >
-        #{uniqueId,jdbcType=VARCHAR},
-      </if>
-      <if test="ownerId != null" >
-        #{ownerId,jdbcType=BIGINT},
-      </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="iconFileId != null" >
-        #{iconFileId,jdbcType=BIGINT},
-      </if>
-      <if test="description != null" >
-        #{description,jdbcType=VARCHAR},
-      </if>
-      <if test="intro != null" >
-        #{intro,jdbcType=VARCHAR},
-      </if>
-      <if test="type != null" >
-        #{type,jdbcType=CHAR},
-      </if>
-      <if test="status != null" >
-        #{status,jdbcType=TINYINT},
-      </if>
-      <if test="autoAdd != null" >
-        #{autoAdd,jdbcType=BIT},
-      </if>
-      <if test="open != null" >
-        #{open,jdbcType=BIT},
-      </if>
-      <if test="memberLimit != null" >
-        #{memberLimit,jdbcType=INTEGER},
-      </if>
-      <if test="address != null" >
-        #{address,jdbcType=VARCHAR},
-      </if>
-      <if test="createMode != null" >
-        #{createMode,jdbcType=TINYINT},
-      </if>
-      <if test="creationDate != null" >
-        #{creationDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="modifier != null" >
-        #{modifier,jdbcType=BIGINT},
-      </if>
-      <if test="modificationDate != null" >
-        #{modificationDate,jdbcType=TIMESTAMP},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.org.model.Organization" >
-    update organization
-    <set >
-      <if test="uniqueId != null" >
-        UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR},
-      </if>
-      <if test="ownerId != null" >
-        OWNER_ID = #{ownerId,jdbcType=BIGINT},
-      </if>
-      <if test="name != null" >
-        NAME = #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="iconFileId != null" >
-        ICON_FILE_ID = #{iconFileId,jdbcType=BIGINT},
-      </if>
-      <if test="description != null" >
-        DESCRIPTION = #{description,jdbcType=VARCHAR},
-      </if>
-      <if test="intro != null" >
-        INTRO = #{intro,jdbcType=VARCHAR},
-      </if>
-      <if test="type != null" >
-        TYPE = #{type,jdbcType=CHAR},
-      </if>
-      <if test="status != null" >
-        STATUS = #{status,jdbcType=TINYINT},
-      </if>
-      <if test="autoAdd != null" >
-        AUTO_ADD = #{autoAdd,jdbcType=BIT},
-      </if>
-      <if test="open != null" >
-        OPEN = #{open,jdbcType=BIT},
-      </if>
-      <if test="memberLimit != null" >
-        MEMBER_LIMIT = #{memberLimit,jdbcType=INTEGER},
-      </if>
-      <if test="address != null" >
-        ADDRESS = #{address,jdbcType=VARCHAR},
-      </if>
-      <if test="createMode != null" >
-        CREATE_MODE = #{createMode,jdbcType=TINYINT},
-      </if>
-      <if test="creationDate != null" >
-        CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="modifier != null" >
-        MODIFIER = #{modifier,jdbcType=BIGINT},
-      </if>
-      <if test="modificationDate != null" >
-        MODIFICATION_DATE = #{modificationDate,jdbcType=TIMESTAMP},
-      </if>
-    </set>
-    where ID = #{id,jdbcType=BIGINT}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.sunny.task.org.model.Organization" >
+
+    <insert id="insertSelective" parameterType="com.sunny.task.org.model.vo.OrganizationVo">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into organization
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="uniqueId != null">
+                UNIQUE_ID,
+            </if>
+            <if test="ownerId != null">
+                OWNER_ID,
+            </if>
+            <if test="name != null">
+                NAME,
+            </if>
+            <if test="iconFileId != null">
+                ICON_FILE_ID,
+            </if>
+            <if test="description != null">
+                DESCRIPTION,
+            </if>
+            <if test="intro != null">
+                INTRO,
+            </if>
+            <if test="type != null">
+                TYPE,
+            </if>
+            <if test="status != null">
+                STATUS,
+            </if>
+            <if test="autoAdd != null">
+                AUTO_ADD,
+            </if>
+            <if test="open != null">
+                OPEN,
+            </if>
+            <if test="memberLimit != null">
+                MEMBER_LIMIT,
+            </if>
+            <if test="address != null">
+                ADDRESS,
+            </if>
+            <if test="createMode != null">
+                CREATE_MODE,
+            </if>
+            <if test="creator != null">
+                CREATOR,
+            </if>
+            <if test="creationDate != null">
+                CREATION_DATE,
+            </if>
+            <if test="modifier != null">
+                MODIFIER,
+            </if>
+            <if test="modificationDate != null">
+                MODIFICATION_DATE,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="uniqueId != null">
+                #{uniqueId,jdbcType=VARCHAR},
+            </if>
+            <if test="ownerId != null">
+                #{ownerId,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="iconFileId != null">
+                #{iconFileId,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="intro != null">
+                #{intro,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=TINYINT},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=TINYINT},
+            </if>
+            <if test="autoAdd != null">
+                #{autoAdd,jdbcType=BIT},
+            </if>
+            <if test="open != null">
+                #{open,jdbcType=BIT},
+            </if>
+            <if test="memberLimit != null">
+                #{memberLimit,jdbcType=INTEGER},
+            </if>
+            <if test="address != null">
+                #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="createMode != null">
+                #{createMode,jdbcType=TINYINT},
+            </if>
+            <if test="creator != null">
+                #{creator,jdbcType=BIGINT},
+            </if>
+            <if test="creationDate != null">
+                #{creationDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifier != null">
+                #{modifier,jdbcType=BIGINT},
+            </if>
+            <if test="modificationDate != null">
+                #{modificationDate,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.org.model.Organization">
+        update organization
+        <set>
+            <if test="uniqueId != null">
+                UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR},
+            </if>
+            <if test="ownerId != null">
+                OWNER_ID = #{ownerId,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                NAME = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="iconFileId != null">
+                ICON_FILE_ID = #{iconFileId,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                DESCRIPTION = #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="intro != null">
+                INTRO = #{intro,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                TYPE = #{type,jdbcType=TINYINT},
+            </if>
+            <if test="status != null">
+                STATUS = #{status,jdbcType=TINYINT},
+            </if>
+            <if test="autoAdd != null">
+                AUTO_ADD = #{autoAdd,jdbcType=BIT},
+            </if>
+            <if test="open != null">
+                OPEN = #{open,jdbcType=BIT},
+            </if>
+            <if test="memberLimit != null">
+                MEMBER_LIMIT = #{memberLimit,jdbcType=INTEGER},
+            </if>
+            <if test="address != null">
+                ADDRESS = #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="createMode != null">
+                CREATE_MODE = #{createMode,jdbcType=TINYINT},
+            </if>
+            <if test="creator != null">
+                CREATOR = #{creator,jdbcType=BIGINT},
+            </if>
+            <if test="creationDate != null">
+                CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifier != null">
+                MODIFIER = #{modifier,jdbcType=BIGINT},
+            </if>
+            <if test="modificationDate != null">
+                MODIFICATION_DATE = #{modificationDate,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where ID = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.sunny.task.org.model.Organization">
     update organization
     set UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR},
-      OWNER_ID = #{ownerId,jdbcType=BIGINT},
+      OWNER_ID = #{ownerId,jdbcType=VARCHAR},
       NAME = #{name,jdbcType=VARCHAR},
-      ICON_FILE_ID = #{iconFileId,jdbcType=BIGINT},
+      ICON_FILE_ID = #{iconFileId,jdbcType=VARCHAR},
       DESCRIPTION = #{description,jdbcType=VARCHAR},
       INTRO = #{intro,jdbcType=VARCHAR},
-      TYPE = #{type,jdbcType=CHAR},
+      TYPE = #{type,jdbcType=TINYINT},
       STATUS = #{status,jdbcType=TINYINT},
       AUTO_ADD = #{autoAdd,jdbcType=BIT},
       OPEN = #{open,jdbcType=BIT},
       MEMBER_LIMIT = #{memberLimit,jdbcType=INTEGER},
       ADDRESS = #{address,jdbcType=VARCHAR},
       CREATE_MODE = #{createMode,jdbcType=TINYINT},
+      CREATOR = #{creator,jdbcType=BIGINT},
       CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
       MODIFIER = #{modifier,jdbcType=BIGINT},
       MODIFICATION_DATE = #{modificationDate,jdbcType=TIMESTAMP}
     where ID = #{id,jdbcType=BIGINT}
   </update>
+
+    <resultMap id="OrganizationVo" extends="BaseResultMap" type="com.sunny.task.org.model.vo.OrganizationVo">
+        <result column="PRO_COUNT" jdbcType="INTEGER" property="proCount"/>
+        <result column="ICON_URL" jdbcType="VARCHAR" property="iconUrl"/>
+        <result column="is_admin" jdbcType="BIT" property="isAdmin"/>
+        <association column="{orgId=UNIQUE_ID}" property="userCount"
+                    select="com.sunny.task.org.mapper.OrganizationMemberMapper.selectCountByOrgId"></association>
+    </resultMap>
+    <!--获取组织详情-->
+    <select id="selectOrgDetailByUId" resultMap="OrganizationVo">
+        SELECT
+            A.NAME,
+            A.UNIQUE_ID,
+            if(a.OWNER_ID=#{userId,jdbcType=VARCHAR},'true','false') is_admin,
+            b.FILE_URL ICON_URL
+        FROM
+            ORGANIZATION A left join app_file_relate b on a.ICON_FILE_ID=b.UNIQUE_ID
+        WHERE A.UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR}
+        and a.STATUS!=0
+    </select>
+    <!--根据用户id获取组织-->
+    <select id="selectAppUserOrgsByUserId" resultMap="OrganizationVo">
+        select
+            b.NAME,
+            if(a.USER_ID=b.OWNER_ID,'true','false') is_admin,
+            b.UNIQUE_ID,
+            c.FILE_URL
+        from
+            organization_member a left join organization b on
+            a.ORG_ID = b.UNIQUE_ID left join app_file_relate c on b.ICON_FILE_ID=c.UNIQUE_ID
+        where a.USER_ID=#{userId,jdbcType=VARCHAR}
+    </select>
 </mapper>

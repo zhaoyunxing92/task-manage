@@ -2,45 +2,25 @@ package com.sunny.task.org.model;
 
 import com.sunny.task.common.base.BaseModel;
 
-import java.util.Date;
-
 public class OrganizationChat extends BaseModel<Long> {
-
-    private Long orgId;
-
+    private static final long serialVersionUID = 2689234622268010295L;
+    private String orgId;
     private String projectId;
-
-    private Long ownerId;
-
+    private String ownerId;
     private String chatId;
-
     private Long iconFileId;
-
     private String chatName;
-
     private String chatDesc;
-
     private Byte chatType;
-
     private Boolean autoAdd;
-
     private Integer memberLimit;
-
     private String defaultMsg;
-
-    private Date creationDate;
-
-    private Long modifier;
-
-    private Date modificationDate;
-
-
-    public Long getOrgId() {
+    public String getOrgId() {
         return orgId;
     }
 
-    public void setOrgId(Long orgId) {
-        this.orgId = orgId;
+    public void setOrgId(String orgId) {
+        this.orgId = orgId == null ? null : orgId.trim();
     }
 
     public String getProjectId() {
@@ -51,12 +31,12 @@ public class OrganizationChat extends BaseModel<Long> {
         this.projectId = projectId == null ? null : projectId.trim();
     }
 
-    public Long getOwnerId() {
+    public String getOwnerId() {
         return ownerId;
     }
 
-    public void setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public void setOwnerId(String ownerId) {
+        this.ownerId = ownerId == null ? null : ownerId.trim();
     }
 
     public String getChatId() {

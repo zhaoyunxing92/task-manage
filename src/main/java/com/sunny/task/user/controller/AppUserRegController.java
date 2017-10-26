@@ -4,11 +4,8 @@ import com.sunny.task.common.base.BaseResult;
 import com.sunny.task.common.base.ResultEnum;
 import com.sunny.task.common.utils.ResultUtils;
 import com.sunny.task.common.valid.InsertGroup;
-import com.sunny.task.core.service.TaskEmailService;
 import com.sunny.task.user.form.AppUserForm;
 import com.sunny.task.user.service.AppUserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -24,12 +21,9 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/reg")
 public class AppUserRegController {
-    final static Logger log = LoggerFactory.getLogger(AppUserRegController.class);
+//    final static Logger log = LoggerFactory.getLogger(AppUserRegController.class);
     @Autowired
     private AppUserService appUserService;
-    @Autowired
-    private TaskEmailService taskEmailService;
-
     /**
      * 注册用户
      *

@@ -29,6 +29,7 @@ import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -76,14 +77,12 @@ public class AppUserServiceImpl implements AppUserService {
             appUser.setPassword2(password);
             appUser.setStatus(AppUserStatus.NOT_ACTIVATE_STATUS); //默认未激活用户
             appUserMapper.insertSelective(appUser);
-
             userId = appUser.getId();
-
         } catch (TaskException e) {
             throw new TaskException(ResultEnum.ADD_APP_USER_ERROR, e);
         }
         //添加用户扩展数据
-        addAppUserExtend(userId);
+        addAppUserExtend(uId, userId);
         String account = form.getAccount();
         //添加账号搜索
         if (NullUtils.isNotNull(account)) {
@@ -93,7 +92,8 @@ public class AppUserServiceImpl implements AppUserService {
         if (NullUtils.isNotNull(email)) {
 
             appUserByEmailService.addAppUserByEmail(email, userId);
-            sendActiveToken(email, userId);
+
+            // sendActiveToken(email, userId);
         }
         //添加手机号搜索
         String mobile = form.getMobile();
@@ -102,16 +102,17 @@ public class AppUserServiceImpl implements AppUserService {
             appUserByMobileService.addAppUserByMobile(mobile, userId);
         }
         /**添加unq搜索*/
-        primaryKeyByUniqueIdService.addPrimaryKeyByUniqueId(uId, userId);
+        primaryKeyByUniqueIdService.addPrimaryKeyByUniqueId(uId, userId, BaseFields.APP_USER_TYPE);
     }
 
     /**
      * 添加用户扩展表
      */
-    private void addAppUserExtend(Long userId) {
+    private void addAppUserExtend(String uId, Long userId) {
         try {
             AppUserExtend appUserExtend = new AppUserExtend();
-            appUserExtend.setUserId(userId);
+            appUserExtend.setUserId(uId);
+            appUserExtend.setCreationDate(new Date());
             appUserExtend.setCreator(userId);
             appUserExtend.setModifier(userId);
             appUserExtendMapper.insertSelective(appUserExtend);
@@ -140,6 +141,8 @@ public class AppUserServiceImpl implements AppUserService {
             log.error("io异常:{}", e);
         } catch (TemplateException e) {
             log.error("模板异常:{}", e);
+        } catch (Exception e) {
+            log.error("发送邮件异常{},{}", email, e);
         }
     }
 
