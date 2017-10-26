@@ -2,6 +2,7 @@ package com.sunny.task.core.interceptor;
 
 import com.google.gson.JsonObject;
 import com.sunny.task.common.base.BaseFields;
+import com.sunny.task.common.base.BaseResult;
 import com.sunny.task.common.base.ResultEnum;
 import com.sunny.task.common.context.TaskAppUserContext;
 import com.sunny.task.common.utils.CookiesUtils;
@@ -28,7 +29,7 @@ public class TaskInterceptor implements HandlerInterceptor {
     // TODO:后期可以根据环境判断开发环境过滤swagger文档
     // private static final List<String> EXCLUDES = Arrays.asList("/swagger-resources","/configuration/security", "/v2/api-docs", "/configuration/ui", "/reg", "/auth");
 
-    private static final String[] EXCLUDES = {/*"/swagger-resources", "/configuration/security", "/v2/api-docs", "/configuration/ui",*/ "/reg", "/auth", "/user"};
+    private static final String[] EXCLUDES = {/*"/swagger-resources", "/configuration/security", "/v2/api-docs", "/configuration/ui",*/"/error", "/reg", "/auth", "/user"};
 
     @Override
     public boolean preHandle(HttpServletRequest req, HttpServletResponse res, Object o) throws Exception {
@@ -39,7 +40,10 @@ public class TaskInterceptor implements HandlerInterceptor {
             res.setCharacterEncoding("UTF-8");
             res.setContentType("application/json");
             res.setStatus(SC_UNAUTHORIZED); //返回401状态码
-            res.getWriter().println(GsonUtils.getGson().toJson(ResultEnum.TASK_TOKEN_LOGIN_REJECT_ERROR));
+            BaseResult result = new BaseResult();
+            result.setCode(ResultEnum.TASK_TOKEN_LOGIN_REJECT_ERROR.getCode());
+            result.setMsg(ResultEnum.TASK_TOKEN_LOGIN_REJECT_ERROR.getMsg());
+            res.getWriter().println(GsonUtils.getGson().toJson(result));
             res.getWriter().flush();
             return false;
         } else {

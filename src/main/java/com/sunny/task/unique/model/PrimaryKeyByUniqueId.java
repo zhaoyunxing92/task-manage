@@ -14,9 +14,10 @@ public class PrimaryKeyByUniqueId extends BaseModel<String> {
         super();
     }
 
-    public PrimaryKeyByUniqueId(String uniqueId, Long primaryKey) {
+    public PrimaryKeyByUniqueId(String uniqueId, Long primaryKey, Byte keyType) {
         this.uniqueId = uniqueId;
         this.primaryKey = primaryKey;
+        this.keyType = keyType;
     }
 
     public String getUniqueId() {

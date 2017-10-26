@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.sunny.task.user.mapper.AppUserExtendMapper" >
   <resultMap id="BaseResultMap" type="com.sunny.task.user.model.AppUserExtend" >
-    <result column="USER_ID" property="userId" jdbcType="BIGINT" />
+    <result column="USER_ID" property="userId" jdbcType="VARCHAR" />
     <result column="SEX" property="sex" jdbcType="TINYINT" />
     <result column="BIRTHDATE" property="birthdate" jdbcType="DATE" />
     <result column="REAL_NAME" property="realName" jdbcType="VARCHAR" />
@@ -21,7 +21,7 @@
       ADDRESS, URL, CREATOR, 
       CREATION_DATE, MODIFIER, MODIFICATION_DATE
       )
-    values (#{userId,jdbcType=BIGINT}, #{sex,jdbcType=TINYINT}, #{birthdate,jdbcType=DATE}, 
+    values (#{userId,jdbcType=VARCHAR}, #{sex,jdbcType=TINYINT}, #{birthdate,jdbcType=DATE}, 
       #{realName,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{bio,jdbcType=VARCHAR}, 
       #{address,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{creator,jdbcType=BIGINT}, 
       #{creationDate,jdbcType=TIMESTAMP}, #{modifier,jdbcType=BIGINT}, #{modificationDate,jdbcType=TIMESTAMP}
@@ -69,7 +69,7 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="userId != null" >
-        #{userId,jdbcType=BIGINT},
+        #{userId,jdbcType=VARCHAR},
       </if>
       <if test="sex != null" >
         #{sex,jdbcType=TINYINT},

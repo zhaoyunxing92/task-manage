@@ -19,8 +19,8 @@ public class PrimaryKeyByUniqueIdServiceImpl implements PrimaryKeyByUniqueIdServ
     private PrimaryKeyByUniqueIdMapper primaryKeyByUniqueIdMapper;
 
     @Override
-    public void addPrimaryKeyByUniqueId(String unqId, Long pkId) {
-        primaryKeyByUniqueIdMapper.insertSelective(new PrimaryKeyByUniqueId(unqId, pkId));
+    public void addPrimaryKeyByUniqueId(String unqId, Long pkId,Byte type) {
+        primaryKeyByUniqueIdMapper.insertSelective(new PrimaryKeyByUniqueId(unqId, pkId,type));
     }
 
     @Override

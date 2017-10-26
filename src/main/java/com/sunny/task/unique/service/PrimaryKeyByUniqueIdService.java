@@ -14,7 +14,7 @@ public interface PrimaryKeyByUniqueIdService {
      * @param pkId
      * @param type
      */
-    void addPrimaryKeyByUniqueId(String unqId, Long pkId);
+    void addPrimaryKeyByUniqueId(String unqId, Long pkId,Byte type);
 
     /**
      * 根据唯一键获取主键id
