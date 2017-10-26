@@ -28,13 +28,26 @@ spring:
     pool:
       max-active: 8
       max-wait: 1
-      max-idle: 8
+      max-idle: 8   #ihacqpkuwqajeagg
   mail:
     host: smtp.qq.com
-    username: 2385585770@qq.com
+    username: zhao322614@foxmail.com
+    password: vuebnncudncveabf
     properties:
-     mail:
-      smtp:
-       auth: false
+      mail:
+        smtp:
+          auth: true
+          statttls:
+            enable: true
+            required: true
+          timeout: 72000
+
+#  mail:
+#    host: smtp.163.com
+#    username: zhaoyunxing94@163.com
+#    password: taskmanage1
+
+
+
 
 
