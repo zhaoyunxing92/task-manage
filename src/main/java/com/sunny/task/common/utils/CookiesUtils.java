@@ -26,6 +26,8 @@ public class CookiesUtils {
         Cookie cookie = new Cookie(key, value);
         // tomcat下多应用共享
         cookie.setPath("/");
+        //禁止js读取
+        cookie.setHttpOnly(Boolean.TRUE);
         res.addCookie(cookie);
     }
 

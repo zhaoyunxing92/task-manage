@@ -13,11 +13,33 @@ public class BaseFields implements Serializable {
 
     public static String DEFAULT_PASSWORD = "{taks/null}";
     /**
+     * 1=用户,2=团队,3=微应用,4=chat,5=project
+     */
+    public final static Byte APP_USER_TYPE = 1;
+    /**
+     * 团队
+     */
+    public final static Byte APP_ORG_TYPE = 2;
+    /**
+     * 微应用
+     */
+    public final static Byte APP_ORG_APP_TYPE = 3;
+    /**
+     * 群
+     */
+    public final static Byte APP_ORG_CHAT_TYPE = 4;
+    /**
+     * project
+     */
+    public final static Byte APP_ORG_PROJECT_TYPE = 5;
+
+
+    /**
      * 用户唯一id 前缀
      */
     public final static String APP_USER_PREFIX_UNQ_ID = "task";
 
-    public final static String TASK_ORG_PREFIX_UNQ_ID="org";
+    public final static String TASK_ORG_PREFIX_UNQ_ID = "org";
     /**
      * cookie 的key
      */
