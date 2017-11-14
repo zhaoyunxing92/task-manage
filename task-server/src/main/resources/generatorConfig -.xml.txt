@@ -29,7 +29,7 @@
 
         <!-- !!!! Model Configurations !!!! -->
         <!-- 生成实体类地址 -->
-        <javaModelGenerator targetPackage="com.sunny.task.org.model" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.sunny.task.project.model" targetProject="src/main/java">
             <!-- 是否对model添加 构造函数 -->
             <property name="constructorBased" value="false"/>
             <!-- 是否允许子包，即targetPackage.schemaName.tableName -->
@@ -37,14 +37,14 @@
             <!-- 建立的Model对象是否 不可改变  即生成的Model对象不会有 setter方法，只有构造方法 -->
             <property name="immutable" value="false"/>
             <!-- 给Model添加一个父类 -->
-            <property name="rootClass" value="com.sunny.task.common.base.BaseModel"/>
+            <property name="rootClass" value="com.sunny.task.model.BaseModel"/>
             <!-- 是否对类CHAR类型的列的数据进行trim操作 -->
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <!-- !!!! Mapper XML Configurations !!!! -->
         <!-- 生成mapxml文件 -->
-        <sqlMapGenerator targetPackage="com.sunny.task.org.mapper.xml" targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="com.sunny.task.project.mapper.xml" targetProject="src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
@@ -55,28 +55,28 @@
                 type="MIXEDMAPPER",生成基于注解的Java Model 和相应的Mapper对象
                 type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口
         -->
-       <!--<javaClientGenerator targetPackage="com.sunny.task.org.mapper" targetProject="src/main/java" type="XMLMAPPER">-->
-            <!--<property name="enableSubPackages" value="true"/>-->
-            <!--&lt;!&ndash;-->
-                    <!--定义Maper.java 源代码中的ByExample() 方法的可视性，可选的值有：-->
-                    <!--public;-->
-                    <!--private;-->
-                    <!--protected;-->
-                    <!--default-->
-                    <!--注意：如果 targetRuntime="MyBatis3",此参数被忽略-->
-             <!--&ndash;&gt;-->
-           <!--&lt;!&ndash; <property name="exampleMethodVisibility" value=""/>&ndash;&gt;-->
-            <!--&lt;!&ndash;-->
-              <!--方法名计数器-->
-              <!--Important note: this property is ignored if the target runtime is MyBatis3.-->
-             <!--&ndash;&gt;-->
-         <!--&lt;!&ndash;   <property name="methodNameCalculator" value=""/>&ndash;&gt;-->
-            <!--&lt;!&ndash;  为生成的接口添加父接口&ndash;&gt;-->
-            <!--<property name="rootInterface" value="com.sunny.task.common.base.BaseMapper"/>-->
-        <!--</javaClientGenerator>-->
+       <javaClientGenerator targetPackage="com.sunny.task.project.mapper" targetProject="src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+            <!--
+                    定义Maper.java 源代码中的ByExample() 方法的可视性，可选的值有：
+                    public;
+                    private;
+                    protected;
+                    default
+                    注意：如果 targetRuntime="MyBatis3",此参数被忽略
+             -->
+           <!-- <property name="exampleMethodVisibility" value=""/>-->
+            <!--
+              方法名计数器
+              Important note: this property is ignored if the target runtime is MyBatis3.
+             -->
+         <!--   <property name="methodNameCalculator" value=""/>-->
+            <!--  为生成的接口添加父接口-->
+            <property name="rootInterface" value="com.sunny.task.mapper.BaseMapper"/>
+        </javaClientGenerator>
 
         <!-- !!!! Table Configurations !!!! -->
-        <table tableName="organization" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+        <table tableName="project" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
             <!-- optional   , only for mybatis3 runtime
                  自动生成的键值（identity,或者序列值）
@@ -108,19 +108,11 @@
             <!--<columnRenamingRule searchString="" replaceString=""/>-->
         </table>
 
-        <table tableName="organization_app" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+        <table tableName="project_user" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
 
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
 
-        <table tableName="organization_chat" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
-
-        
-        
     </context>
 </generatorConfiguration>
