@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sunny.task.project.mapper.ProjectMapper" >
-  <resultMap id="BaseResultMap" type="com.sunny.task.project.model.Project" >
+<mapper namespace="com.sunny.task.mapper.project.ProjectMapper" >
+  <resultMap id="BaseResultMap" type="com.sunny.task.model.project.Project" >
     <id column="ID" property="id" jdbcType="BIGINT" />
     <result column="UNIQUE_ID" property="uniqueId" jdbcType="VARCHAR" />
     <result column="ORG_ID" property="orgId" jdbcType="VARCHAR" />
@@ -33,7 +33,7 @@
     delete from project
     where ID = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.sunny.task.project.model.Project" >
+  <insert id="insert" parameterType="com.sunny.task.model.project.Project" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -48,7 +48,7 @@
       #{autoAdd,jdbcType=BIT}, #{creator,jdbcType=BIGINT}, #{creationDate,jdbcType=TIMESTAMP}, 
       #{modifier,jdbcType=BIGINT}, #{modificationDate,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.sunny.task.project.model.Project" >
+  <insert id="insertSelective" parameterType="com.sunny.task.model.project.Project" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -148,7 +148,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.project.model.Project" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.model.project.Project" >
     update project
     <set >
       <if test="uniqueId != null" >
@@ -199,7 +199,7 @@
     </set>
     where ID = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.sunny.task.project.model.Project" >
+  <update id="updateByPrimaryKey" parameterType="com.sunny.task.model.project.Project" >
     update project
     set UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR},
       ORG_ID = #{orgId,jdbcType=VARCHAR},

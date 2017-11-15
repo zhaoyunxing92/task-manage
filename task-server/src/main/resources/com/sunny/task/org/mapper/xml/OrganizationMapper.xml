@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.sunny.task.org.mapper.OrganizationMapper">
-    <resultMap id="BaseResultMap" type="com.sunny.task.org.model.Organization">
+<mapper namespace="com.sunny.task.mapper.org.OrganizationMapper">
+    <resultMap id="BaseResultMap" type="com.sunny.task.model.org.Organization">
         <id column="ID" jdbcType="BIGINT" property="id"/>
         <result column="UNIQUE_ID" jdbcType="VARCHAR" property="uniqueId"/>
         <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId"/>
@@ -36,7 +36,7 @@
     where ID = #{id,jdbcType=BIGINT}
   </delete>
 
-    <insert id="insertSelective" parameterType="com.sunny.task.org.model.vo.OrganizationVo">
+    <insert id="insertSelective" parameterType="com.sunny.task.model.org.vo.OrganizationVo">
         <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
             SELECT LAST_INSERT_ID()
         </selectKey>
@@ -148,7 +148,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.org.model.Organization">
+    <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.model.org.Organization">
         update organization
         <set>
             <if test="uniqueId != null">
@@ -205,7 +205,7 @@
         </set>
         where ID = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.sunny.task.org.model.Organization">
+    <update id="updateByPrimaryKey" parameterType="com.sunny.task.model.org.Organization">
     update organization
     set UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR},
       OWNER_ID = #{ownerId,jdbcType=VARCHAR},
@@ -227,12 +227,12 @@
     where ID = #{id,jdbcType=BIGINT}
   </update>
 
-    <resultMap id="OrganizationVo" extends="BaseResultMap" type="com.sunny.task.org.model.vo.OrganizationVo">
+    <resultMap id="OrganizationVo" extends="BaseResultMap" type="com.sunny.task.model.org.vo.OrganizationVo">
         <result column="PRO_COUNT" jdbcType="INTEGER" property="proCount"/>
         <result column="ICON_URL" jdbcType="VARCHAR" property="iconUrl"/>
         <result column="is_admin" jdbcType="BIT" property="isAdmin"/>
         <association column="{orgId=UNIQUE_ID}" property="userCount"
-                    select="com.sunny.task.org.mapper.OrganizationMemberMapper.selectCountByOrgId"></association>
+                    select="com.sunny.task.mapper.org.OrganizationMemberMapper.selectCountByOrgId"></association>
     </resultMap>
     <!--获取组织详情-->
     <select id="selectOrgDetailByUId" resultMap="OrganizationVo">

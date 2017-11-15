@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.sunny.task.user.mapper.AppUserRoleMapper">
-  <resultMap id="BaseResultMap" type="com.sunny.task.user.model.AppUserRole">
+<mapper namespace="com.sunny.task.mapper.user.AppUserRoleMapper">
+  <resultMap id="BaseResultMap" type="com.sunny.task.model.user.AppUserRole">
     <result column="USER_ID" jdbcType="BIGINT" property="userId" />
     <result column="ROLE_ID" jdbcType="BIGINT" property="roleId" />
     <result column="STATUS" jdbcType="TINYINT" property="status" />
@@ -10,7 +10,7 @@
     <result column="MODIFIER" jdbcType="BIGINT" property="modifier" />
     <result column="MODIFICATION_DATE" jdbcType="TIMESTAMP" property="modificationDate" />
   </resultMap>
-  <insert id="insertSelective" parameterType="com.sunny.task.user.model.AppUserRole">
+  <insert id="insertSelective" parameterType="com.sunny.task.model.user.AppUserRole">
     insert into app_user_role
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="userId != null">

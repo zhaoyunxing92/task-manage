@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sunny.task.user.mapper.AppUserExtendMapper" >
-  <resultMap id="BaseResultMap" type="com.sunny.task.user.model.AppUserExtend" >
+<mapper namespace="com.sunny.task.mapper.user.AppUserExtendMapper" >
+  <resultMap id="BaseResultMap" type="com.sunny.task.model.user.AppUserExtend" >
     <result column="USER_ID" property="userId" jdbcType="VARCHAR" />
     <result column="SEX" property="sex" jdbcType="TINYINT" />
     <result column="BIRTHDATE" property="birthdate" jdbcType="DATE" />
@@ -15,7 +15,7 @@
     <result column="MODIFIER" property="modifier" jdbcType="BIGINT" />
     <result column="MODIFICATION_DATE" property="modificationDate" jdbcType="TIMESTAMP" />
   </resultMap>
-  <insert id="insert" parameterType="com.sunny.task.user.model.AppUserExtend" >
+  <insert id="insert" parameterType="com.sunny.task.model.user.AppUserExtend" >
     insert into app_user_extend (USER_ID, SEX, BIRTHDATE, 
       REAL_NAME, CITY, BIO, 
       ADDRESS, URL, CREATOR, 
@@ -27,7 +27,7 @@
       #{creationDate,jdbcType=TIMESTAMP}, #{modifier,jdbcType=BIGINT}, #{modificationDate,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.sunny.task.user.model.AppUserExtend" >
+  <insert id="insertSelective" parameterType="com.sunny.task.model.user.AppUserExtend" >
     insert into app_user_extend
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="userId != null" >

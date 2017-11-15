@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sunny.task.user.mapper.AppRoleMapper" >
-  <resultMap id="BaseResultMap" type="com.sunny.task.user.model.AppRole" >
+<mapper namespace="com.sunny.task.mapper.user.AppRoleMapper" >
+  <resultMap id="BaseResultMap" type="com.sunny.task.model.user.AppRole" >
     <id column="ID" property="id" jdbcType="BIGINT" />
     <result column="UNIQUE_ID" property="uniqueId" jdbcType="VARCHAR" />
     <result column="ROLE_NAME" property="roleName" jdbcType="VARCHAR" />
@@ -28,7 +28,7 @@
     delete from app_role
     where ID = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.sunny.task.user.model.AppRole" >
+  <insert id="insert" parameterType="com.sunny.task.model.user.AppRole" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -41,7 +41,7 @@
       #{creator,jdbcType=BIGINT}, #{creationDate,jdbcType=TIMESTAMP}, #{modifier,jdbcType=BIGINT}, 
       #{modificationDate,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.sunny.task.user.model.AppRole" >
+  <insert id="insertSelective" parameterType="com.sunny.task.model.user.AppRole" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -111,7 +111,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.user.model.AppRole" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.model.user.AppRole" >
     update app_role
     <set >
       <if test="uniqueId != null" >
@@ -147,7 +147,7 @@
     </set>
     where ID = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.sunny.task.user.model.AppRole" >
+  <update id="updateByPrimaryKey" parameterType="com.sunny.task.model.user.AppRole" >
     update app_role
     set UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR},
       ROLE_NAME = #{roleName,jdbcType=VARCHAR},

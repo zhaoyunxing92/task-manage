@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sunny.task.user.mapper.AppUserByMobileMapper">
-    <resultMap id="BaseResultMap" type="com.sunny.task.user.model.AppUserByMobile">
+<mapper namespace="com.sunny.task.mapper.user.AppUserByMobileMapper">
+    <resultMap id="BaseResultMap" type="com.sunny.task.model.user.AppUserByMobile">
         <id column="MOBILE" property="mobile" jdbcType="VARCHAR"/>
         <result column="USER_ID" property="userId" jdbcType="BIGINT"/>
     </resultMap>
@@ -18,11 +18,11 @@
     delete from app_user_by_mobile
     where MOBILE = #{mobile,jdbcType=VARCHAR}
   </delete>
-    <insert id="insert" parameterType="com.sunny.task.user.model.AppUserByMobile">
+    <insert id="insert" parameterType="com.sunny.task.model.user.AppUserByMobile">
     insert into app_user_by_mobile (MOBILE, USER_ID)
     values (#{mobile,jdbcType=VARCHAR}, #{userId,jdbcType=BIGINT})
   </insert>
-    <insert id="insertSelective" parameterType="com.sunny.task.user.model.AppUserByMobile">
+    <insert id="insertSelective" parameterType="com.sunny.task.model.user.AppUserByMobile">
         insert into app_user_by_mobile
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="mobile != null">
@@ -41,7 +41,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.user.model.AppUserByMobile">
+    <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.model.user.AppUserByMobile">
         update app_user_by_mobile
         <set>
             <if test="userId != null">
@@ -50,7 +50,7 @@
         </set>
         where MOBILE = #{mobile,jdbcType=VARCHAR}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.sunny.task.user.model.AppUserByMobile">
+    <update id="updateByPrimaryKey" parameterType="com.sunny.task.model.user.AppUserByMobile">
     update app_user_by_mobile
     set USER_ID = #{userId,jdbcType=BIGINT}
     where MOBILE = #{mobile,jdbcType=VARCHAR}

@@ -1,3 +1,4 @@
+
 server:
   port: 8088
   # http://blog.csdn.net/isea533/article/details/50359390
@@ -41,14 +42,15 @@ spring:
           statttls:
             enable: true
             required: true
-         # timeout: 72000
-
-
-#  mail:
-#    host: smtp.163.com
-#    username: zhaoyunxing94@163.com
-#    password: taskmanage1
-
+#  日志配置
+logging:
+  level:
+    #com.sunny.task: debug
+    com.sunny.task.mapper: debug   #mapper输入 sql语句
+    org.springfromework.web: debug
+  path: logs/task.log
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} [%5p]:%L %c - %5m%n'
 
 
 

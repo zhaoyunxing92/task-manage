@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.sunny.task.org.mapper.OrganizationResourceMapper">
-  <resultMap id="BaseResultMap" type="com.sunny.task.org.model.OrganizationResource">
+<mapper namespace="com.sunny.task.mapper.org.OrganizationResourceMapper">
+  <resultMap id="BaseResultMap" type="com.sunny.task.model.org.OrganizationResource">
     <result column="ORG_ID" jdbcType="VARCHAR" property="orgId" />
     <result column="CORP_NAME" jdbcType="VARCHAR" property="corpName" />
     <result column="CORP_ID" jdbcType="VARCHAR" property="corpId" />
@@ -17,7 +17,7 @@
     <result column="MODIFICATION_DATE" jdbcType="TIMESTAMP" property="modificationDate" />
   </resultMap>
   
-  <insert id="insertSelective" parameterType="com.sunny.task.org.model.OrganizationResource">
+  <insert id="insertSelective" parameterType="com.sunny.task.model.org.OrganizationResource">
     insert into organization_resource
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="orgId != null">

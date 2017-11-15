@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sunny.task.user.mapper.AppUserMapper">
-    <resultMap id="BaseResultMap" type="com.sunny.task.user.model.AppUser">
+<mapper namespace="com.sunny.task.mapper.user.AppUserMapper">
+    <resultMap id="BaseResultMap" type="com.sunny.task.model.user.AppUser">
         <id column="ID" property="id" jdbcType="BIGINT"/>
         <result column="UNIQUE_ID" property="uniqueId" jdbcType="VARCHAR"/>
         <result column="ACCOUNT" property="account" jdbcType="VARCHAR"/>
@@ -37,7 +37,7 @@
     where ID = #{id,jdbcType=BIGINT}
   </delete>
 
-    <insert id="insertSelective" parameterType="com.sunny.task.user.model.AppUser">
+    <insert id="insertSelective" parameterType="com.sunny.task.model.user.AppUser">
         <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
             SELECT LAST_INSERT_ID()
         </selectKey>
@@ -149,7 +149,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.user.model.AppUser">
+    <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.model.user.AppUser">
         update app_user
         <set>
             <if test="uniqueId != null">
@@ -207,7 +207,7 @@
         where ID = #{id,jdbcType=BIGINT}
     </update>
 
-    <resultMap id="AppUserVo" type="com.sunny.task.user.model.vo.AppUserVo" extends="BaseResultMap">
+    <resultMap id="AppUserVo" type="com.sunny.task.model.user.vo.AppUserVo" extends="BaseResultMap">
         <result column="real_name" property="realName" jdbcType="VARCHAR"/>
         <result column="sex" property="sex" jdbcType="TINYINT"/>
         <result column="city" property="city" jdbcType="VARCHAR"/>

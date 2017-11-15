@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.sunny.task.org.mapper.OrganizationMemberMapper">
-    <resultMap id="BaseResultMap" type="com.sunny.task.org.model.OrganizationMember">
+<mapper namespace="com.sunny.task.mapper.org.OrganizationMemberMapper">
+    <resultMap id="BaseResultMap" type="com.sunny.task.model.org.OrganizationMember">
         <id column="ID" jdbcType="BIGINT" property="id"/>
         <result column="ORG_ID" jdbcType="VARCHAR" property="orgId"/>
         <result column="USER_ID" jdbcType="VARCHAR" property="userId"/>
@@ -34,7 +34,7 @@
     delete from organization_member
     where ID = #{id,jdbcType=BIGINT}
   </delete>
-    <insert id="insert" parameterType="com.sunny.task.org.model.OrganizationMember">
+    <insert id="insert" parameterType="com.sunny.task.model.org.OrganizationMember">
         <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
             SELECT LAST_INSERT_ID()
         </selectKey>
@@ -51,7 +51,7 @@
         #{creator,jdbcType=BIGINT}, #{creationDate,jdbcType=TIMESTAMP}, #{modifier,jdbcType=BIGINT},
         #{modificationDate,jdbcType=TIMESTAMP})
     </insert>
-    <insert id="insertSelective" parameterType="com.sunny.task.org.model.OrganizationMember">
+    <insert id="insertSelective" parameterType="com.sunny.task.model.org.OrganizationMember">
         <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
             SELECT LAST_INSERT_ID()
         </selectKey>
@@ -157,7 +157,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.org.model.OrganizationMember">
+    <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.model.org.OrganizationMember">
         update organization_member
         <set>
             <if test="orgId != null">
@@ -211,7 +211,7 @@
         </set>
         where ID = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.sunny.task.org.model.OrganizationMember">
+    <update id="updateByPrimaryKey" parameterType="com.sunny.task.model.org.OrganizationMember">
     update organization_member
     set ORG_ID = #{orgId,jdbcType=VARCHAR},
       USER_ID = #{userId,jdbcType=VARCHAR},

@@ -31,7 +31,7 @@ import javax.validation.UnexpectedTypeException;
 public class TaskManageHandle {
     private final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(TaskManageHandle.class);
 
-    // MyBatisSystemException nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'open' in 'class com.sunny.bugmanage.project.form.ProjectForm
+    // MyBatisSystemException nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'open' in 'class com.sunny.bugmanage.project.org.ProjectForm
     @ExceptionHandler({BindException.class, MethodArgumentNotValidException.class, HttpMessageNotReadableException.class, MyBatisSystemException.class})
     @ResponseBody
     @ResponseStatus(HttpStatus.BAD_REQUEST)
