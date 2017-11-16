@@ -11,4 +11,11 @@ public interface ProjectMapper extends BaseMapper<ProjectVo,Long> {
      * @return
      */
     ProjectVo selectProjectDetailsByUId(@Param("uId") String uId);
+
+    /**
+     * 获取项目个数
+     * @param orgId
+     * @return
+     */
+    Integer selectProjectCountByOrgId(@Param("orgId")String orgId);
 }

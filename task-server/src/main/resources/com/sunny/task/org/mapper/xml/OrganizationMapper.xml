@@ -3,7 +3,7 @@
 <mapper namespace="com.sunny.task.mapper.org.OrganizationMapper">
     <resultMap id="BaseResultMap" type="com.sunny.task.model.org.Organization">
         <id column="ID" jdbcType="BIGINT" property="id"/>
-        <result column="UNIQUE_ID" jdbcType="VARCHAR" property="uniqueId"/>
+        <result column="UNIQUE_ID" jdbcType="VARCHAR" property="uId"/>
         <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId"/>
         <result column="NAME" jdbcType="VARCHAR" property="name"/>
         <result column="ICON_FILE_ID" jdbcType="VARCHAR" property="iconFileId"/>
@@ -31,6 +31,7 @@
         from organization
         where ID = #{id,jdbcType=BIGINT}
     </select>
+    
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from organization
     where ID = #{id,jdbcType=BIGINT}
@@ -42,7 +43,7 @@
         </selectKey>
         insert into organization
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="uniqueId != null">
+            <if test="uId != null">
                 UNIQUE_ID,
             </if>
             <if test="ownerId != null">
@@ -95,7 +96,7 @@
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
-            <if test="uniqueId != null">
+            <if test="uId != null">
                 #{uniqueId,jdbcType=VARCHAR},
             </if>
             <if test="ownerId != null">
@@ -151,8 +152,8 @@
     <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.model.org.Organization">
         update organization
         <set>
-            <if test="uniqueId != null">
-                UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR},
+            <if test="uId != null">
+                UNIQUE_ID = #{uId,jdbcType=VARCHAR},
             </if>
             <if test="ownerId != null">
                 OWNER_ID = #{ownerId,jdbcType=VARCHAR},
@@ -205,34 +206,15 @@
         </set>
         where ID = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.sunny.task.model.org.Organization">
-    update organization
-    set UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR},
-      OWNER_ID = #{ownerId,jdbcType=VARCHAR},
-      NAME = #{name,jdbcType=VARCHAR},
-      ICON_FILE_ID = #{iconFileId,jdbcType=VARCHAR},
-      DESCRIPTION = #{description,jdbcType=VARCHAR},
-      INTRO = #{intro,jdbcType=VARCHAR},
-      TYPE = #{type,jdbcType=TINYINT},
-      STATUS = #{status,jdbcType=TINYINT},
-      AUTO_ADD = #{autoAdd,jdbcType=BIT},
-      OPEN = #{open,jdbcType=BIT},
-      MEMBER_LIMIT = #{memberLimit,jdbcType=INTEGER},
-      ADDRESS = #{address,jdbcType=VARCHAR},
-      CREATE_MODE = #{createMode,jdbcType=TINYINT},
-      CREATOR = #{creator,jdbcType=BIGINT},
-      CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
-      MODIFIER = #{modifier,jdbcType=BIGINT},
-      MODIFICATION_DATE = #{modificationDate,jdbcType=TIMESTAMP}
-    where ID = #{id,jdbcType=BIGINT}
-  </update>
 
     <resultMap id="OrganizationVo" extends="BaseResultMap" type="com.sunny.task.model.org.vo.OrganizationVo">
         <result column="PRO_COUNT" jdbcType="INTEGER" property="proCount"/>
         <result column="ICON_URL" jdbcType="VARCHAR" property="iconUrl"/>
         <result column="is_admin" jdbcType="BIT" property="isAdmin"/>
         <association column="{orgId=UNIQUE_ID}" property="userCount"
-                    select="com.sunny.task.mapper.org.OrganizationMemberMapper.selectCountByOrgId"></association>
+                     select="com.sunny.task.mapper.org.OrganizationMemberMapper.selectCountByOrgId"/>
+        <association column="{orgId=UNIQUE_ID}" property="proCount"
+                     select="com.sunny.task.mapper.project.ProjectMapper.selectProjectCountByOrgId"/>
     </resultMap>
     <!--获取组织详情-->
     <select id="selectOrgDetailByUId" resultMap="OrganizationVo">

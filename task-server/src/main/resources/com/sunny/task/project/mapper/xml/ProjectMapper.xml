@@ -185,7 +185,7 @@
         </set>
         where ID = #{id,jdbcType=BIGINT}
     </update>
-    
+
     <resultMap id="projectVo" extends="BaseResultMap" type="com.sunny.task.model.project.vo.ProjectVo">
         <result column="UNIQUE_ID" jdbcType="VARCHAR" property="uId"/>
         <result column="FILE_URL" jdbcType="VARCHAR" property="iconUrl"/>
@@ -205,6 +205,11 @@
           PROJECT A LEFT JOIN PROJECT_USER B ON
           A.UNIQUE_ID = B.PRO_ID LEFT JOIN APP_FILE_RELATE C ON A.ICON_FILE_ID=C.UNIQUE_ID
       WHERE A.UNIQUE_ID = #{uId,jdbcType=VARCHAR}
-  </select>
+    </select>
+
+    <!--统计项目格式-->
+    <select id="selectProjectCountByOrgId" resultType="java.lang.Integer">
+      SELECT count(id) from project where ORG_ID=#{orgId,jdbcType=VARCHAR}
+    </select>
 
 </mapper>

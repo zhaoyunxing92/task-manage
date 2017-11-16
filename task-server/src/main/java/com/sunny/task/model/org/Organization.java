@@ -5,7 +5,6 @@ import com.sunny.task.model.BaseModel;
 
 public class Organization extends BaseModel<Long> {
     private static final long serialVersionUID = 4356137616144347164L;
-    private String uniqueId;
 
     private String ownerId;
 
@@ -30,16 +29,7 @@ public class Organization extends BaseModel<Long> {
     private String address;
 
     private Byte createMode;
-
-
-    public String getUniqueId() {
-        return uniqueId;
-    }
-
-    public void setUniqueId(String uniqueId) {
-        this.uniqueId = uniqueId == null ? null : uniqueId.trim();
-    }
-
+    
     public String getOwnerId() {
         return ownerId;
     }

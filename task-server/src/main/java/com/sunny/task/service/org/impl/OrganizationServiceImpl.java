@@ -47,7 +47,7 @@ public class OrganizationServiceImpl implements OrganizationService {
             unqId = UUIDUtills.getPrefixUUID(BaseFields.TASK_ORG_PREFIX_UNQ_ID);
             orgVo = new OrganizationVo();
             BeanUtils.copyProperties(form, orgVo);
-            orgVo.setUniqueId(unqId);
+            orgVo.setuId(unqId);
             orgVo.setOwnerId(userUnquId);
             organizationMapper.insertSelective(orgVo);
         } catch (TaskException e) {
