@@ -51,6 +51,10 @@ public class BaseForm<T extends Serializable> implements Serializable {
     private T id;
 
     private String uid;
+    /**
+     * 自动添加
+     */
+    private Boolean autoAdd;
     
     public Integer getItem() {
         if (item <= 0) {
@@ -115,5 +119,12 @@ public class BaseForm<T extends Serializable> implements Serializable {
     public void setStatus(Byte status) {
         this.status = status;
     }
-    
+
+    public Boolean getAutoAdd() {
+        return autoAdd;
+    }
+
+    public void setAutoAdd(Boolean autoAdd) {
+        this.autoAdd = autoAdd;
+    }
 }

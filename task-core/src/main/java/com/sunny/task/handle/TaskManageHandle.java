@@ -8,6 +8,7 @@ import com.sunny.task.result.ResultEnum;
 import com.sunny.task.utils.ResultUtils;
 import org.apache.ibatis.binding.BindingException;
 import org.mybatis.spring.MyBatisSystemException;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.TransientDataAccessResourceException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -96,7 +97,23 @@ public class TaskManageHandle {
 
         TaskUserAuthException taskUserAuthException = (TaskUserAuthException) ex;
         return ResultUtils.error(taskUserAuthException.getCode(), taskUserAuthException.getMessage());
-
     }
+    //DuplicateKeyException
+
+    /**
+     * 401权限不足
+     *
+     * @param ex
+     * @return 唯一键重复
+     */
+    @ExceptionHandler({DuplicateKeyException.class})
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseBody
+    public BaseResult DuplicateKeyException(DuplicateKeyException ex) {
+        String exMsg = ex.getMessage();
+        logger.error("唯一键重复：{}", ex);
+        return ResultUtils.error(ResultEnum.DUPLICATE_KEY_EXCEPTION, exMsg.substring(exMsg.indexOf("Duplicate entry"), exMsg.indexOf("for key")));
+    }
+
 
 }

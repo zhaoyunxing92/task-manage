@@ -12,5 +12,12 @@ import com.sunny.task.model.project.vo.ProjectVo;
 public interface ProjectService {
      String pro_uid_prefix = "task";
 
-    ProjectVo addProject(ProForm form);
+    String addProject(ProForm form);
+
+    /**
+     * 根据项目id获取项目详情
+     * @param uId
+     * @return
+     */
+    ProjectVo getProjectDetailsByUId(String uId);
 }

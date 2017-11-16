@@ -4,7 +4,7 @@ import com.sunny.task.model.BaseModel;
 
 public class Project extends BaseModel<Long> {
 
-    private String uniqueId;
+    private static final long serialVersionUID = 4113641577209176205L;
 
     private String orgId;
 
@@ -16,7 +16,7 @@ public class Project extends BaseModel<Long> {
 
     private String url;
 
-    private Long iconFileId;
+    private String iconFileId;
 
     private Integer memberLimit;
 
@@ -25,14 +25,6 @@ public class Project extends BaseModel<Long> {
     private Boolean open;
 
     private Boolean autoAdd;
-
-    public String getUniqueId() {
-        return uniqueId;
-    }
-
-    public void setUniqueId(String uniqueId) {
-        this.uniqueId = uniqueId == null ? null : uniqueId.trim();
-    }
 
     public String getOrgId() {
         return orgId;
@@ -74,12 +66,12 @@ public class Project extends BaseModel<Long> {
         this.url = url == null ? null : url.trim();
     }
 
-    public Long getIconFileId() {
+    public String getIconFileId() {
         return iconFileId;
     }
 
-    public void setIconFileId(Long iconFileId) {
-        this.iconFileId = iconFileId;
+    public void setIconFileId(String iconFileId) {
+        this.iconFileId = iconFileId == null ? null : iconFileId.trim();
     }
 
     public Integer getMemberLimit() {
@@ -113,5 +105,5 @@ public class Project extends BaseModel<Long> {
     public void setAutoAdd(Boolean autoAdd) {
         this.autoAdd = autoAdd;
     }
-    
+
 }

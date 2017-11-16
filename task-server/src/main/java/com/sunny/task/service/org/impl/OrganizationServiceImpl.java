@@ -8,9 +8,9 @@ import com.sunny.task.form.org.OrgForm;
 import com.sunny.task.form.org.OrgUserForm;
 import com.sunny.task.mapper.org.OrganizationMapper;
 import com.sunny.task.model.org.vo.OrganizationVo;
+import com.sunny.task.result.ResultEnum;
 import com.sunny.task.service.org.OrganizationService;
 import com.sunny.task.service.org.OrganizationUserService;
-import com.sunny.task.result.ResultEnum;
 import com.sunny.task.service.unique.PrimaryKeyByUniqueIdService;
 import com.sunny.task.utils.NullUtils;
 import com.sunny.task.utils.UUIDUtills;
@@ -54,10 +54,9 @@ public class OrganizationServiceImpl implements OrganizationService {
             throw new TaskException(ResultEnum.TASK_INSERT_ORG_ERROR, e);
         }
         //添加成员
-        Long orgId = orgVo.getId();
         addOrgUser(unqId, userUnquId);
         /**添加unq搜索*/
-        primaryKeyByUniqueIdService.addPrimaryKeyByUniqueId(unqId, orgId, BaseFields.APP_ORG_TYPE);
+        primaryKeyByUniqueIdService.addPrimaryKeyByUniqueId(unqId, orgVo.getId(), BaseFields.APP_ORG_TYPE);
         return orgVo;
     }
 

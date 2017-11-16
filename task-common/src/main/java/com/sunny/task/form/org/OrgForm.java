@@ -46,11 +46,6 @@ public class OrgForm extends BaseForm<Long> {
      */
     private Boolean open;
 
-    /**
-     * 是否自动加入
-     */
-    private Boolean autoAdd;
-
     public String getName() {
         return name;
     }
@@ -91,11 +86,4 @@ public class OrgForm extends BaseForm<Long> {
         this.open = open;
     }
 
-    public Boolean getAutoAdd() {
-        return autoAdd;
-    }
-
-    public void setAutoAdd(Boolean autoAdd) {
-        this.autoAdd = autoAdd;
-    }
 }

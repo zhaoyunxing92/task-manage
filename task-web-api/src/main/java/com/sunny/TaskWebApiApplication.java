@@ -6,11 +6,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
 @EnableAutoConfiguration //开启自动注入bean
-@MapperScan("com.sunny.task.**.mapper")
+@MapperScan("com.sunny.task.mapper")
 @Import(TaskManageConfig.class)
+@EnableAsync  //开启异步执行
 public class TaskWebApiApplication {
 
 	public static void main(String[] args) {

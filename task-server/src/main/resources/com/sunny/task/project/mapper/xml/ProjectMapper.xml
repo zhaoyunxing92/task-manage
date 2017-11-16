@@ -1,221 +1,210 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sunny.task.mapper.project.ProjectMapper" >
-  <resultMap id="BaseResultMap" type="com.sunny.task.model.project.Project" >
-    <id column="ID" property="id" jdbcType="BIGINT" />
-    <result column="UNIQUE_ID" property="uniqueId" jdbcType="VARCHAR" />
-    <result column="ORG_ID" property="orgId" jdbcType="VARCHAR" />
-    <result column="OWNER_ID" property="ownerId" jdbcType="VARCHAR" />
-    <result column="NAME" property="name" jdbcType="VARCHAR" />
-    <result column="INTRO" property="intro" jdbcType="VARCHAR" />
-    <result column="URL" property="url" jdbcType="VARCHAR" />
-    <result column="ICON_FILE_ID" property="iconFileId" jdbcType="BIGINT" />
-    <result column="MEMBER_LIMIT" property="memberLimit" jdbcType="INTEGER" />
-    <result column="STATUS" property="status" jdbcType="TINYINT" />
-    <result column="OPEN" property="open" jdbcType="BIT" />
-    <result column="AUTO_ADD" property="autoAdd" jdbcType="BIT" />
-    <result column="CREATOR" property="creator" jdbcType="BIGINT" />
-    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
-    <result column="MODIFIER" property="modifier" jdbcType="BIGINT" />
-    <result column="MODIFICATION_DATE" property="modificationDate" jdbcType="TIMESTAMP" />
-  </resultMap>
-  <sql id="Base_Column_List" >
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sunny.task.mapper.project.ProjectMapper">
+    <resultMap id="BaseResultMap" type="com.sunny.task.model.project.Project">
+        <id column="ID" jdbcType="BIGINT" property="id"/>
+        <result column="UNIQUE_ID" jdbcType="VARCHAR" property="uId"/>
+        <result column="ORG_ID" jdbcType="VARCHAR" property="orgId"/>
+        <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId"/>
+        <result column="NAME" jdbcType="VARCHAR" property="name"/>
+        <result column="INTRO" jdbcType="VARCHAR" property="intro"/>
+        <result column="URL" jdbcType="VARCHAR" property="url"/>
+        <result column="ICON_FILE_ID" jdbcType="VARCHAR" property="iconFileId"/>
+        <result column="MEMBER_LIMIT" jdbcType="INTEGER" property="memberLimit"/>
+        <result column="STATUS" jdbcType="TINYINT" property="status"/>
+        <result column="OPEN" jdbcType="BIT" property="open"/>
+        <result column="AUTO_ADD" jdbcType="BIT" property="autoAdd"/>
+        <result column="CREATOR" jdbcType="BIGINT" property="creator"/>
+        <result column="CREATION_DATE" jdbcType="TIMESTAMP" property="creationDate"/>
+        <result column="MODIFIER" jdbcType="BIGINT" property="modifier"/>
+        <result column="MODIFICATION_DATE" jdbcType="TIMESTAMP" property="modificationDate"/>
+    </resultMap>
+    <sql id="Base_Column_List">
     ID, UNIQUE_ID, ORG_ID, OWNER_ID, NAME, INTRO, URL, ICON_FILE_ID, MEMBER_LIMIT, STATUS, 
     OPEN, AUTO_ADD, CREATOR, CREATION_DATE, MODIFIER, MODIFICATION_DATE
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
-    select 
-    <include refid="Base_Column_List" />
-    from project
-    where ID = #{id,jdbcType=BIGINT}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from project
+        where ID = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from project
     where ID = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.sunny.task.model.project.Project" >
-    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into project (UNIQUE_ID, ORG_ID, OWNER_ID, 
-      NAME, INTRO, URL, ICON_FILE_ID, 
-      MEMBER_LIMIT, STATUS, OPEN, 
-      AUTO_ADD, CREATOR, CREATION_DATE, 
-      MODIFIER, MODIFICATION_DATE)
-    values (#{uniqueId,jdbcType=VARCHAR}, #{orgId,jdbcType=VARCHAR}, #{ownerId,jdbcType=VARCHAR}, 
-      #{name,jdbcType=VARCHAR}, #{intro,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{iconFileId,jdbcType=BIGINT}, 
-      #{memberLimit,jdbcType=INTEGER}, #{status,jdbcType=TINYINT}, #{open,jdbcType=BIT}, 
-      #{autoAdd,jdbcType=BIT}, #{creator,jdbcType=BIGINT}, #{creationDate,jdbcType=TIMESTAMP}, 
-      #{modifier,jdbcType=BIGINT}, #{modificationDate,jdbcType=TIMESTAMP})
-  </insert>
-  <insert id="insertSelective" parameterType="com.sunny.task.model.project.Project" >
-    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into project
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="uniqueId != null" >
-        UNIQUE_ID,
-      </if>
-      <if test="orgId != null" >
-        ORG_ID,
-      </if>
-      <if test="ownerId != null" >
-        OWNER_ID,
-      </if>
-      <if test="name != null" >
-        NAME,
-      </if>
-      <if test="intro != null" >
-        INTRO,
-      </if>
-      <if test="url != null" >
-        URL,
-      </if>
-      <if test="iconFileId != null" >
-        ICON_FILE_ID,
-      </if>
-      <if test="memberLimit != null" >
-        MEMBER_LIMIT,
-      </if>
-      <if test="status != null" >
-        STATUS,
-      </if>
-      <if test="open != null" >
-        OPEN,
-      </if>
-      <if test="autoAdd != null" >
-        AUTO_ADD,
-      </if>
-      <if test="creator != null" >
-        CREATOR,
-      </if>
-      <if test="creationDate != null" >
-        CREATION_DATE,
-      </if>
-      <if test="modifier != null" >
-        MODIFIER,
-      </if>
-      <if test="modificationDate != null" >
-        MODIFICATION_DATE,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="uniqueId != null" >
-        #{uniqueId,jdbcType=VARCHAR},
-      </if>
-      <if test="orgId != null" >
-        #{orgId,jdbcType=VARCHAR},
-      </if>
-      <if test="ownerId != null" >
-        #{ownerId,jdbcType=VARCHAR},
-      </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="intro != null" >
-        #{intro,jdbcType=VARCHAR},
-      </if>
-      <if test="url != null" >
-        #{url,jdbcType=VARCHAR},
-      </if>
-      <if test="iconFileId != null" >
-        #{iconFileId,jdbcType=BIGINT},
-      </if>
-      <if test="memberLimit != null" >
-        #{memberLimit,jdbcType=INTEGER},
-      </if>
-      <if test="status != null" >
-        #{status,jdbcType=TINYINT},
-      </if>
-      <if test="open != null" >
-        #{open,jdbcType=BIT},
-      </if>
-      <if test="autoAdd != null" >
-        #{autoAdd,jdbcType=BIT},
-      </if>
-      <if test="creator != null" >
-        #{creator,jdbcType=BIGINT},
-      </if>
-      <if test="creationDate != null" >
-        #{creationDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="modifier != null" >
-        #{modifier,jdbcType=BIGINT},
-      </if>
-      <if test="modificationDate != null" >
-        #{modificationDate,jdbcType=TIMESTAMP},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.model.project.Project" >
-    update project
-    <set >
-      <if test="uniqueId != null" >
-        UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR},
-      </if>
-      <if test="orgId != null" >
-        ORG_ID = #{orgId,jdbcType=VARCHAR},
-      </if>
-      <if test="ownerId != null" >
-        OWNER_ID = #{ownerId,jdbcType=VARCHAR},
-      </if>
-      <if test="name != null" >
-        NAME = #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="intro != null" >
-        INTRO = #{intro,jdbcType=VARCHAR},
-      </if>
-      <if test="url != null" >
-        URL = #{url,jdbcType=VARCHAR},
-      </if>
-      <if test="iconFileId != null" >
-        ICON_FILE_ID = #{iconFileId,jdbcType=BIGINT},
-      </if>
-      <if test="memberLimit != null" >
-        MEMBER_LIMIT = #{memberLimit,jdbcType=INTEGER},
-      </if>
-      <if test="status != null" >
-        STATUS = #{status,jdbcType=TINYINT},
-      </if>
-      <if test="open != null" >
-        OPEN = #{open,jdbcType=BIT},
-      </if>
-      <if test="autoAdd != null" >
-        AUTO_ADD = #{autoAdd,jdbcType=BIT},
-      </if>
-      <if test="creator != null" >
-        CREATOR = #{creator,jdbcType=BIGINT},
-      </if>
-      <if test="creationDate != null" >
-        CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="modifier != null" >
-        MODIFIER = #{modifier,jdbcType=BIGINT},
-      </if>
-      <if test="modificationDate != null" >
-        MODIFICATION_DATE = #{modificationDate,jdbcType=TIMESTAMP},
-      </if>
-    </set>
-    where ID = #{id,jdbcType=BIGINT}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.sunny.task.model.project.Project" >
-    update project
-    set UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR},
-      ORG_ID = #{orgId,jdbcType=VARCHAR},
-      OWNER_ID = #{ownerId,jdbcType=VARCHAR},
-      NAME = #{name,jdbcType=VARCHAR},
-      INTRO = #{intro,jdbcType=VARCHAR},
-      URL = #{url,jdbcType=VARCHAR},
-      ICON_FILE_ID = #{iconFileId,jdbcType=BIGINT},
-      MEMBER_LIMIT = #{memberLimit,jdbcType=INTEGER},
-      STATUS = #{status,jdbcType=TINYINT},
-      OPEN = #{open,jdbcType=BIT},
-      AUTO_ADD = #{autoAdd,jdbcType=BIT},
-      CREATOR = #{creator,jdbcType=BIGINT},
-      CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
-      MODIFIER = #{modifier,jdbcType=BIGINT},
-      MODIFICATION_DATE = #{modificationDate,jdbcType=TIMESTAMP}
-    where ID = #{id,jdbcType=BIGINT}
-  </update>
+
+    <insert id="insertSelective" parameterType="com.sunny.task.model.project.Project">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into project
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="uId != null">
+                UNIQUE_ID,
+            </if>
+            <if test="orgId != null">
+                ORG_ID,
+            </if>
+            <if test="ownerId != null">
+                OWNER_ID,
+            </if>
+            <if test="name != null">
+                NAME,
+            </if>
+            <if test="intro != null">
+                INTRO,
+            </if>
+            <if test="url != null">
+                URL,
+            </if>
+            <if test="iconFileId != null">
+                ICON_FILE_ID,
+            </if>
+            <if test="memberLimit != null">
+                MEMBER_LIMIT,
+            </if>
+            <if test="status != null">
+                STATUS,
+            </if>
+            <if test="open != null">
+                OPEN,
+            </if>
+            <if test="autoAdd != null">
+                AUTO_ADD,
+            </if>
+            <if test="creator != null">
+                CREATOR,
+            </if>
+            <if test="creationDate != null">
+                CREATION_DATE,
+            </if>
+            <if test="modifier != null">
+                MODIFIER,
+            </if>
+            <if test="modificationDate != null">
+                MODIFICATION_DATE,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="uId != null">
+                #{uId,jdbcType=VARCHAR},
+            </if>
+            <if test="orgId != null">
+                #{orgId,jdbcType=VARCHAR},
+            </if>
+            <if test="ownerId != null">
+                #{ownerId,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="intro != null">
+                #{intro,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null">
+                #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="iconFileId != null">
+                #{iconFileId,jdbcType=VARCHAR},
+            </if>
+            <if test="memberLimit != null">
+                #{memberLimit,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=TINYINT},
+            </if>
+            <if test="open != null">
+                #{open,jdbcType=BIT},
+            </if>
+            <if test="autoAdd != null">
+                #{autoAdd,jdbcType=BIT},
+            </if>
+            <if test="creator != null">
+                #{creator,jdbcType=BIGINT},
+            </if>
+            <if test="creationDate != null">
+                #{creationDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifier != null">
+                #{modifier,jdbcType=BIGINT},
+            </if>
+            <if test="modificationDate != null">
+                #{modificationDate,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.model.project.Project">
+        update project
+        <set>
+            <if test="uniqueId != null">
+                UNIQUE_ID = #{uniqueId,jdbcType=VARCHAR},
+            </if>
+            <if test="orgId != null">
+                ORG_ID = #{orgId,jdbcType=VARCHAR},
+            </if>
+            <if test="ownerId != null">
+                OWNER_ID = #{ownerId,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                NAME = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="intro != null">
+                INTRO = #{intro,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null">
+                URL = #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="iconFileId != null">
+                ICON_FILE_ID = #{iconFileId,jdbcType=VARCHAR},
+            </if>
+            <if test="memberLimit != null">
+                MEMBER_LIMIT = #{memberLimit,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                STATUS = #{status,jdbcType=TINYINT},
+            </if>
+            <if test="open != null">
+                OPEN = #{open,jdbcType=BIT},
+            </if>
+            <if test="autoAdd != null">
+                AUTO_ADD = #{autoAdd,jdbcType=BIT},
+            </if>
+            <if test="creator != null">
+                CREATOR = #{creator,jdbcType=BIGINT},
+            </if>
+            <if test="creationDate != null">
+                CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifier != null">
+                MODIFIER = #{modifier,jdbcType=BIGINT},
+            </if>
+            <if test="modificationDate != null">
+                MODIFICATION_DATE = #{modificationDate,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where ID = #{id,jdbcType=BIGINT}
+    </update>
+    
+    <resultMap id="projectVo" extends="BaseResultMap" type="com.sunny.task.model.project.vo.ProjectVo">
+        <result column="UNIQUE_ID" jdbcType="VARCHAR" property="uId"/>
+        <result column="FILE_URL" jdbcType="VARCHAR" property="iconUrl"/>
+        <result column="userCount" property="userCount"/>
+    </resultMap>
+
+    <!--根据项目id获取详情-->
+    <select id="selectProjectDetailsByUId" resultMap="projectVo">
+        SELECT
+          A.UNIQUE_ID,
+          A.NAME,
+          A.MEMBER_LIMIT,
+          A.ORG_ID,
+          C.FILE_URL,
+          if(count( B.ID )=0,null,count( B.ID )) userCount
+      FROM
+          PROJECT A LEFT JOIN PROJECT_USER B ON
+          A.UNIQUE_ID = B.PRO_ID LEFT JOIN APP_FILE_RELATE C ON A.ICON_FILE_ID=C.UNIQUE_ID
+      WHERE A.UNIQUE_ID = #{uId,jdbcType=VARCHAR}
+  </select>
+
 </mapper>

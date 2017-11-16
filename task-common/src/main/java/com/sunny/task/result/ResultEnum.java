@@ -111,10 +111,24 @@ public enum ResultEnum {
      */
     TASK_ORG_USER_OVERFLOW_ERROR(10022, "组织成员超限"),
     /**
-     *
+     * 创建组织异常
      */
     TASK_INSERT_ORG_ERROR(10023, "创建组织异常"),
 
+     /*=======================================项目模块========================================*/
+    /**
+     * 添加项目异常
+     */
+    TASK_INSERT_PRO_ERROR(10200, "添加项目异常"),
+
+    /**
+     * 添加项目成员异常
+     */
+    TASK_INSERT_PRO_USER_ERROR(10201, "添加项目成员异常"),
+    /**
+     *  项目成员超限
+     */
+    TASK_ORG_PRO_USER_OVERFLOW(10202, "项目成员超限"),
 
     /*===================================== token ===============================================*/
     /**
@@ -152,10 +166,16 @@ public enum ResultEnum {
     TASK_TOKEN_LOGIN_REJECT_ERROR(1006, "请先登录"),
 
     /*============================== 系统级别 =================================================*/
+
+
     /**
      * 参数异常
      */
-    PARAMETER_ERROR(2000, "参数错误！");
+    PARAMETER_ERROR(2000, "参数错误！"),
+    /**
+     * 唯一键重复
+     */
+    DUPLICATE_KEY_EXCEPTION(2001,"重复数据：");
 
     private Integer code;
     private String msg;

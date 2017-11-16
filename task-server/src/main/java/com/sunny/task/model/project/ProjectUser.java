@@ -4,6 +4,7 @@ import com.sunny.task.model.BaseModel;
 
 public class ProjectUser extends BaseModel<Long> {
 
+    private static final long serialVersionUID = 487647426338179039L;
     private String orgId;
 
     private String proId;

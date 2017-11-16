@@ -15,6 +15,9 @@ import java.util.Date;
 public class BaseModel<ID extends Serializable> implements Serializable {
     private static final long serialVersionUID = 720013901235423189L;
     private ID id;
+
+    private String uId;
+
     private Long creator;
 
     private Date creationDate;
@@ -29,6 +32,14 @@ public class BaseModel<ID extends Serializable> implements Serializable {
 
     public void setId(ID id) {
         this.id = id;
+    }
+
+    public String getuId() {
+        return uId;
+    }
+
+    public void setuId(String uId) {
+        this.uId = uId;
     }
 
     public Long getCreator() {

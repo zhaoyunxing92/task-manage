@@ -27,16 +27,16 @@ import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
  */
 public class TaskInterceptor implements HandlerInterceptor {
 
-    private static final String[] EXCLUDES = {/*"/swagger-resources", "/configuration/security", "/v2/api-docs", "/configuration/ui",*/"/error", "/reg", "/auth", "/user"};
+    private static final String[] EXCLUDES = {"/error", "/reg", "/auth", "/user"};
 
     @Override
     public boolean preHandle(HttpServletRequest req, HttpServletResponse res, Object o) throws Exception {
 
         String method = req.getMethod();
+        //vue post 默认会发送OPTIONS请求
         if (method.equalsIgnoreCase("OPTIONS")) {
             return true;
         }
-
 
         String path = req.getServletPath();
         if (isInterceptor(path) && !setTaskAppUserContext(path, req)) {

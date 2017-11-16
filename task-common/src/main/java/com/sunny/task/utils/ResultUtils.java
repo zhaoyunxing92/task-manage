@@ -106,6 +106,21 @@ public class ResultUtils {
      * 错误
      *
      * @param resultEnum
+     * @return
+     */
+
+    public static BaseResult error(ResultEnum resultEnum, String msg) {
+        BaseResult result = new BaseResult();
+        result.setMsg(resultEnum.getMsg() + msg);
+        result.setCode(resultEnum.getCode());
+        // result.setData (null);
+        return result;
+    }
+
+    /**
+     * 错误
+     *
+     * @param resultEnum
      * @param errors
      * @return
      */
