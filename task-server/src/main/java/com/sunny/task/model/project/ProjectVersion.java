@@ -3,22 +3,10 @@ package com.sunny.task.model.project;
 import com.sunny.task.model.BaseModel;
 
 public class ProjectVersion extends BaseModel<Long> {
-
-    private String uniqueId;
-
+    private static final long serialVersionUID = -2011219527496597000L;
     private String proId;
-
     private String name;
-
     private String intro;
-
-    public String getUniqueId() {
-        return uniqueId;
-    }
-
-    public void setUniqueId(String uniqueId) {
-        this.uniqueId = uniqueId == null ? null : uniqueId.trim();
-    }
 
     public String getProId() {
         return proId;

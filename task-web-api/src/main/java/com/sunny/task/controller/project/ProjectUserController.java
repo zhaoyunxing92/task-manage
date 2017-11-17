@@ -25,6 +25,17 @@ public class ProjectUserController {
     private ProjectUserService projectUserService;
 
     /**
+     * 获取项目成员
+     *
+     * @param proId
+     * @return
+     */
+    @GetMapping
+    BaseResult getProjectUser(@RequestParam("proId") String proId) {
+        return null;
+    }
+
+    /**
      * 添加项目成员
      *
      * @param form

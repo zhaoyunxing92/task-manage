@@ -15,7 +15,7 @@ import java.io.Serializable;
 public interface BaseMapper<T extends BaseModel<ID>, ID extends Serializable> {
     int deleteByPrimaryKey(ID id) throws TaskException;
 
-    int insert(T record) throws TaskException;
+   // int insert(T record) throws TaskException;
 
     int insertSelective(T record) throws TaskException;
 
@@ -23,5 +23,5 @@ public interface BaseMapper<T extends BaseModel<ID>, ID extends Serializable> {
 
     int updateByPrimaryKeySelective(T record) throws TaskException;
 
-    int updateByPrimaryKey(T record) throws TaskException;
+    //int updateByPrimaryKey(T record) throws TaskException;
 }

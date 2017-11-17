@@ -16,7 +16,7 @@ public interface OrganizationService {
     /**
      * 创建组织
      *
-     * @param form
+     * @param form sdfe
      * @return
      */
     OrganizationVo addOrganization(OrgForm form);

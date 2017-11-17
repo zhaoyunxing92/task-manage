@@ -133,6 +133,18 @@ public enum ResultEnum {
      * 删除项目成员异常
      */
     TASK_DELETE_PRO_USER_ERROR(10203, "删除项目成员异常"),
+    /**
+     * 添加项目版本异常
+     */
+    TASK_INSERT_PRO_VERSION_ERROR(10204, "添加项目版本异常"),
+    /**
+     * 修改版本信息异常
+     */
+    TASK_UPDATE_PRO_VERSION_ERROR(10205, "修改版本信息异常"),
+    /**
+     * 删除项目版本异常
+     */
+    TASK_DELETE_PRO_VERSION_ERROR(10206,"删除项目版本异常" ),
 
     /*===================================== token ===============================================*/
     /**

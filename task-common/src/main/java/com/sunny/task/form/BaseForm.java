@@ -4,6 +4,7 @@ package com.sunny.task.form;
 import com.sunny.task.utils.StringUtils;
 import com.sunny.task.valid.SelectGroup;
 import com.sunny.task.valid.UpdateGroup;
+import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -16,9 +17,7 @@ import java.io.Serializable;
  * @description 基础form
  */
 public class BaseForm<T extends Serializable> implements Serializable {
-    /**
-     *
-     */
+
     private static final long serialVersionUID = 634044498033223687L;
 
     /**
@@ -49,13 +48,16 @@ public class BaseForm<T extends Serializable> implements Serializable {
      * 主键id
      */
     private T id;
-
-    private String uid;
+    /**
+     * uid
+     */
+    @NotBlank(message = "请输入id", groups = {UpdateGroup.class})
+    private String uId;
     /**
      * 自动添加
      */
     private Boolean autoAdd;
-    
+
     public Integer getItem() {
         if (item <= 0) {
             item = 10;
@@ -96,12 +98,12 @@ public class BaseForm<T extends Serializable> implements Serializable {
         this.id = id;
     }
 
-    public String getUid() {
-        return uid;
+    public String getuId() {
+        return uId;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setuId(String uId) {
+        this.uId = uId;
     }
 
     public Boolean getFunzzy() {

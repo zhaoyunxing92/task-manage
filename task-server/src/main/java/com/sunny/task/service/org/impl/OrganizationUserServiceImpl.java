@@ -48,7 +48,7 @@ public class OrganizationUserServiceImpl implements OrganizationUserService {
         BeanUtils.copyProperties(form, orgUser);
         organizationMemberMapper.insertSelective(orgUser);
         TaskManageUser user=new TaskManageUser();
-        user.setUid(form.getUid());
+        user.setUid(form.getuId());
         user.setId(form.getId());
         return user;
     }

@@ -55,7 +55,7 @@ public class OrganizationServiceImpl implements OrganizationService {
         }
         //添加成员
         addOrgUser(unqId, userUnquId);
-        /**添加unq搜索*/
+        /*添加unq搜索*/
         primaryKeyByUniqueIdService.addPrimaryKeyByUniqueId(unqId, orgVo.getId(), BaseFields.APP_ORG_TYPE);
         return orgVo;
     }
