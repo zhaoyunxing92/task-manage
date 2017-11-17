@@ -15,33 +15,12 @@
         <result column="MODIFIER" property="modifier" jdbcType="BIGINT"/>
         <result column="MODIFICATION_DATE" property="modificationDate" jdbcType="TIMESTAMP"/>
     </resultMap>
+    
     <sql id="Base_Column_List">
-    ID, ORG_ID, PRO_ID, USER_ID, NAME, REMARK, STATUS, MANAGER, CREATOR, CREATION_DATE, 
-    MODIFIER, MODIFICATION_DATE
-  </sql>
-    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
-        select
-        <include refid="Base_Column_List"/>
-        from project_user
-        where ID = #{id,jdbcType=BIGINT}
-    </select>
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    delete from project_user
-    where ID = #{id,jdbcType=BIGINT}
-  </delete>
-    <insert id="insert" parameterType="com.sunny.task.model.project.ProjectUser">
-        <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
-            SELECT LAST_INSERT_ID()
-        </selectKey>
-        insert into project_user (ORG_ID, PRO_ID, USER_ID,
-        NAME, REMARK, STATUS,
-        MANAGER, CREATOR, CREATION_DATE,
-        MODIFIER, MODIFICATION_DATE)
-        values (#{orgId,jdbcType=VARCHAR}, #{proId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR},
-        #{name,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT},
-        #{manager,jdbcType=BIT}, #{creator,jdbcType=BIGINT}, #{creationDate,jdbcType=TIMESTAMP},
-        #{modifier,jdbcType=BIGINT}, #{modificationDate,jdbcType=TIMESTAMP})
-    </insert>
+      ID, ORG_ID, PRO_ID, USER_ID, NAME, REMARK, STATUS, MANAGER, CREATOR, CREATION_DATE,
+      MODIFIER, MODIFICATION_DATE
+    </sql>
+
     <insert id="insertSelective" parameterType="com.sunny.task.model.project.ProjectUser">
         <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
             SELECT LAST_INSERT_ID()
@@ -118,16 +97,11 @@
             </if>
         </trim>
     </insert>
+
+    <!--根据项目id修改成员信息-->
     <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.model.project.ProjectUser">
         update project_user
         <set>
-           
-            <if test="proId != null">
-                PRO_ID = #{proId,jdbcType=VARCHAR},
-            </if>
-            <if test="userId != null">
-                USER_ID = #{userId,jdbcType=VARCHAR},
-            </if>
             <if test="name != null">
                 NAME = #{name,jdbcType=VARCHAR},
             </if>
@@ -147,23 +121,8 @@
                 MODIFICATION_DATE = #{modificationDate,jdbcType=TIMESTAMP},
             </if>
         </set>
-        where ID = #{id,jdbcType=BIGINT}
+        where PRO_ID = #{proId,jdbcType=VARCHAR} AND USER_ID = #{userId,jdbcType=VARCHAR}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.sunny.task.model.project.ProjectUser">
-    update project_user
-    set ORG_ID = #{orgId,jdbcType=VARCHAR},
-      PRO_ID = #{proId,jdbcType=VARCHAR},
-      USER_ID = #{userId,jdbcType=VARCHAR},
-      NAME = #{name,jdbcType=VARCHAR},
-      REMARK = #{remark,jdbcType=VARCHAR},
-      STATUS = #{status,jdbcType=TINYINT},
-      MANAGER = #{manager,jdbcType=BIT},
-      CREATOR = #{creator,jdbcType=BIGINT},
-      CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
-      MODIFIER = #{modifier,jdbcType=BIGINT},
-      MODIFICATION_DATE = #{modificationDate,jdbcType=TIMESTAMP}
-    where ID = #{id,jdbcType=BIGINT}
-  </update>
 
     <!--添加项目成员-->
     <select id="insertProjectUsers">
