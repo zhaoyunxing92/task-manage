@@ -27,7 +27,8 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: process.env.PORT || 8700,
+    port: 8700,
+    host:'192.168.1.105',//'localhost',
     serviceUrl: 'http://localhost:8088/task',
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
