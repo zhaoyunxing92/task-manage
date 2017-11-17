@@ -5,13 +5,12 @@ import com.sunny.task.result.BaseResult;
 import com.sunny.task.result.ResultEnum;
 import com.sunny.task.service.project.ProjectUserService;
 import com.sunny.task.utils.ResultUtils;
+import com.sunny.task.valid.DeleteGroup;
 import com.sunny.task.valid.InsertGroup;
+import com.sunny.task.valid.UpdateGroup;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author sunny
@@ -33,7 +32,31 @@ public class ProjectUserController {
      */
     @PostMapping("/add")
     BaseResult addProjectUser(@RequestBody @Validated({InsertGroup.class}) ProUserForm form) {
-        projectUserService.addProjectUser(form.getProId(),false,form.getUsers());
+        projectUserService.addProjectUser(form.getProId(), false, form.getUserIds());
+        return ResultUtils.success(ResultEnum.SUCCESS);
+    }
+
+    /**
+     * 批量删除用户
+     *
+     * @param form
+     * @return
+     */
+    @DeleteMapping("/remove")
+    BaseResult removeProjectUserByProId(@RequestBody @Validated({DeleteGroup.class}) ProUserForm form) {
+        projectUserService.removeProjectUserByProId(form.getProId(), form.getUserIds());
+        return ResultUtils.success(ResultEnum.SUCCESS);
+    }
+
+    /**
+     * 修改用户信息
+     *
+     * @param form
+     * @return
+     */
+    @PutMapping("/revise")
+    BaseResult reviseProjectUserByProId(@RequestBody @Validated({UpdateGroup.class}) ProUserForm form) {
+        projectUserService.reviseProjectUserByProId(form);
         return ResultUtils.success(ResultEnum.SUCCESS);
     }
 }

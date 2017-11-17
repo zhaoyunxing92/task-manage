@@ -121,9 +121,7 @@
     <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.model.project.ProjectUser">
         update project_user
         <set>
-            <if test="orgId != null">
-                ORG_ID = #{orgId,jdbcType=VARCHAR},
-            </if>
+           
             <if test="proId != null">
                 PRO_ID = #{proId,jdbcType=VARCHAR},
             </if>
@@ -141,12 +139,6 @@
             </if>
             <if test="manager != null">
                 MANAGER = #{manager,jdbcType=BIT},
-            </if>
-            <if test="creator != null">
-                CREATOR = #{creator,jdbcType=BIGINT},
-            </if>
-            <if test="creationDate != null">
-                CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
             </if>
             <if test="modifier != null">
                 MODIFIER = #{modifier,jdbcType=BIGINT},
@@ -187,5 +179,14 @@
     <!--根据项目id获取成员id-->
     <select id="selectProjectUserIdByProId" resultType="java.lang.String">
         select USER_ID from project_user where PRO_ID= #{proId,jdbcType=VARCHAR}
+    </select>
+
+    <!--批量删除项目成员-->
+    <select id="deleteProjectUserByProId">
+        DELETE FROM PROJECT_USER
+        WHERE PRO_ID=#{proId,jdbcType=VARCHAR} AND USER_ID IN
+        <foreach collection="userIds" item="userId" index="index" separator="," open="(" close=")">
+            #{userId,jdbcType=VARCHAR}
+        </foreach>
     </select>
 </mapper>

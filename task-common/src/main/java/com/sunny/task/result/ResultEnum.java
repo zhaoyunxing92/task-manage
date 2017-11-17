@@ -126,9 +126,13 @@ public enum ResultEnum {
      */
     TASK_INSERT_PRO_USER_ERROR(10201, "添加项目成员异常"),
     /**
-     *  项目成员超限
+     * 项目成员超限
      */
     TASK_ORG_PRO_USER_OVERFLOW(10202, "项目成员超限"),
+    /**
+     * 删除项目成员异常
+     */
+    TASK_DELETE_PRO_USER_ERROR(10203, "删除项目成员异常"),
 
     /*===================================== token ===============================================*/
     /**
@@ -175,7 +179,7 @@ public enum ResultEnum {
     /**
      * 唯一键重复
      */
-    DUPLICATE_KEY_EXCEPTION(2001,"重复数据：");
+    DUPLICATE_KEY_EXCEPTION(2001, "重复数据：");
 
     private Integer code;
     private String msg;

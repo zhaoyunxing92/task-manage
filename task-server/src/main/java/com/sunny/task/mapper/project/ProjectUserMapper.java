@@ -24,5 +24,13 @@ public interface ProjectUserMapper extends BaseMapper<ProjectUser, Long> {
      * @param proId
      * @return
      */
-    List<String> selectProjectUserIdByProId(@Param("proId") String proId);
+    List<String> selectProjectUserIdByProId(@Param("proId") String proId) throws TaskException;
+
+    /**
+     * 批量删除项目成员
+     *
+     * @param proId
+     * @param userIds
+     */
+    void deleteProjectUserByProId(@Param("proId")String proId, @Param("userIds")List<String> userIds) throws TaskException;
 }

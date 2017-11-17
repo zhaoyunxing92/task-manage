@@ -1,7 +1,9 @@
 package com.sunny.task.service.project.impl;
 
 import com.sunny.task.exception.TaskException;
+import com.sunny.task.form.pro.ProUserForm;
 import com.sunny.task.mapper.project.ProjectUserMapper;
+import com.sunny.task.model.project.ProjectUser;
 import com.sunny.task.model.project.vo.ProjectVo;
 import com.sunny.task.result.ResultEnum;
 import com.sunny.task.service.project.ProjectService;
@@ -31,9 +33,10 @@ public class ProjectUserServiceImpl implements ProjectUserService {
     @Async
     @Transactional(rollbackFor = Exception.class)
     public void addProjectUser(String orgId, String proId, Boolean auto, List<String> users) {
-        Byte isAdmin = 1; /**默认是管理员*/
+        Byte isAdmin = 1; /*默认是管理员*/
 
-        /**校验是否超员*/
+        /*校验是否超员*/
+
         if (!auto) {
             isAdmin = 0;
             //TODO:  projectService.getProjectDetailsByUId 方法不能直接获取项目成员id，后期redis要考虑，项目成员个数0=null
@@ -45,11 +48,10 @@ public class ProjectUserServiceImpl implements ProjectUserService {
                 throw new TaskException(ResultEnum.TASK_ORG_PRO_USER_OVERFLOW);
             }
             orgId = project.getOrgId();
-
             List<String> oldUsers = projectUserMapper.selectProjectUserIdByProId(proId);
             users.removeAll(oldUsers);
         }
-
+        //</editor-fold>
         if (users.isEmpty() || users.size() <= 0) {
             return;
         }
@@ -63,5 +65,21 @@ public class ProjectUserServiceImpl implements ProjectUserService {
     @Override
     public void addProjectUser(String proId, Boolean auto, List<String> users) {
         addProjectUser(null, proId, auto, users);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void removeProjectUserByProId(String proId, List<String> userIds) {
+        try {
+            projectUserMapper.deleteProjectUserByProId(proId, userIds);
+        } catch (TaskException e) {
+            throw new TaskException(ResultEnum.TASK_DELETE_PRO_USER_ERROR, e);
+        }
+    }
+
+    @Override
+    public void reviseProjectUserByProId(ProUserForm form) {
+        ProjectUser projectUser = new ProjectUser();
+        projectUserMapper.updateByPrimaryKeySelective(projectUser);
     }
 }

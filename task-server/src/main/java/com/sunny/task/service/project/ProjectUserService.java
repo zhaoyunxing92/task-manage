@@ -1,5 +1,7 @@
 package com.sunny.task.service.project;
 
+import com.sunny.task.form.pro.ProUserForm;
+
 import java.util.List;
 
 /**
@@ -16,17 +18,31 @@ public interface ProjectUserService {
      * @param orgId
      * @param proId
      * @param auto
-     * @param users
+     * @param userIds
      */
-    void addProjectUser(String orgId, String proId, Boolean auto, List<String> users);
+    void addProjectUser(String orgId, String proId, Boolean auto, List<String> userIds);
 
     /**
      * 添加项目用户
      *
      * @param proId
      * @param auto
-     * @param users
+     * @param userIds
      */
-    void addProjectUser(String proId, Boolean auto, List<String> users);
+    void addProjectUser(String proId, Boolean auto, List<String> userIds);
 
+    /**
+     * 批量删除用户
+     *
+     * @param proId
+     * @param userIds
+     */
+    void removeProjectUserByProId(String proId, List<String> userIds);
+
+    /**
+     * 修改用户信息
+     *
+     * @param form
+     */
+    void reviseProjectUserByProId(ProUserForm form);
 }
