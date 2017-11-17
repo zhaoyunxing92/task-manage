@@ -2,3 +2,5 @@
 /.idea/
 */target/
 /logs/
+/task-web-front/dist/
+/task-web-front/node_modules/
