@@ -242,38 +242,37 @@
 // ];
 
 /**main*/
-const Main = () => import('../pages/main');
-const Home = () => import('../pages/home/index');
+const Main = () => import(/* webpackChunkName: "main" */'../pages/main');
+const Home = () => import(/* webpackChunkName: "home" */'../pages/home/index');
 
 /**工作台*/
-const WorkbenchIndex = () => import('../pages/workbench/index');
-const AssignedToMe = () => import('../pages/workbench/assigned_to_me'); //指给我的
+const WorkbenchIndex = () => import(/* webpackChunkName: "workbench" */'../pages/workbench/index');
+const AssignedToMe = () => import(/* webpackChunkName: "workbench" */'../pages/workbench/assigned_to_me'); //指给我的
 
 /**任务*/
-const Task = () => import('../pages/task/index'); //任务列表
+const Task = () => import(/* webpackChunkName: "task" */'../pages/task/index'); //任务列表
 
 
 /**项目列表*/
-const Project = () => import('../pages/project/index'); //项目列表
+const Project = () => import(/* webpackChunkName: "project" */'../pages/project/index'); //项目列表
 
 
 /**设置*/
-const Setting = () => import('../pages/setting/index');
-const SettingOrgInfo = () => import('../pages/setting/orgInfo');//组织信息
-const SettingOrgAdvance=()=>import('../pages/setting/orgAdvance'); //组织高级设置
-const SettingOrgUsers=()=>import('../pages/setting/orgUsers'); //组织成员
-const SettingOrgRole=()=>import('../pages/setting/orgRole');//组织角色
-const SettingOrgProjects=()=>import('../pages/setting/orgProjects');//组织项目
-const SettingOrgThirdparty=()=>import('../pages/setting/orgThirdparty'); //第三方绑定数据
+const Setting = () => import(/* webpackChunkName: "setting" */'../pages/setting/index');
+const SettingOrgInfo = () => import(/* webpackChunkName: "setting" */'../pages/setting/orgInfo');//组织信息
+const SettingOrgAdvance = () => import(/* webpackChunkName: "setting" */'../pages/setting/orgAdvance'); //组织高级设置
+const SettingOrgUsers = () => import(/* webpackChunkName: "setting" */'../pages/setting/orgUsers'); //组织成员
+const SettingOrgRole = () => import(/* webpackChunkName: "setting" */'../pages/setting/orgRole');//组织角色
+const SettingOrgProjects = () => import(/* webpackChunkName: "setting" */'../pages/setting/orgProjects');//组织项目
+const SettingOrgThirdparty = () => import(/* webpackChunkName: "setting" */'../pages/setting/orgThirdparty'); //第三方绑定数据
 
 /**组织*/
-const AddOrg = () => import('../pages/org/addOrg');
-const AddOrgUser = () => import('../pages/org/addUser');
-const OrgList = () => import('../pages/org/orgList');
+const AddOrg = () => import(/* webpackChunkName: "org" */'../pages/org/addOrg');
+const AddOrgUser = () => import(/* webpackChunkName: "org" */'../pages/org/addUser');
+const OrgList = () => import(/* webpackChunkName: "org" */'../pages/org/orgList');
 
 /**me*/
-const AppMe =()=>import('../pages/me/index');
-
+const AppMe = () => import(/* webpackChunkName: "me" */'../pages/me/index');
 
 
 /**other*/
