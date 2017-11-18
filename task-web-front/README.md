@@ -1,6 +1,6 @@
-# task-front
+# task-manager-iview-front
 
-> ��������ǰ��
+> A Vue.js project
 
 ## Build Setup
 
