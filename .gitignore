@@ -3,4 +3,4 @@
 */target/
 /logs/
 /task-web-front/dist/
-/task-web-front/node_modules/
+*/node_modules/

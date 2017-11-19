@@ -36,7 +36,8 @@
         <module>task-web-api</module>
         <module>task-server</module>
         <module>task-core</module>
-        <module>task-web-front</module>
+        <!-- <module>task-web-front</module> -->
+        <module>task-web</module>
     </modules>
 
     <!--指定项目中公有的模块-->
