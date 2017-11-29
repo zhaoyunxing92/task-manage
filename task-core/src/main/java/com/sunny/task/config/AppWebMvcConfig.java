@@ -21,7 +21,7 @@ import java.util.List;
  * @description: AppWebMvcConfig
  */
 public class AppWebMvcConfig extends WebMvcConfigurerAdapter {
-    private static String UNIFIED_DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
+
     /**
      * 跨域配置
      *
@@ -32,7 +32,7 @@ public class AppWebMvcConfig extends WebMvcConfigurerAdapter {
         registry.addMapping("/**")
                 .allowedOrigins("*")
                 .allowCredentials(true)
-                .allowedMethods("GET", "POST", "DELETE", "PUT","OPTIONS")
+                .allowedMethods("GET", "POST", "DELETE", "PUT", "OPTIONS")
                 .maxAge(3600);
 
     }
@@ -73,13 +73,14 @@ public class AppWebMvcConfig extends WebMvcConfigurerAdapter {
      */
     @Override
     public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
-        converters.removeIf(httpMessageConverter -> httpMessageConverter instanceof MappingJackson2HttpMessageConverter); // 删除MappingJackson2HttpMessageConverter
+        String UNIFIED_DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
+        // 删除MappingJackson2HttpMessageConverter
+        converters.removeIf(httpMessageConverter -> httpMessageConverter instanceof MappingJackson2HttpMessageConverter);
         GsonHttpMessageConverter gsonHttpMessageConverter = new GsonHttpMessageConverter();
         GsonBuilder gsonBuilder = new GsonBuilder();
-       // gsonBuilder.registerTypeAdapter(BigDecimal.class, BIG_DECIMAL);
         gsonBuilder.setDateFormat(UNIFIED_DATE_FORMAT);
-       // gsonBuilder.excludeFieldsWithModifiers(Modifier.PROTECTED);
         gsonHttpMessageConverter.setGson(gsonBuilder.create());
-        converters.add(gsonHttpMessageConverter); // 添加GsonHttpMessageConverter
+        // 添加GsonHttpMessageConverter
+        converters.add(gsonHttpMessageConverter);
     }
 }

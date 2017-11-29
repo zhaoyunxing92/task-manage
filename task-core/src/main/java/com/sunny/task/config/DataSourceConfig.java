@@ -12,7 +12,6 @@ import javax.sql.DataSource;
  * @date 2017-03-31 11:02
  * @description
  */
-//@Configuration
 public class DataSourceConfig {
 
     @Bean(destroyMethod = "close", initMethod = "init")

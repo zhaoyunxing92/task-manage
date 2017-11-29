@@ -7,11 +7,17 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+/**
+ * @author sunny
+ * @className com.sunny.task.mapper.org.OrganizationMapper
+ * @date 2017.11.29 17:30
+ * @description:
+ */
 public interface OrganizationMapper extends BaseMapper<OrganizationVo, Long> {
     /**
      * 根据uId查询组织信息
-     *
      * @param uId
+     * @param userId
      * @return
      */
     OrganizationVo selectOrgDetailByUId(@Param("uniqueId") String uId, @Param("userId") String userId);
