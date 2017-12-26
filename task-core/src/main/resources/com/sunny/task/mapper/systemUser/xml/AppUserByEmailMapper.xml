@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sunny.task.mapper.systemUser.AppUserByEmailMapper">
+    <resultMap id="BaseResultMap" type="com.sunny.task.model.systemUser.AppUserByEmail">
+        <id column="EMAIL" property="email" jdbcType="VARCHAR"/>
+        <result column="U_ID" property="uId" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    EMAIL, U_ID
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from app_user_by_email
+        where EMAIL = #{email,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from app_user_by_email
+    where EMAIL = #{email,jdbcType=VARCHAR}
+  </delete>
+    <insert id="insert" parameterType="com.sunny.task.model.systemUser.AppUserByEmail">
+    insert into app_user_by_email (EMAIL, U_ID)
+    values (#{email,jdbcType=VARCHAR}, #{uId,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.sunny.task.model.systemUser.AppUserByEmail">
+        insert into app_user_by_email
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="email != null">
+                EMAIL,
+            </if>
+            <if test="uId != null">
+                U_ID,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="email != null">
+                #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="uId != null">
+                #{uId,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.model.systemUser.AppUserByEmail">
+        update app_user_by_email
+        <set>
+            <if test="uId != null">
+                U_ID = #{uId,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where EMAIL = #{email,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.sunny.task.model.systemUser.AppUserByEmail">
+    update app_user_by_email
+    set U_ID = #{uId,jdbcType=VARCHAR}
+    where EMAIL = #{email,jdbcType=VARCHAR}
+  </update>
+
+    <!-- 根据邮箱获取用户uid-->
+    <select id="selectAppUserUidByEmail" resultType="java.lang.String">
+      select
+        U_ID
+      from app_user_by_email
+      where EMAIL = #{email,jdbcType=VARCHAR}
+    </select>
+    
+    <!--添加根据邮箱查看uid方法-->
+    <select id="insertAppUserByEmailKey">
+        insert into app_user_by_email (EMAIL, U_ID)
+         values (#{email,jdbcType=VARCHAR}, #{uId,jdbcType=VARCHAR})
+    </select>
+</mapper>

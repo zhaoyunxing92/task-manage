@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/task-core/task-core.iml" filepath="$PROJECT_DIR$/task-core/task-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/task-manage.iml" filepath="$PROJECT_DIR$/task-manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/task-sdk-dingtalk/task-sdk-dingtalk.iml" filepath="$PROJECT_DIR$/task-sdk-dingtalk/task-sdk-dingtalk.iml" />
+    </modules>
+  </component>
+</project>

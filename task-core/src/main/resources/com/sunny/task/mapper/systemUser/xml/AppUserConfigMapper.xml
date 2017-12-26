@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sunny.task.mapper.systemUser.AppUserConfigMapper" >
+  <resultMap id="BaseResultMap" type="com.sunny.task.model.systemUser.AppUserConfig" >
+    <id column="U_ID" property="uId" jdbcType="VARCHAR" />
+    <result column="CREATOR_ORG_LIMIT" property="creatorOrgLimit" jdbcType="INTEGER" />
+    <result column="ADD_ORG_LIMIT" property="addOrgLimit" jdbcType="INTEGER" />
+    <result column="BACKGROUND_IMAGE" property="backgroundImage" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    U_ID, CREATOR_ORG_LIMIT, ADD_ORG_LIMIT, BACKGROUND_IMAGE
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from app_user_config
+    where U_ID = #{uId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from app_user_config
+    where U_ID = #{uId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.sunny.task.model.systemUser.AppUserConfig" >
+    insert into app_user_config (U_ID, CREATOR_ORG_LIMIT, ADD_ORG_LIMIT, 
+      BACKGROUND_IMAGE)
+    values (#{uId,jdbcType=VARCHAR}, #{creatorOrgLimit,jdbcType=INTEGER}, #{addOrgLimit,jdbcType=INTEGER}, 
+      #{backgroundImage,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.sunny.task.model.systemUser.AppUserConfig" >
+    insert into app_user_config
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uId != null" >
+        U_ID,
+      </if>
+      <if test="creatorOrgLimit != null" >
+        CREATOR_ORG_LIMIT,
+      </if>
+      <if test="addOrgLimit != null" >
+        ADD_ORG_LIMIT,
+      </if>
+      <if test="backgroundImage != null" >
+        BACKGROUND_IMAGE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uId != null" >
+        #{uId,jdbcType=VARCHAR},
+      </if>
+      <if test="creatorOrgLimit != null" >
+        #{creatorOrgLimit,jdbcType=INTEGER},
+      </if>
+      <if test="addOrgLimit != null" >
+        #{addOrgLimit,jdbcType=INTEGER},
+      </if>
+      <if test="backgroundImage != null" >
+        #{backgroundImage,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.model.systemUser.AppUserConfig" >
+    update app_user_config
+    <set >
+      <if test="creatorOrgLimit != null" >
+        CREATOR_ORG_LIMIT = #{creatorOrgLimit,jdbcType=INTEGER},
+      </if>
+      <if test="addOrgLimit != null" >
+        ADD_ORG_LIMIT = #{addOrgLimit,jdbcType=INTEGER},
+      </if>
+      <if test="backgroundImage != null" >
+        BACKGROUND_IMAGE = #{backgroundImage,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where U_ID = #{uId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.sunny.task.model.systemUser.AppUserConfig" >
+    update app_user_config
+    set CREATOR_ORG_LIMIT = #{creatorOrgLimit,jdbcType=INTEGER},
+      ADD_ORG_LIMIT = #{addOrgLimit,jdbcType=INTEGER},
+      BACKGROUND_IMAGE = #{backgroundImage,jdbcType=VARCHAR}
+    where U_ID = #{uId,jdbcType=VARCHAR}
+  </update>
+</mapper>
