@@ -1,284 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd2d0fdc-653a-48ab-a596-64c39ea36acd" name="Default" comment="tiaj">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_26.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_ulisesbocchio_jasypt_spring_boot_1_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_ulisesbocchio_jasypt_spring_boot_starter_1_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_6_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_8_5_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_23.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_27_incubating.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_6_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jasypt_jasypt_1_9_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_25.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_1_5_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_1_5_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_5_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_1_5_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_websocket_1_5_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_13_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_1_2_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_1_8_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_13_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_13_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_13_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_13_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_13_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_13_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_13_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_4_3_13_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_3_13_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_13_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_13_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_13_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_13_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_4_3_13_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/smartfox_info.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/all.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/all.log.1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/all.log.2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/all.log.3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/debug.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/debug.log.1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/debug.log.2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/error.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/main/SystemUserController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/main/form/AppUserForm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/context/TaskAppUser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/context/TaskAppUserContext.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/model/BaseModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/StringUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/TaskFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserByAccountMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserByEmailMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserByMobileMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserConfigMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserExtendMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/systemUser/AppUserByAccount.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/systemUser/AppUserByEmail.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/systemUser/AppUserByMobile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/systemUser/AppUserConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/systemUser/vo/AppUserVo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserByAccountServer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserByEmailServer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserByMobileServer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserServer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/SystemUserServer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByAccountServerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByEmailServerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByMobileServerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserServerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/SystemUserServierImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserConfigMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserExtendMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/resources/sql/app-user.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/test/java/com/sunny/TaskCoreApplicationTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/test/java/com/sunny/task/core/common/utils/StringUtilsTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/context/TaskAppUserContext.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/form/org/OrgForm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/form/org/OrgUserForm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/form/pro/ProForm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/form/pro/ProUserForm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/form/pro/ProVsersionForm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/form/user/AppUserForm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/model/BaseModel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/utils/StringUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/org/OrganizationAppMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/org/OrganizationChatMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/org/OrganizationChatUserMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/org/OrganizationMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/org/OrganizationMemberMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/org/OrganizationMemberResourceMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/org/OrganizationResourceMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/project/ProjectMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/project/ProjectUserMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/project/ProjectVersionMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/unique/PrimaryKeyByUniqueIdMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/user/AppPermissionMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/user/AppRoleMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/user/AppUserByAccountMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/user/AppUserByEmailMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/user/AppUserByMobileMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/user/AppUserExtendMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/user/AppUserMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/mapper/user/AppUserRoleMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/org/Organization.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/org/OrganizationApp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/org/OrganizationChat.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/org/OrganizationChatUser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/org/OrganizationMember.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/org/OrganizationMemberResource.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/org/OrganizationResource.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/org/vo/OrganizationVo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/project/Project.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/project/ProjectUser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/project/ProjectVersion.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/project/vo/ProjectVo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/unique/PrimaryKeyByUniqueId.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/user/AppPermission.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/user/AppRole.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/user/AppUserByAccount.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/user/AppUserByEmail.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/user/AppUserByMobile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/user/AppUserRole.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/user/vo/AppUserVo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/msg/Impl/TaskEmailServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/msg/TaskEmailService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/org/OrganizationService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/org/OrganizationUserService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/org/impl/OrganizationServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/org/impl/OrganizationUserServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/project/ProjectService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/project/ProjectUserService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/project/ProjectVersionService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/project/impl/ProjectServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/project/impl/ProjectUserServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/project/impl/ProjectVersionServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/unique/PrimaryKeyByUniqueIdService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/unique/impl/PrimaryKeyByUniqueIdServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/user/AppPermissionService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/user/AppUserByAccountService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/user/AppUserByEmailService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/user/AppUserByMobileService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/user/AppUserService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/user/impl/AppPermissionServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/user/impl/AppUserByAccountServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/user/impl/AppUserByEmailServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/user/impl/AppUserByMobileServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/service/user/impl/AppUserServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/org/mapper/xml/OrganizationAppMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/org/mapper/xml/OrganizationChatMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/org/mapper/xml/OrganizationChatUserMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/org/mapper/xml/OrganizationMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/org/mapper/xml/OrganizationMemberMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/org/mapper/xml/OrganizationMemberResourceMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/org/mapper/xml/OrganizationResourceMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/project/mapper/xml/ProjectMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/project/mapper/xml/ProjectUserMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/project/mapper/xml/ProjectVersionMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/unique/mapper/xml/PrimaryKeyByUniqueIdMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/user/mapper/xml/AppPermissionMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/user/mapper/xml/AppRoleMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/user/mapper/xml/AppUserExtendMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/user/mapper/xml/AppUserRoleMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/generatorConfig -.xml.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-web-api/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-web-api/src/main/java/com/sunny/task/controller/org/OrganizationController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-web-api/src/main/java/com/sunny/task/controller/org/OrganizationUserController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-web-api/src/main/java/com/sunny/task/controller/project/ProjecVersionController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-web-api/src/main/java/com/sunny/task/controller/project/ProjectController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-web-api/src/main/java/com/sunny/task/controller/project/ProjectUserController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-web-api/src/main/java/com/sunny/task/controller/user/AppUserController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-web-api/src/main/java/com/sunny/task/controller/user/AppUserRegController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-web-api/src/main/java/com/sunny/task/controller/user/AppUserRoleController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-web-api/src/main/java/com/sunny/task/controller/user/TaskAppUserController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-web-api/src/main/resources/application.properties" afterPath="" />
+    <list default="true" id="bd2d0fdc-653a-48ab-a596-64c39ea36acd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-sdk-dingtalk/pom.xml" afterPath="$PROJECT_DIR$/task-sdk-dingtalk/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/task-core/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/exception/TaskException.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/exception/TaskException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/exception/TaskUserAuthException.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/exception/TaskUserAuthException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/field/BaseFields.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/field/BaseFields.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/form/BaseForm.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/form/BaseForm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/mapper/BaseMapper.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/mapper/BaseMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/result/BaseResult.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/result/BaseResult.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/result/ResultEnum.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/result/ResultEnum.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/status/AppUserStatus.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/status/AppUserStatus.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/utils/CookiesUtils.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/CookiesUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/utils/GsonUtils.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/GsonUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/utils/HttpHelperUtils.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/HttpHelperUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/utils/NullUtils.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/NullUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/utils/ResultUtils.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/ResultUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/utils/TokenUtils.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/TokenUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/utils/UUIDUtills.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/UUIDUtills.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/valid/DeleteGroup.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/valid/DeleteGroup.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/valid/InsertGroup.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/valid/InsertGroup.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/valid/LoginGroup.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/valid/LoginGroup.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/valid/SelectGroup.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/valid/SelectGroup.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-common/src/main/java/com/sunny/task/valid/UpdateGroup.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/valid/UpdateGroup.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/config/AppWebMvcConfig.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/AppWebMvcConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/config/DataSourceConfig.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/DataSourceConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/config/MyBatisConfig.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/MyBatisConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/config/RedisConfig.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/RedisConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/config/TaskManageConfig.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/TaskManageConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/contaxt/TaskManageUser.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/contaxt/TaskManageUser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/handle/TaskManageHandle.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/handle/TaskManageHandle.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/interceptor/TaskInterceptor.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/interceptor/TaskInterceptor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/user/AppUser.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/systemUser/AppUser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-server/src/main/java/com/sunny/task/model/user/AppUserExtend.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/systemUser/AppUserExtend.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/user/mapper/xml/AppUserByAccountMapper.xml" afterPath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserByAccountMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/user/mapper/xml/AppUserByEmailMapper.xml" afterPath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserByEmailMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/user/mapper/xml/AppUserByMobileMapper.xml" afterPath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserByMobileMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/com/sunny/task/user/mapper/xml/AppUserMapper.xml" afterPath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/task-core/src/main/resources/generatorConfig.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-server/src/main/resources/templates/email/active-account-email.ftl" afterPath="$PROJECT_DIR$/task-core/src/main/resources/templates/email/active-account-email.ftl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-web-api/src/main/java/com/sunny/TaskWebApiApplication.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/TaskCoreApplication.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-web-api/src/main/resources/application-dev.yml" afterPath="$PROJECT_DIR$/task-core/src/main/resources/application-dev.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-web-api/src/main/resources/application-prod.yml" afterPath="$PROJECT_DIR$/task-core/src/main/resources/application-prod.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-web-api/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/task-core/src/main/resources/application.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-web-api/src/main/resources/banner.txt" afterPath="$PROJECT_DIR$/task-core/src/main/resources/banner.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-web-api/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/task-core/src/main/resources/log4j.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/task-web-api/src/main/resources/logback-spring.xml.text" afterPath="$PROJECT_DIR$/task-core/src/main/resources/logback-spring.xml.text" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -316,8 +41,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+            <state relative-caret-position="-30">
+              <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -348,6 +73,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -509,20 +237,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="task-manage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-manage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-manage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1052,16 +766,30 @@
       <updated>1514188931850</updated>
       <workItem from="1514188936839" duration="7989000" />
       <workItem from="1514211331566" duration="3152000" />
-      <workItem from="1514270896515" duration="17402000" />
+      <workItem from="1514270896515" duration="18413000" />
     </task>
+    <task id="LOCAL-00001" summary="调整：项目结构，合并mven模块等等处理">
+      <created>1514299012662</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1514299012662</updated>
+    </task>
+    <task id="LOCAL-00002" summary="删除：日志文件">
+      <created>1514299889676</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1514299889676</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28543000" />
+    <option name="totallyTimeSpent" value="29554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1080,7 +808,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Mybatis datasource" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1134,8 +862,31 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="调整：项目结构，合并mven模块等等处理" />
+    <MESSAGE value="删除：日志文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除：日志文件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1614,8 +1365,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        <state relative-caret-position="-30">
+          <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
           <folding />
         </state>
       </provider>
