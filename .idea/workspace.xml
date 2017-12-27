@@ -2,45 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd2d0fdc-653a-48ab-a596-64c39ea36acd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/form/OrgForm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationMemberServer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationServer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationMemberServerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationServerImpl.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMemberMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMemberResourceMapper.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/SpringBeanInstanceAccessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/main/form/AppUserForm.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/main/form/AppUserForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/context/TaskAppUserContext.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/context/TaskAppUserContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/mapper/BaseMapper.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/mapper/BaseMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/model/BaseModel.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/model/BaseModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/result/ResultEnum.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/result/ResultEnum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/UUIDUtills.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/UUIDUtills.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/AppWebMvcConfig.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/AppWebMvcConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/TaskManageConfig.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/TaskManageConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/interceptor/TaskInterceptor.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/interceptor/TaskInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMapper.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMemberMapper.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMemberMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMemberResourceMapper.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMemberResourceMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationResourceMapper.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationResourceMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserByAccountMapper.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserByAccountMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserByEmailMapper.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserByEmailMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserByMobileMapper.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserByMobileMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/Organization.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/Organization.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/OrganizationMember.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/OrganizationMember.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/OrganizationMemberResource.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/OrganizationMemberResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/OrganizationResource.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/OrganizationResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserByAccountServer.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserByAccountServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserByEmailServer.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserByEmailServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserMapper.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserServer.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/SystemUserServer.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/SystemUserServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByAccountServerImpl.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByAccountServerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByEmailServerImpl.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByEmailServerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByMobileServerImpl.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByMobileServerImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserServerImpl.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserServerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/SystemUserServierImpl.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/SystemUserServierImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserByAccountMapper.xml" afterPath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserByAccountMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/task-core/src/main/resources/generatorConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserMapper.xml" afterPath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,94 +36,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OrganizationMemberMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMemberMapper.java">
+      <file leaf-file-name="TaskInterceptor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/interceptor/TaskInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppUserByMobileServer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserByMobileServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppUserByEmailServer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserByEmailServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppUserByMobileServerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByMobileServerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="46" column="72" lean-forward="true" selection-start-line="46" selection-start-column="72" selection-end-line="46" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppUserByAccountServerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByAccountServerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="41" column="109" lean-forward="true" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="107" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResultEnum.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/result/ResultEnum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2168">
-              <caret line="57" column="32" lean-forward="true" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppUserByEmailServerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByEmailServerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
-              <caret line="53" column="10" lean-forward="true" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+            <state relative-caret-position="370">
+              <caret line="113" column="12" lean-forward="true" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppUserServer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppUserServerImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserServerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="707">
-              <caret line="76" column="20" lean-forward="false" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -177,6 +68,9 @@
       <find>appUserMapper</find>
       <find>deleteByPrimaryKey</find>
       <find>appUserByAccountServerImpl</find>
+      <find>dispatcherServlet</find>
+      <find>FrameworkServlet 'dispatcherServlet'</find>
+      <find>initialization completed</find>
     </findStrings>
     <replaceStrings>
       <replace>uId</replace>
@@ -197,17 +91,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserMapper.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/systemUser/vo/AppUserVo.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/context/TaskAppUser.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/systemUser/AppUser.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserByEmailMapper.xml" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserByMobileServer.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserByMobileMapper.xml" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/handle/TaskManageHandle.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/main/SystemUserController.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserMapper.xml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserMapIdMapper.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/systemUser/AppUserMapId.java" />
         <option value="$PROJECT_DIR$/task-core/pom.xml" />
@@ -228,7 +112,6 @@
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/context/TaskAppUserContext.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/SystemUserServer.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/SystemUserServierImpl.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/interceptor/TaskInterceptor.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/model/BaseModel.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/result/ResultEnum.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationController.java" />
@@ -239,15 +122,26 @@
         <option value="$PROJECT_DIR$/logs/error.log" />
         <option value="$PROJECT_DIR$/logs/debug.log" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserByAccountMapper.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserServer.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserByEmailServer.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserByAccountMapper.xml" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserByAccountServer.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserByMobileMapper.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByAccountServerImpl.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByEmailServerImpl.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByMobileServerImpl.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserServer.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserMapper.xml" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserMapper.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserServerImpl.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/AppWebMvcConfig.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/SpringBeanUtils.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/SpringBeanInstanceAccessor.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/SpringBeanInstanceAccessorUtils.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/SpringBeanInstanceAccessorUtils.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/TaskManageConfig.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByAccountServerImpl.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/SpringBeanInstanceAccessor.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/interceptor/TaskInterceptor.java" />
       </list>
     </option>
   </component>
@@ -431,6 +325,74 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -499,10 +461,6 @@
               <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -577,66 +535,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-manage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-manage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sunny" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-manage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-manage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -657,7 +555,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="SearchEverywhereHistoryKey" value="AppUserByMobileServerImpl&#9;FILE&#9;file://F:/code/java/task-manage/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByMobileServerImpl.java" />
+    <property name="SearchEverywhereHistoryKey" value="dispatcherServlet&#9;FILE&#9;jar://I:/repository/org/springframework/spring-webmvc/4.3.13.RELEASE/spring-webmvc-4.3.13.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class&#10;AppUserByMobileServerImpl&#9;FILE&#9;file://F:/code/java/task-manage/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByMobileServerImpl.java" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -671,6 +569,7 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sunny.task.core.config" />
       <recent name="com.sunny.task.model.systemUser.vo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -1159,6 +1058,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="bd2d0fdc-653a-48ab-a596-64c39ea36acd" name="Default" comment="" />
@@ -1169,7 +1071,7 @@
       <workItem from="1514188936839" duration="7989000" />
       <workItem from="1514211331566" duration="3152000" />
       <workItem from="1514270896515" duration="18498000" />
-      <workItem from="1514346267931" duration="15707000" />
+      <workItem from="1514346267931" duration="23826000" />
     </task>
     <task id="LOCAL-00001" summary="调整：项目结构，合并mven模块等等处理">
       <created>1514299012662</created>
@@ -1206,11 +1108,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514357869565</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="优化：去除异步方法，保持事物一致">
+      <created>1514369895796</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1514369895796</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45346000" />
+    <option name="totallyTimeSpent" value="53465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
@@ -1240,7 +1149,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26685083" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5215517" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1277,9 +1186,9 @@
       <window_info id="Mybatis datasource" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26685083" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26685083" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5215517" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
@@ -1314,14 +1223,23 @@
     <MESSAGE value="修改：git忽略文件" />
     <MESSAGE value="添加：第三方绑定表" />
     <MESSAGE value="添加：组织模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加：组织模块" />
+    <MESSAGE value="优化：去除异步方法，保持事物一致" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化：去除异步方法，保持事物一致" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/SpringBeanInstanceAccessor.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="31" />
+      <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1330,375 +1248,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/main/SystemUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="42" column="80" lean-forward="true" selection-start-line="42" selection-start-column="80" selection-end-line="42" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/form/OrgForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.13.RELEASE/spring-aop-4.3.13.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/context/TaskAppUserContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.6.2/gson-2.6.2-sources.jar!/com/google/gson/JsonArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="210" column="16" lean-forward="false" selection-start-line="210" selection-start-column="16" selection-end-line="210" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/TaskCoreApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/TaskManageConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/AppWebMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.6.2/gson-2.6.2-sources.jar!/com/google/gson/JsonElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="318" column="16" lean-forward="false" selection-start-line="318" selection-start-column="16" selection-end-line="318" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/OrganizationMember.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/model/BaseModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="56" column="59" lean-forward="true" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
-          <folding>
-            <element signature="e#767#768#0" expanded="false" />
-            <element signature="e#820#821#0" expanded="false" />
-            <element signature="e#1031#1032#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-            <element signature="e#1169#1170#0" expanded="false" />
-            <element signature="e#1399#1400#0" expanded="false" />
-            <element signature="e#1455#1456#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/handle/TaskManageHandle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="33" column="115" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/interceptor/TaskInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1971">
-          <caret line="91" column="21" lean-forward="false" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-          <folding>
-            <marker date="1514298348760" expanded="true" signature="1823:1937" ph="select from app_user" />
-            <marker date="1514298348760" expanded="true" signature="2026:2084" ph="delete from " />
-            <marker date="1514298348760" expanded="true" signature="5519:7355" ph="update app_u... " />
-            <marker date="1514298348760" expanded="true" signature="7467:8236" ph="update app_u... " />
-            <marker date="1514298348760" expanded="true" signature="8484:8781" ph="select a.NIC... app_user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/all.log.1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3402">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.13.RELEASE/spring-beans-4.3.13.RELEASE.jar!/org/springframework/beans/factory/annotation/Autowired.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.13.RELEASE/spring-context-4.3.13.RELEASE.jar!/org/springframework/context/annotation/Scope.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.13.RELEASE/spring-context-4.3.13.RELEASE.jar!/org/springframework/context/annotation/ScopedProxyMode.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/all.log.2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-730479">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/debug.log.2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-311031">
-          <caret line="2" column="39" lean-forward="true" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/SystemUserServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.13.RELEASE/spring-aop-4.3.13.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.13.RELEASE/spring-aop-4.3.13.RELEASE.jar!/org/springframework/aop/interceptor/AsyncExecutionInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserByEmailMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="19" column="101" lean-forward="true" selection-start-line="19" selection-start-column="101" selection-end-line="19" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/mapper/BaseMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationMemberServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.13.RELEASE/spring-core-4.3.13.RELEASE.jar!/org/springframework/core/NestedRuntimeException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding>
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationServerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="49" column="66" lean-forward="true" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/error.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/debug.log.1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285017">
-          <caret line="6" column="6470" lean-forward="true" selection-start-line="6" selection-start-column="6470" selection-end-line="6" selection-end-column="6470" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/debug.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32138">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserByAccountMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="66" column="4" lean-forward="false" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
-          <folding>
-            <marker date="1514368931158" expanded="true" signature="603:682" ph="delete from " />
-            <marker date="1514368931158" expanded="true" signature="789:902" ph="insert into app_user_by_account... " />
-            <marker date="1514368931158" expanded="true" signature="1697:1906" ph="update app_u... " />
-            <marker date="1514368931158" expanded="true" signature="2027:2140" ph="update app_u... " />
-            <marker date="1514368931158" expanded="true" signature="2259:2365" ph="select U_ID app_user_by_account" />
-            <marker date="1514368931158" expanded="true" signature="2455:2572" ph="insert into app_user_by_account... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserByAccountMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/SystemUserServierImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="121" column="68" lean-forward="true" selection-start-line="121" selection-start-column="68" selection-end-line="121" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserByAccountServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationMemberServerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="48" column="54" lean-forward="true" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserByMobileMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="17" column="83" lean-forward="true" selection-start-line="17" selection-start-column="83" selection-end-line="17" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMemberResourceMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationResourceMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -1727,20 +1280,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByAccountServerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="41" column="109" lean-forward="true" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByEmailServerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="653">
           <caret line="53" column="10" lean-forward="true" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1761,11 +1306,419 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logs/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationMemberServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationMemberServerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="48" column="54" lean-forward="true" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="230" column="62" lean-forward="true" selection-start-line="230" selection-start-column="62" selection-end-line="230" selection-end-column="62" />
+          <folding>
+            <marker date="1514370997240" expanded="true" signature="1823:1937" ph="select from app_user" />
+            <marker date="1514370997240" expanded="true" signature="2026:2084" ph="delete from " />
+            <marker date="1514370997240" expanded="true" signature="5519:7355" ph="update app_u... " />
+            <marker date="1514370997240" expanded="true" signature="7467:8236" ph="update app_u... " />
+            <marker date="1514370997240" expanded="true" signature="8484:8781" ph="select a.NIC... app_user" />
+            <marker date="1514370997240" expanded="true" signature="8882:8992" ph="select COUNT... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/AppUserServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/systemUser/AppUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/AppWebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-751">
+          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/handle/TaskManageHandle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.13.RELEASE/spring-webmvc-4.3.13.RELEASE.jar!/org/springframework/web/servlet/handler/HandlerInterceptorAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="65" lean-forward="false" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.13.RELEASE/spring-webmvc-4.3.13.RELEASE.jar!/org/springframework/web/servlet/AsyncHandlerInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="60" lean-forward="true" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.13.RELEASE/spring-webmvc-4.3.13.RELEASE.jar!/org/springframework/web/servlet/HandlerInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/SpringBeanUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/SpringBeanInstanceAccessorUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/TaskManageConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="81" lean-forward="true" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserByAccountServerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="20" column="72" lean-forward="true" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.0.26/druid-1.0.26.jar!/com/alibaba/druid/support/spring/stat/annotation/StatAnnotationAdvisor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="36" column="42" lean-forward="false" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.springframework.beans.factory.BeanFactoryAware">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.springframework.beans.factory.BeanFactoryAware</OriginalElement>
+          <nodes>
+            <node x="" y="">org.springframework.beans.factory.BeanFactoryAware</node>
+            <node x="" y="">org.springframework.beans.factory.Aware</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="86.0" y="57.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.13.RELEASE/spring-beans-4.3.13.RELEASE.jar!/org/springframework/beans/factory/BeanFactoryAware.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.13.RELEASE/spring-web-4.3.13.RELEASE.jar!/org/springframework/remoting/jaxws/AbstractJaxWsServiceExporter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="63" column="16" lean-forward="false" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.13.RELEASE/spring-context-4.3.13.RELEASE.jar!/org/springframework/context/support/AbstractApplicationContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="597" column="50" lean-forward="true" selection-start-line="597" selection-start-column="50" selection-end-line="597" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.13.RELEASE/spring-test-4.3.13.RELEASE.jar!/org/springframework/test/web/servlet/setup/StubWebApplicationContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="114" column="36" lean-forward="true" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.13.RELEASE/spring-core-4.3.13.RELEASE.jar!/org/springframework/core/ResolvableType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="586" column="33" lean-forward="false" selection-start-line="586" selection-start-column="33" selection-end-line="586" selection-end-column="33" />
+          <folding>
+            <element signature="e#22454#22455#0" expanded="true" />
+            <element signature="e#22502#22503#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://H:/JDK/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1793">
+          <caret line="509" column="26" lean-forward="false" selection-start-line="509" selection-start-column="26" selection-end-line="509" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.13.RELEASE/spring-beans-4.3.13.RELEASE.jar!/org/springframework/beans/factory/support/StaticListableBeanFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="154" column="63" lean-forward="true" selection-start-line="154" selection-start-column="63" selection-end-line="154" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.springframework.web.servlet.DispatcherServlet">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.springframework.web.servlet.DispatcherServlet</OriginalElement>
+          <nodes>
+            <node x="" y="">javax.servlet.ServletConfig</node>
+            <node x="" y="">org.springframework.web.servlet.DispatcherServlet</node>
+            <node x="" y="">javax.servlet.http.HttpServlet</node>
+            <node x="" y="">org.springframework.web.servlet.HttpServletBean</node>
+            <node x="" y="">org.springframework.context.EnvironmentAware</node>
+            <node x="" y="">javax.servlet.Servlet</node>
+            <node x="" y="">javax.servlet.GenericServlet</node>
+            <node x="" y="">org.springframework.core.env.EnvironmentCapable</node>
+            <node x="" y="">org.springframework.beans.factory.Aware</node>
+            <node x="" y="">org.springframework.web.servlet.FrameworkServlet</node>
+            <node x="" y="">org.springframework.context.ApplicationContextAware</node>
+            <node x="" y="">java.io.Serializable</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="444.5" y="221.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.13.RELEASE/spring-webmvc-4.3.13.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="47" column="47" lean-forward="true" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+          <folding>
+            <element signature="e#4968#4969#0" expanded="true" />
+            <element signature="e#5020#5021#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.13.RELEASE/spring-webmvc-4.3.13.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="209" column="36" lean-forward="true" selection-start-line="209" selection-start-column="36" selection-end-line="209" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.13.RELEASE/spring-aop-4.3.13.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.13.RELEASE/spring-beans-4.3.13.RELEASE.jar!/org/springframework/beans/factory/BeanFactoryUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar!/org/apache/log4j/Hierarchy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="355" column="0" lean-forward="false" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
+          <folding>
+            <element signature="e#10043#10044#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar!/org/apache/log4j/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="735" column="0" lean-forward="false" selection-start-line="735" selection-start-column="0" selection-end-line="735" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/Log4jLoggerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding>
+            <element signature="e#2674#2675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.13.RELEASE/spring-beans-4.3.13.RELEASE.jar!/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="224" column="35" lean-forward="true" selection-start-line="224" selection-start-column="35" selection-end-line="224" selection-end-column="35" />
+          <folding>
+            <element signature="e#4083#4084#0" expanded="true" />
+            <element signature="e#4139#4140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.jar!/org/apache/commons/logging/impl/SLF4JLocationAwareLog.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="e#930#931#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.13.RELEASE/spring-beans-4.3.13.RELEASE.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/main/impl/AppUserServerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="76" column="20" lean-forward="false" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+        <state relative-caret-position="305">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding>
+            <element signature="e#2836#2837#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/config/SpringBeanInstanceAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding>
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.13.RELEASE/spring-beans-4.3.13.RELEASE.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="739" column="71" lean-forward="false" selection-start-line="739" selection-start-column="8" selection-end-line="739" selection-end-column="71" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.13.RELEASE/spring-core-4.3.13.RELEASE.jar!/org/springframework/util/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="59" column="71" lean-forward="false" selection-start-line="59" selection-start-column="63" selection-end-line="59" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.13.RELEASE/spring-core-4.3.13.RELEASE-sources.jar!/org/springframework/util/Assert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="140" column="15" lean-forward="false" selection-start-line="140" selection-start-column="5" selection-end-line="140" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/utils/NullUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7434">
+          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/interceptor/TaskInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="113" column="12" lean-forward="true" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

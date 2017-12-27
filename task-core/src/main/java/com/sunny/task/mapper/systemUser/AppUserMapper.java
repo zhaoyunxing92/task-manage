@@ -12,4 +12,12 @@ public interface AppUserMapper extends BaseMapper<AppUser, String> {
      * @return AppUserVo
      */
     AppUserVo selectAppUserByUId(String uId);
+
+    /**
+     * 统计uid个数
+     *
+     * @param uId
+     * @return
+     */
+    int selectAppUserCount(String uId);
 }

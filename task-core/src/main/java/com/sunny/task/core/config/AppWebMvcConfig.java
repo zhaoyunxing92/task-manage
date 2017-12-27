@@ -21,7 +21,7 @@ import java.util.List;
  */
 //@EnableWebMvc
 public class AppWebMvcConfig extends WebMvcConfigurerAdapter {
-
+    
     /**
      * 跨域配置
      *

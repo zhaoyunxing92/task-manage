@@ -34,22 +34,6 @@ public class AppUserServerImpl implements AppUserServer {
     }
 
     /**
-     * 根据用户uid删除用户，强制删除
-     *
-     * @param uId
-     */
-    @Override
-    public void removeAppUserByUId(String uId) {
-        try {
-            appUserMapper.deleteByPrimaryKey(uId);
-          //  appUserByEmailServer.removeAppUserByEmailKeyByUId(uId);
-          //  appUserByAccountServer.removeAppUserByEmailKeyByUId(uId);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
      * 添加用户
      *
      * @param form
@@ -87,5 +71,15 @@ public class AppUserServerImpl implements AppUserServer {
 //        appUserExtend.setModifier(uId);
 //        appUserExtendMapper.insertSelective(appUserExtend);
 
+    }
+
+    /**
+     * 检验用户id是否合法
+     *
+     * @param uId
+     */
+    @Override
+    public Boolean checkUIdIsLegal(String uId) {
+        return 1 == appUserMapper.selectAppUserCount(uId);
     }
 }

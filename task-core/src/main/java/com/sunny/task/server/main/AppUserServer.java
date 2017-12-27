@@ -35,9 +35,9 @@ public interface AppUserServer {
     void saveAppUser(AppUserForm form);
 
     /**
-     * 根据用户uid删除用户，强制删除
+     * 检验用户id是否合法
      *
      * @param uId
      */
-    void removeAppUserByUId(String uId);
+    Boolean checkUIdIsLegal(String uId);
 }

@@ -11,10 +11,12 @@ import com.sunny.task.core.common.utils.CookiesUtils;
 import com.sunny.task.core.common.utils.GsonUtils;
 import com.sunny.task.core.common.utils.NullUtils;
 import com.sunny.task.core.common.utils.TokenUtils;
+import com.sunny.task.core.config.SpringBeanInstanceAccessor;
+import com.sunny.task.server.main.AppUserServer;
 import com.sunny.task.server.main.SystemUserServer;
 import org.apache.http.HttpStatus;
-import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -26,18 +28,21 @@ import javax.servlet.http.HttpServletResponse;
  * @date 2017-06-30 09:09
  * @description: controller层 拦截器
  */
-public class TaskInterceptor implements HandlerInterceptor {
+public class TaskInterceptor extends HandlerInterceptorAdapter {
 
     private static final String[] EXCLUDES = {"/error", "/reg", "/auth", "/user"};
 
+
     @Override
     public boolean preHandle(HttpServletRequest req, HttpServletResponse res, Object o) throws Exception {
+
         //   String method = req.getMethod();
         //vue post 默认会发送OPTIONS请求
 //        String options = "OPTIONS";
 //        if (options.equalsIgnoreCase(method)) {
 //            return true;
 //        }
+
 
         String path = req.getServletPath();
         if (isInterceptor(path) && !setTaskAppUserContext(path, req)) {
@@ -70,7 +75,7 @@ public class TaskInterceptor implements HandlerInterceptor {
     }
 
     /**
-     * 设置上下文
+     * 设置上下文,token校验
      *
      * @param path
      * @param req
@@ -100,13 +105,15 @@ public class TaskInterceptor implements HandlerInterceptor {
                         throw new TaskException(ResultEnum.TASK_TOKEN_UNKNOWN_ERROR);
                 }
             } else {
+                AppUserServer appUserServer = (AppUserServer) SpringBeanInstanceAccessor.getBean(AppUserServer.class);
                 //用户id
                 JsonElement uIdJsonElement = parseToken.get(SystemUserServer.SYSTEM_USER_ID_TOKEN_KEY);
                 JsonElement nackNameJsonElement = parseToken.get(SystemUserServer.SYSTEM_USER_NACK_NAME_TOKEN_KEY);
-                if (uIdJsonElement.isJsonNull() || nackNameJsonElement.isJsonNull()) {
+
+                if (uIdJsonElement.isJsonNull() || nackNameJsonElement.isJsonNull() || !appUserServer.checkUIdIsLegal(uIdJsonElement.getAsString())) {
                     throw new TaskException(ResultEnum.TASK_TOKEN_UNSUPPORTED_ERROR);
                 }
-                
+
                 TaskAppUserContext.setuId(uIdJsonElement.getAsString());
                 TaskAppUserContext.setNackName(nackNameJsonElement.getAsString());
                 return true;

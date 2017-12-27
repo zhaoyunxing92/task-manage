@@ -227,4 +227,12 @@
             a.id = b.U_ID
         where a.id=#{id,jdbcType=VARCHAR}
     </select>
+
+    <!--统计uid个数-->
+    <select id="selectAppUserCount" resultType="int">
+            select
+              COUNT(id)
+           from app_user
+          where id=#{id,jdbcType=VARCHAR} and STATUS=1
+    </select>
 </mapper>

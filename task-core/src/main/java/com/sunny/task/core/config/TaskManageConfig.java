@@ -8,6 +8,6 @@ import org.springframework.context.annotation.Import;
  * @date 2017-10-16 10:44
  * @description:
  */
-@Import({AppWebMvcConfig.class, DataSourceConfig.class, MyBatisConfig.class, TaskFilter.class})
+@Import({AppWebMvcConfig.class, DataSourceConfig.class, MyBatisConfig.class, TaskFilter.class, SpringBeanInstanceAccessor.class})
 public class TaskManageConfig {
 }
