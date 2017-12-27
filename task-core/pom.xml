@@ -132,6 +132,13 @@
             <version>${jasypt.spring.boot.starter.version}</version>
         </dependency>
 
+        <!--dingtalk jar-->
+        <dependency>
+            <groupId>com.sunny</groupId>
+            <artifactId>task-sdk-dingtalk</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
