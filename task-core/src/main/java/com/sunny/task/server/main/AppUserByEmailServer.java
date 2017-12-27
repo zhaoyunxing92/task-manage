@@ -25,4 +25,5 @@ public interface AppUserByEmailServer {
      * @param email 邮箱
      */
     void saveAppUserByEmailKey(String uId, String email);
+
 }

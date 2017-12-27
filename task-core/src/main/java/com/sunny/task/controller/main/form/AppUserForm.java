@@ -21,25 +21,25 @@ public class AppUserForm extends BaseForm {
      * 账号
      */
     @NotBlank(message = "请输入账号", groups = {LoginGroup.class, InsertGroup.class})
-    @NotNull(message = "字段 [account] 必填", groups = {LoginGroup.class, InsertGroup.class})
+    @NotNull(message = "字段 [账号] 必填", groups = {LoginGroup.class, InsertGroup.class})
     @Length(max = 50, message = "账号最长{max}位字符", groups = {InsertGroup.class})
     private String account;
     /**
      * 密码
      */
     @NotBlank(message = "请输入密码", groups = {LoginGroup.class, InsertGroup.class})
-    @NotNull(message = "字段 [password] 必填", groups = {LoginGroup.class, InsertGroup.class})
+    @NotNull(message = "字段 [密码] 必填", groups = {LoginGroup.class, InsertGroup.class})
     @Length(max = 50, min = 6, message = "密码长度在{min}-{max}位字符", groups = {InsertGroup.class})
     private String password;
     /**
      * 邮箱
      */
     @NotBlank(message = "请输入邮箱", groups = {InsertGroup.class})
-    @NotNull(message = "字段 [email] 必填", groups = {InsertGroup.class})
+    @NotNull(message = "字段 [邮箱] 必填", groups = {InsertGroup.class})
     @Length(max = 100, min = 3, message = "邮箱长度{min}~{max}位字符", groups = {InsertGroup.class})
     @Pattern(regexp = "^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)$", message = "请输入正确的邮箱地址", groups = {InsertGroup.class})
     private String email;
-    
+
     public String getAccount() {
         return account;
     }

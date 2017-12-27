@@ -1,7 +1,5 @@
 package com.sunny.task.server.main;
 
-import com.sunny.task.core.common.exception.TaskException;
-
 /**
  * @author sunny
  * @className com.sunny.task.server.main.AppUserByAccountServer
@@ -9,7 +7,7 @@ import com.sunny.task.core.common.exception.TaskException;
  * @description:
  */
 public interface AppUserByAccountServer {
-    String findAppUserUidByAccount(String account) throws TaskException;
+    String findAppUserUidByAccount(String account);
 
     /**
      * 添加根据用户名获取uid
@@ -18,4 +16,5 @@ public interface AppUserByAccountServer {
      * @param account 账号
      */
     void saveAppUserByAccountKey(String uId, String account);
+    
 }

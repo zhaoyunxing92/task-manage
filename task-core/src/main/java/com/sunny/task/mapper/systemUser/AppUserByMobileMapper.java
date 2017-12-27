@@ -1,6 +1,5 @@
 package com.sunny.task.mapper.systemUser;
 
-import com.sunny.task.core.common.exception.TaskException;
 import com.sunny.task.core.common.mapper.BaseMapper;
 import com.sunny.task.model.systemUser.AppUserByMobile;
 import org.apache.ibatis.annotations.Param;
@@ -20,5 +19,5 @@ public interface AppUserByMobileMapper extends BaseMapper<AppUserByMobile, Strin
      * @param uId    用户uid
      * @param mobile 手机号
      */
-    void insertAppUserByMobileKey(@Param("uId") String uId, @Param("mobile") String mobile) throws TaskException;
+    void insertAppUserByMobileKey(@Param("uId") String uId, @Param("mobile") String mobile) throws Exception;
 }

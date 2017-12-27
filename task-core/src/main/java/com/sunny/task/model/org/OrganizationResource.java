@@ -1,22 +1,14 @@
 package com.sunny.task.model.org;
 
 import com.sunny.task.core.common.model.BaseModel;
-import java.util.Date;
 
-public class OrganizationResource extends BaseModel {
+public class OrganizationResource extends BaseModel<String> {
+    private static final long serialVersionUID = -4366565934293888591L;
     private String sourceId;
 
     private String orgId;
 
     private Byte sourceType;
-
-    private String creator;
-
-    private Date creationDate;
-
-    private String modifier;
-
-    private Date modificationDate;
 
     public String getSourceId() {
         return sourceId;
@@ -42,35 +34,4 @@ public class OrganizationResource extends BaseModel {
         this.sourceType = sourceType;
     }
 
-    public String getCreator() {
-        return creator;
-    }
-
-    public void setCreator(String creator) {
-        this.creator = creator == null ? null : creator.trim();
-    }
-
-    public Date getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
-    }
-
-    public String getModifier() {
-        return modifier;
-    }
-
-    public void setModifier(String modifier) {
-        this.modifier = modifier == null ? null : modifier.trim();
-    }
-
-    public Date getModificationDate() {
-        return modificationDate;
-    }
-
-    public void setModificationDate(Date modificationDate) {
-        this.modificationDate = modificationDate;
-    }
 }

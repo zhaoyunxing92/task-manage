@@ -21,7 +21,7 @@ public class UUIDUtills {
      */
     public static String getUUID(String prefix) {
 
-        return prefix + "_" + getUUID();
+        return prefix + getUUID();
     }
 
     /**

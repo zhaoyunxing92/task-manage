@@ -34,6 +34,22 @@ public class AppUserServerImpl implements AppUserServer {
     }
 
     /**
+     * 根据用户uid删除用户，强制删除
+     *
+     * @param uId
+     */
+    @Override
+    public void removeAppUserByUId(String uId) {
+        try {
+            appUserMapper.deleteByPrimaryKey(uId);
+          //  appUserByEmailServer.removeAppUserByEmailKeyByUId(uId);
+          //  appUserByAccountServer.removeAppUserByEmailKeyByUId(uId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
      * 添加用户
      *
      * @param form
@@ -58,10 +74,10 @@ public class AppUserServerImpl implements AppUserServer {
             appUser.setNickName(account);
             appUser.setStatus(AppUserServer.NOT_ACTIVE_STATUS);
             appUserMapper.insertSelective(appUser);
-            //插入查询表
+            //插入查询表 
             appUserByAccountServer.saveAppUserByAccountKey(uId, account);
             appUserByEmailServer.saveAppUserByEmailKey(uId, email);
-        } catch (TaskException ex) {
+        } catch (Exception ex) {
             throw new TaskException(ResultEnum.ADD_APP_USER_BY_ACCOUNT_ERROR, ex);
         }
 

@@ -123,21 +123,26 @@ public enum ResultEnum {
 
     /*=======================================组织模块========================================*/
     /**
-     * 查询组织异常
+     * 团队创建成功
      */
-    TASK_ORG_SELECT_ERROR(10020, "查询组织异常"),
+    TASK_INSERT_ORG_SUCCESS(11001,"团队创建成功"),
     /**
      * 查询组织异常
      */
-    TASK_ORG_SELECT_NOT_EXIST_ERROR(10021, "组织不存在"),
+    TASK_ORG_SELECT_ERROR(11020, "查询组织异常"),
+    /**
+     * 查询组织异常
+     */
+    TASK_ORG_SELECT_NOT_EXIST_ERROR(11021, "组织不存在"),
     /**
      * 组织成员超限
      */
-    TASK_ORG_USER_OVERFLOW_ERROR(10022, "组织成员超限"),
+    TASK_ORG_USER_OVERFLOW_ERROR(11022, "组织成员超限"),
     /**
      * 创建组织异常
      */
-    TASK_INSERT_ORG_ERROR(10023, "创建组织异常"),
+    TASK_INSERT_ORG_ERROR(11023, "创建组织异常"),
+
 
      /*=======================================项目模块========================================*/
     /**

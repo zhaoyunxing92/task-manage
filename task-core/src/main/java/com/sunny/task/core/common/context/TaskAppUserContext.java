@@ -18,13 +18,25 @@ public class TaskAppUserContext implements Serializable {
     /**
      * 用户唯一id
      */
-    static String uId;
+    private static String uId;
+    /**
+     * 昵称
+     */
+    private static String nackName;
 
     public static String getuId() {
         return uId;
     }
 
-    public static void setuId(String uId) {
+    public static synchronized void setuId(String uId) {
         TaskAppUserContext.uId = uId;
+    }
+
+    public static String getNackName() {
+        return nackName;
+    }
+
+    public static synchronized void setNackName(String nackName) {
+        TaskAppUserContext.nackName = nackName;
     }
 }

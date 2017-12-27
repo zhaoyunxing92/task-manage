@@ -14,6 +14,19 @@ import javax.servlet.http.HttpServletResponse;
  */
 public interface SystemUserServer {
     /**
+     * 用户id前缀
+     */
+    String SYSTEM_USER_ID_PREFIX = "task";
+    /**
+     * token存放的userid key
+     */
+    String SYSTEM_USER_ID_TOKEN_KEY = "uId";
+    /**
+     * token存放的用户昵称 key
+     */
+    String SYSTEM_USER_NACK_NAME_TOKEN_KEY = "nackName";
+
+    /**
      * 登录
      *
      * @param req

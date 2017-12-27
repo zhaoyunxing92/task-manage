@@ -80,10 +80,10 @@
             <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
         </table>
 
-        <table tableName="organization_resource" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false">
-            <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
-        </table>
+        <!--<table tableName="organization_resource" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--enableUpdateByExample="false">-->
+            <!--&lt;!&ndash;<generatedKey column="id" sqlStatement="MySql" identity="true"/>&ndash;&gt;-->
+        <!--</table>-->
         
     </context>
 </generatorConfiguration>

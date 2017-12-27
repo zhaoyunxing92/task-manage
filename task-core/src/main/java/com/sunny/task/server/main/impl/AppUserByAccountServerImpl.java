@@ -1,10 +1,11 @@
 package com.sunny.task.server.main.impl;
 
+import com.sunny.task.core.common.exception.TaskException;
+import com.sunny.task.core.common.result.ResultEnum;
 import com.sunny.task.core.common.utils.StringUtils;
 import com.sunny.task.mapper.systemUser.AppUserByAccountMapper;
 import com.sunny.task.server.main.AppUserByAccountServer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 /**
@@ -33,13 +34,14 @@ public class AppUserByAccountServerImpl implements AppUserByAccountServer {
      * @param account 账号
      */
     @Override
-    @Async
-    public void saveAppUserByAccountKey(String uId, String account) {
-        synchronized (this) {
-            if (StringUtils.isBlank(findAppUserUidByAccount(account))) {
+    public synchronized void saveAppUserByAccountKey(String uId, String account) {
+        if (StringUtils.isBlank(findAppUserUidByAccount(account))) {
+            try {
                 appUserByAccountMapper.insertAppUserByAccountKey(uId, account);
+            } catch (Exception e) {
+                throw new TaskException(ResultEnum.ADD_APP_USER_BY_ACCOUNT_ERROR, e.getLocalizedMessage());
             }
         }
-
     }
+
 }

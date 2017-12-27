@@ -2,34 +2,34 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.sunny.task.mapper.org.OrganizationMemberResourceMapper" >
   <resultMap id="BaseResultMap" type="com.sunny.task.model.org.OrganizationMemberResource" >
-    <id column="ORG_U_ID" property="orgUId" jdbcType="VARCHAR" />
+    <id column="ORG_USER_U_ID" property="orgUserUId" jdbcType="VARCHAR" />
     <result column="CORP_USER_ID" property="corpUserId" jdbcType="VARCHAR" />
     <result column="CORP_USER_OPENID" property="corpUserOpenid" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    ORG_U_ID, CORP_USER_ID, CORP_USER_OPENID
+    ORG_USER_U_ID, CORP_USER_ID, CORP_USER_OPENID
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
     from organization_member_resource
-    where ORG_U_ID = #{orgUId,jdbcType=VARCHAR}
+    where ORG_USER_U_ID = #{orgUserUId,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from organization_member_resource
-    where ORG_U_ID = #{orgUId,jdbcType=VARCHAR}
+    where ORG_USER_U_ID = #{orgUserUId,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.sunny.task.model.org.OrganizationMemberResource" >
-    insert into organization_member_resource (ORG_U_ID, CORP_USER_ID, CORP_USER_OPENID
+    insert into organization_member_resource (ORG_USER_U_ID, CORP_USER_ID, CORP_USER_OPENID
       )
-    values (#{orgUId,jdbcType=VARCHAR}, #{corpUserId,jdbcType=VARCHAR}, #{corpUserOpenid,jdbcType=VARCHAR}
+    values (#{orgUserUId,jdbcType=VARCHAR}, #{corpUserId,jdbcType=VARCHAR}, #{corpUserOpenid,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.sunny.task.model.org.OrganizationMemberResource" >
     insert into organization_member_resource
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="orgUId != null" >
-        ORG_U_ID,
+      <if test="orgUserUId != null" >
+        ORG_USER_U_ID,
       </if>
       <if test="corpUserId != null" >
         CORP_USER_ID,
@@ -39,8 +39,8 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="orgUId != null" >
-        #{orgUId,jdbcType=VARCHAR},
+      <if test="orgUserUId != null" >
+        #{orgUserUId,jdbcType=VARCHAR},
       </if>
       <if test="corpUserId != null" >
         #{corpUserId,jdbcType=VARCHAR},
@@ -60,12 +60,12 @@
         CORP_USER_OPENID = #{corpUserOpenid,jdbcType=VARCHAR},
       </if>
     </set>
-    where ORG_U_ID = #{orgUId,jdbcType=VARCHAR}
+    where ORG_USER_U_ID = #{orgUserUId,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.sunny.task.model.org.OrganizationMemberResource" >
     update organization_member_resource
     set CORP_USER_ID = #{corpUserId,jdbcType=VARCHAR},
       CORP_USER_OPENID = #{corpUserOpenid,jdbcType=VARCHAR}
-    where ORG_U_ID = #{orgUId,jdbcType=VARCHAR}
+    where ORG_USER_U_ID = #{orgUserUId,jdbcType=VARCHAR}
   </update>
 </mapper>

@@ -1,9 +1,12 @@
 package com.sunny.task.server.main.impl;
 
 import com.sunny.task.core.common.exception.TaskException;
+import com.sunny.task.core.common.result.ResultEnum;
 import com.sunny.task.core.common.utils.StringUtils;
 import com.sunny.task.mapper.systemUser.AppUserByMobileMapper;
 import com.sunny.task.server.main.AppUserByMobileServer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -16,6 +19,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AppUserByMobileServerImpl implements AppUserByMobileServer {
+    private final static Logger logger = LoggerFactory.getLogger(AppUserByAccountServerImpl.class);
     @Autowired
     private AppUserByMobileMapper appUserByMobileMapper;
 
@@ -37,7 +41,11 @@ public class AppUserByMobileServerImpl implements AppUserByMobileServer {
     @Async
     public void saveAppUserByMobileKey(String uId, String mobile) {
         if (StringUtils.isMobile(mobile) && StringUtils.isBlank(findAppUserUidByMobile(mobile))) {
-            appUserByMobileMapper.insertAppUserByMobileKey(uId, mobile);
+            try {
+                appUserByMobileMapper.insertAppUserByMobileKey(uId, mobile);
+            } catch (Exception e) {
+                throw new TaskException(ResultEnum.ADD_APP_USER_BY_MOBILE_ERROR, e.getLocalizedMessage());
+            }
         }
     }
 }

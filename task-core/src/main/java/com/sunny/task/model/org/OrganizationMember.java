@@ -1,10 +1,9 @@
 package com.sunny.task.model.org;
 
 import com.sunny.task.core.common.model.BaseModel;
-import java.util.Date;
 
-public class OrganizationMember extends BaseModel {
-    private String id;
+public class OrganizationMember extends BaseModel<String> {
+    private static final long serialVersionUID = -7055979976914296695L;
 
     private String orgId;
 
@@ -29,22 +28,6 @@ public class OrganizationMember extends BaseModel {
     private Boolean rejectEmailMsg;
 
     private Boolean hideAll;
-
-    private String creator;
-
-    private Date creationDate;
-
-    private String modifier;
-
-    private Date modificationDate;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
-    }
 
     public String getOrgId() {
         return orgId;
@@ -142,35 +125,4 @@ public class OrganizationMember extends BaseModel {
         this.hideAll = hideAll;
     }
 
-    public String getCreator() {
-        return creator;
-    }
-
-    public void setCreator(String creator) {
-        this.creator = creator == null ? null : creator.trim();
-    }
-
-    public Date getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
-    }
-
-    public String getModifier() {
-        return modifier;
-    }
-
-    public void setModifier(String modifier) {
-        this.modifier = modifier == null ? null : modifier.trim();
-    }
-
-    public Date getModificationDate() {
-        return modificationDate;
-    }
-
-    public void setModificationDate(Date modificationDate) {
-        this.modificationDate = modificationDate;
-    }
 }

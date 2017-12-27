@@ -64,4 +64,5 @@
          insert into app_user_by_account (ACCOUNT, U_ID)
         values (#{account,jdbcType=VARCHAR}, #{uId,jdbcType=VARCHAR})
     </select>
+    
 </mapper>

@@ -1,5 +1,6 @@
 package com.sunny.task.core.interceptor;
 
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.sunny.task.core.common.context.TaskAppUserContext;
 import com.sunny.task.core.common.exception.TaskException;
@@ -10,6 +11,7 @@ import com.sunny.task.core.common.utils.CookiesUtils;
 import com.sunny.task.core.common.utils.GsonUtils;
 import com.sunny.task.core.common.utils.NullUtils;
 import com.sunny.task.core.common.utils.TokenUtils;
+import com.sunny.task.server.main.SystemUserServer;
 import org.apache.http.HttpStatus;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -99,8 +101,14 @@ public class TaskInterceptor implements HandlerInterceptor {
                 }
             } else {
                 //用户id
-                String uId = parseToken.get("uId").getAsString();
-                TaskAppUserContext.setuId(uId);
+                JsonElement uIdJsonElement = parseToken.get(SystemUserServer.SYSTEM_USER_ID_TOKEN_KEY);
+                JsonElement nackNameJsonElement = parseToken.get(SystemUserServer.SYSTEM_USER_NACK_NAME_TOKEN_KEY);
+                if (uIdJsonElement.isJsonNull() || nackNameJsonElement.isJsonNull()) {
+                    throw new TaskException(ResultEnum.TASK_TOKEN_UNSUPPORTED_ERROR);
+                }
+                
+                TaskAppUserContext.setuId(uIdJsonElement.getAsString());
+                TaskAppUserContext.setNackName(nackNameJsonElement.getAsString());
                 return true;
             }
         } else {

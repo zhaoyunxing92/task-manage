@@ -1,8 +1,6 @@
 package com.sunny.task.core.common.model;
 
 
-import com.sunny.task.core.common.context.TaskAppUserContext;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -40,7 +38,7 @@ public class BaseModel<ID extends Serializable> implements Serializable {
     }
 
     public String getCreator() {
-        return creator == null ? TaskAppUserContext.getuId() : creator;
+        return creator == null ? "" : creator;
     }
 
     public void setCreator(String creator) {
@@ -57,7 +55,7 @@ public class BaseModel<ID extends Serializable> implements Serializable {
     }
 
     public String getModifier() {
-        return modifier == null ? TaskAppUserContext.getuId() : modifier;
+        return modifier == null ? "" : modifier;
     }
 
     public void setModifier(String modifier) {

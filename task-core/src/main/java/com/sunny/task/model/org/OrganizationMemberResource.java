@@ -2,19 +2,20 @@ package com.sunny.task.model.org;
 
 import com.sunny.task.core.common.model.BaseModel;
 
-public class OrganizationMemberResource extends BaseModel {
-    private String orgUId;
+public class OrganizationMemberResource extends BaseModel<String> {
+    private static final long serialVersionUID = 3394444887257624826L;
+    private String orgUserUId;
 
     private String corpUserId;
 
     private String corpUserOpenid;
 
-    public String getOrgUId() {
-        return orgUId;
+    public String getOrgUserUId() {
+        return orgUserUId;
     }
 
-    public void setOrgUId(String orgUId) {
-        this.orgUId = orgUId == null ? null : orgUId.trim();
+    public void setOrgUserUId(String orgUserUId) {
+        this.orgUserUId = orgUserUId == null ? null : orgUserUId.trim();
     }
 
     public String getCorpUserId() {

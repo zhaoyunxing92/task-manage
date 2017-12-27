@@ -60,7 +60,7 @@ public class SystemUserServierImpl implements SystemUserServer {
         TaskAppUser taskAppUser = new TaskAppUser();
         BeanUtils.copyProperties(appUserVo, taskAppUser);
         taskAppUser.setuId(uId);
-        setToken(res, uId);
+        setToken(res, uId, appUserVo.getNickName());
         return taskAppUser;
     }
 
@@ -90,20 +90,21 @@ public class SystemUserServierImpl implements SystemUserServer {
         if (!StringUtils.isBlank(getAppUserUIdByAccount(form.getEmail()))) {
             throw new TaskException(ResultEnum.SYSTEM_EMAIL_EXIST);
         }
-        String uId = UUIDUtills.getUUID("task");
+        String uId = UUIDUtills.getUUID(SystemUserServer.SYSTEM_USER_ID_PREFIX);
         form.setuId(uId);
         appUserServer.saveAppUser(form);
         //返回前端数据
         TaskAppUser taskAppUser = new TaskAppUser();
         taskAppUser.setuId(uId);
         taskAppUser.setNickName(account);
-        setToken(res, uId);
+        setToken(res, uId, account);
         return taskAppUser;
     }
 
-    private void setToken(HttpServletResponse res, String uId) {
+    private void setToken(HttpServletResponse res, String uId, String nackName) {
         HashMap<String, Object> map = new HashMap();
-        map.put("uId", uId);
+        map.put(SystemUserServer.SYSTEM_USER_ID_TOKEN_KEY, uId);
+        map.put(SystemUserServer.SYSTEM_USER_NACK_NAME_TOKEN_KEY, nackName);
         CookiesUtils.setCookie(res, BaseFields.APP_USER_COOKIE_KEY, TokenUtils.generateToken(map));
     }
 
