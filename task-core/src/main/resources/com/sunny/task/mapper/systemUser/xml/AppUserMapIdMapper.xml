@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sunny.task.mapper.systemUser.AppUserMapIdMapper" >
+  <resultMap id="BaseResultMap" type="com.sunny.task.model.systemUser.AppUserMapId" >
+    <id column="MAP_ID" property="mapId" jdbcType="VARCHAR" />
+    <result column="U_ID" property="uId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    MAP_ID, U_ID
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from app_user_map_id
+    where MAP_ID = #{mapId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from app_user_map_id
+    where MAP_ID = #{mapId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.sunny.task.model.systemUser.AppUserMapId" >
+    insert into app_user_map_id (MAP_ID, U_ID)
+    values (#{mapId,jdbcType=VARCHAR}, #{uId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.sunny.task.model.systemUser.AppUserMapId" >
+    insert into app_user_map_id
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="mapId != null" >
+        MAP_ID,
+      </if>
+      <if test="uId != null" >
+        U_ID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="mapId != null" >
+        #{mapId,jdbcType=VARCHAR},
+      </if>
+      <if test="uId != null" >
+        #{uId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.sunny.task.model.systemUser.AppUserMapId" >
+    update app_user_map_id
+    <set >
+      <if test="uId != null" >
+        U_ID = #{uId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where MAP_ID = #{mapId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.sunny.task.model.systemUser.AppUserMapId" >
+    update app_user_map_id
+    set U_ID = #{uId,jdbcType=VARCHAR}
+    where MAP_ID = #{mapId,jdbcType=VARCHAR}
+  </update>
+</mapper>

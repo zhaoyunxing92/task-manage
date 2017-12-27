@@ -67,7 +67,7 @@
 
         <!-- !!!! Table Configurations !!!! -->
        
-        <table tableName="app_user_by_account" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+        <table tableName="app_user_map_id" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
