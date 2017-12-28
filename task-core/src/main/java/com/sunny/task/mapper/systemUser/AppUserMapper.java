@@ -20,4 +20,13 @@ public interface AppUserMapper extends BaseMapper<AppUser, String> {
      * @return
      */
     int selectAppUserCount(String uId);
+
+    /**
+     * 根据uid查询用户昵称
+     *
+     * @param uId
+     * @return
+     */
+
+    String selectAppUserNickNameByUId(String uId);
 }

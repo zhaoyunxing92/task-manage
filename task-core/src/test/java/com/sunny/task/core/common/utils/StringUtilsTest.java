@@ -8,16 +8,7 @@ package com.sunny.task.core.common.utils;
  */
 public class StringUtilsTest {
     public static void main(String[] args) {
-        String id = null;
-        System.out.println("id = " + StringUtils.isEmpty(id,true));
-        System.out.println("id = " + StringUtils.isBlank(id));
-        id = "";
-        System.out.println("id = " + StringUtils.isEmpty(id));
-        System.out.println("id = " + StringUtils.isBlank(id));
-
-        id = "  ";
-        System.out.println("id = " + StringUtils.isEmpty(id));
-        System.out.println("id = " + StringUtils.isBlank(id));
+        
     }
 
 

@@ -7,6 +7,7 @@ import com.sunny.task.core.common.result.ResultEnum;
 import com.sunny.task.core.common.utils.UUIDUtills;
 import com.sunny.task.mapper.org.OrganizationMapper;
 import com.sunny.task.model.org.Organization;
+import com.sunny.task.model.org.vo.OrganizationVo;
 import com.sunny.task.server.org.OrganizationMemberServer;
 import com.sunny.task.server.org.OrganizationServer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,7 @@ public class OrganizationServerImpl implements OrganizationServer {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public String saveOrganization(OrgForm form) {
-        String uId = null;
+        String uId;
         try {
             String userUId = TaskAppUserContext.getuId();
 
@@ -54,5 +55,10 @@ public class OrganizationServerImpl implements OrganizationServer {
             throw new TaskException(ResultEnum.TASK_INSERT_ORG_ERROR, ex);
         }
         return uId;
+    }
+
+    @Override
+    public OrganizationVo findOrganizationById(String id) {
+        return organizationMapper.selectOrganizationById(id, TaskAppUserContext.getuId());
     }
 }

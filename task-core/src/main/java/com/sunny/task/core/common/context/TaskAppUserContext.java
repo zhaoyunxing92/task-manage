@@ -22,7 +22,7 @@ public class TaskAppUserContext implements Serializable {
     /**
      * 昵称
      */
-    private static String nackName;
+    private static String nickName;
 
     public static String getuId() {
         return uId;
@@ -32,11 +32,11 @@ public class TaskAppUserContext implements Serializable {
         TaskAppUserContext.uId = uId;
     }
 
-    public static String getNackName() {
-        return nackName;
+    public static String getNickName() {
+        return nickName;
     }
 
-    public static synchronized void setNackName(String nackName) {
-        TaskAppUserContext.nackName = nackName;
+    public static synchronized void setNickName(String nickName) {
+        TaskAppUserContext.nickName = nickName;
     }
 }

@@ -40,4 +40,12 @@ public interface AppUserServer {
      * @param uId
      */
     Boolean checkUIdIsLegal(String uId);
+
+    /**
+     * 根据uid获取昵称
+     *
+     * @param uId
+     * @return
+     */
+    String findAppUserNickNameByUId(String uId);
 }

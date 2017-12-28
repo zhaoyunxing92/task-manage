@@ -18,7 +18,7 @@ public interface BaseMapper<T extends BaseModel<ID>, ID extends Serializable> {
 
     int insertSelective(T record) throws Exception;
 
-    T selectByPrimaryKey(ID id) throws Exception;
+    T selectByPrimaryKey(ID id);
 
     int updateByPrimaryKeySelective(T record) throws Exception;
 

@@ -115,7 +115,7 @@ public class TaskInterceptor extends HandlerInterceptorAdapter {
                 }
 
                 TaskAppUserContext.setuId(uIdJsonElement.getAsString());
-                TaskAppUserContext.setNackName(nackNameJsonElement.getAsString());
+                TaskAppUserContext.setNickName(nackNameJsonElement.getAsString());
                 return true;
             }
         } else {

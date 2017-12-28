@@ -1,6 +1,7 @@
 package com.sunny.task.server.org;
 
 import com.sunny.task.controller.org.form.OrgForm;
+import com.sunny.task.model.org.vo.OrganizationVo;
 
 /**
  * @author sunny
@@ -19,4 +20,6 @@ public interface OrganizationServer {
      * @return
      */
     String saveOrganization(OrgForm form);
+
+    OrganizationVo findOrganizationById(String id);
 }

@@ -235,4 +235,12 @@
            from app_user
           where id=#{id,jdbcType=VARCHAR} and STATUS=1
     </select>
+
+    <!--根据uid查询用户昵称-->
+    <select id="selectAppUserNickNameByUId" resultType="java.lang.String">
+            select
+              NICK_NAME
+           from app_user
+          where id=#{id,jdbcType=VARCHAR} and STATUS=1
+    </select>
 </mapper>

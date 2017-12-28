@@ -82,4 +82,15 @@ public class AppUserServerImpl implements AppUserServer {
     public Boolean checkUIdIsLegal(String uId) {
         return 1 == appUserMapper.selectAppUserCount(uId);
     }
+
+    /**
+     * 根据uid获取昵称
+     *
+     * @param uId
+     * @return
+     */
+    @Override
+    public String findAppUserNickNameByUId(String uId) {
+        return appUserMapper.selectAppUserNickNameByUId(uId);
+    }
 }

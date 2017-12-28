@@ -125,7 +125,7 @@ public enum ResultEnum {
     /**
      * 团队创建成功
      */
-    TASK_INSERT_ORG_SUCCESS(11001,"团队创建成功"),
+    TASK_INSERT_ORG_SUCCESS(11001, "团队创建成功"),
     /**
      * 查询组织异常
      */
@@ -142,7 +142,14 @@ public enum ResultEnum {
      * 创建组织异常
      */
     TASK_INSERT_ORG_ERROR(11023, "创建组织异常"),
-
+    /**
+     * 团队添加成员异常
+     */
+    TASK_ORG_ADD_USER_ERROR(11024, "团队添加成员异常"),
+    /**
+     *  团队添加成员成功
+     */
+    TASK_ORG_ADD_USER_SUCCESS(11025, "团队添加成员成功"),
 
      /*=======================================项目模块========================================*/
     /**
@@ -238,12 +245,12 @@ public enum ResultEnum {
         return code;
     }
 
-    public String getMsg() {
-        return msg;
-    }
-
     public void setCode(Integer code) {
         this.code = code;
+    }
+
+    public String getMsg() {
+        return msg;
     }
 
     public void setMsg(String msg) {
