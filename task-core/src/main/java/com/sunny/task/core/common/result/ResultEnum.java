@@ -119,7 +119,10 @@ public enum ResultEnum {
      * 手机格式不正确
      */
     MOBILE_FORMAT_ERROR(10018, "手机格式不正确"),
-    
+    /**
+     * 用户id不合法
+     */
+    SYSTEM_UID_IS_NOT_LEGAL(10019, "用户id不合法"),
 
     /*=======================================组织模块========================================*/
     /**
@@ -147,7 +150,7 @@ public enum ResultEnum {
      */
     TASK_ORG_ADD_USER_ERROR(11024, "团队添加成员异常"),
     /**
-     *  团队添加成员成功
+     * 团队添加成员成功
      */
     TASK_ORG_ADD_USER_SUCCESS(11025, "团队添加成员成功"),
 
@@ -155,7 +158,11 @@ public enum ResultEnum {
     /**
      * 添加项目异常
      */
-    TASK_INSERT_PRO_ERROR(10200, "添加项目异常"),
+    TASK_INSERT_PROJECT_OK(0, "添加项目成功"),
+    /**
+     * 添加项目异常
+     */
+    TASK_INSERT_PROJECT_ERROR(10200, "添加项目异常"),
 
     /**
      * 添加项目成员异常

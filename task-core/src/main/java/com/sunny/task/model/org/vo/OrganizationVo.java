@@ -19,11 +19,8 @@ public class OrganizationVo extends Organization {
      * 组织成员
      */
     private String userIdList;
-    /**
-     * 项目个数
-     */
-    private int proCount;
 
+    
     private String iconUrl;
     /**
      * 是否管理员
@@ -48,14 +45,6 @@ public class OrganizationVo extends Organization {
 
     public void setUserIdList(String userIdList) {
         this.userIdList = userIdList;
-    }
-
-    public int getProCount() {
-        return proCount;
-    }
-
-    public void setProCount(int proCount) {
-        this.proCount = proCount;
     }
 
     public String getIconUrl() {

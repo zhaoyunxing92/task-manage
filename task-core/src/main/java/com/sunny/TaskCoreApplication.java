@@ -8,11 +8,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.annotation.EnableAsync;
 
+/**
+ * @author sunny
+ */
 @SpringBootApplication
 @EnableAutoConfiguration //开启自动注入bean
 @MapperScan("com.sunny.task.mapper")
 @Import(TaskManageConfig.class)
-@EnableAsync  //开启异步执行
+@EnableAsync  /**开启异步执行 **/
 public class TaskCoreApplication {
 
 	public static void main(String[] args) {

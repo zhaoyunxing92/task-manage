@@ -40,7 +40,7 @@
 
         <!-- !!!! Model Configurations !!!! -->
         <!-- 生成实体类地址 -->
-        <javaModelGenerator targetPackage="com.sunny.task.model.org" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.sunny.task.model.project" targetProject="src/main/java">
             <!-- 是否对model添加 构造函数 -->
             <property name="constructorBased" value="false"/>
             <!-- 是否允许子包，即targetPackage.schemaName.tableName -->
@@ -55,27 +55,27 @@
         </javaModelGenerator>
         
         <!-- 生成mapxml文件 -->
-        <sqlMapGenerator targetPackage="com.sunny.task.mapper.org.xml" targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="com.sunny.task.mapper.project.xml" targetProject="src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
         <!-- 生成mapxml对应client，也就是接口dao -->
-       <javaClientGenerator targetPackage="com.sunny.task.mapper.org" targetProject="src/main/java" type="XMLMAPPER">
+       <javaClientGenerator targetPackage="com.sunny.task.mapper.project" targetProject="src/main/java" type="XMLMAPPER">
             <property name="enableSubPackages" value="true"/>
             <property name="rootInterface" value="com.sunny.task.core.common.mapper.BaseMapper"/>
         </javaClientGenerator>
 
         <!-- !!!! Table Configurations !!!! -->
        
-        <table tableName="organization" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+        <table tableName="PROJECT" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
             <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
         </table>
-        <table tableName="organization_member" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+        <table tableName="PROJECT_USER" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
             <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
         </table>
-        <table tableName="organization_member_resource" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+        <table tableName="PROJECT_VERSION" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">
             <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
         </table>

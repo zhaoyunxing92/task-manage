@@ -30,7 +30,7 @@ public class MyBatisConfig implements TransactionManagementConfigurer {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
         org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
-        // 这个配置使全局的映射器启用或禁用缓存
+        // 这个配置使全局的映射器启用或禁用缓存，二级缓存开启
         configuration.setCacheEnabled(true);
         // 允许 JDBC 支持生成的键，需要适合的驱动（如MySQL，SQL Server，Sybase ASE）。
         // 如果设置为 true 则这个设置强制生成的键被使用，尽管一些驱动拒绝兼容但仍然有效（比如 Derby）。
@@ -41,7 +41,9 @@ public class MyBatisConfig implements TransactionManagementConfigurer {
         // 配置默认的执行器。SIMPLE 执行器没有什么特别之处；REUSE 执行器重用预处理语句；BATCH 执行器重用语句和批量更新
         configuration.setDefaultExecutorType(ExecutorType.REUSE);
         // 全局启用或禁用延迟加载，禁用时所有关联对象都会即时加载
-        configuration.setLazyLoadingEnabled(false);
+        configuration.setLazyLoadingEnabled(true );
+        //积极加载改为按需加载
+        configuration.setAggressiveLazyLoading(false);
         // 设置SQL语句执行超时时间缺省值，具体SQL语句仍可以单独设置
         configuration.setDefaultStatementTimeout(5000);
         sqlSessionFactoryBean.setConfiguration(configuration);
