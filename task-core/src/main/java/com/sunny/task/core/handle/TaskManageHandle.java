@@ -16,6 +16,7 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.ServletRequestBindingException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -34,7 +35,7 @@ public class TaskManageHandle {
     private final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(TaskManageHandle.class);
 
     // MyBatisSystemException nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'open' in 'class com.sunny.bugmanage.project.org.ProjectForm
-    @ExceptionHandler({BindException.class, MethodArgumentNotValidException.class, HttpMessageNotReadableException.class, MyBatisSystemException.class})
+    @ExceptionHandler({BindException.class, ServletRequestBindingException.class, MethodArgumentNotValidException.class, HttpMessageNotReadableException.class, MyBatisSystemException.class})
     @ResponseBody
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public BaseResult validExceptionHandle(Exception ex) {
@@ -48,6 +49,10 @@ public class TaskManageHandle {
         } else if (ex instanceof HttpMessageNotReadableException) {
             HttpMessageNotReadableException httpMessageNotReadableException = (HttpMessageNotReadableException) ex;
             return ResultUtils.error(100, httpMessageNotReadableException.getMessage());
+        } else if (ex instanceof ServletRequestBindingException) {
+            //get请求没有参数
+            ServletRequestBindingException servletRequestBindingException = new ServletRequestBindingException(ex.getMessage());
+            return ResultUtils.error(100, servletRequestBindingException.getMessage());
         } else {
             return ResultUtils.error(200, ex.getMessage());
         }
