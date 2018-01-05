@@ -23,9 +23,8 @@ public interface ProjectServer {
     /**
      * 根据组织id和项目id获取项目详情
      *
-     * @param orgId
      * @param proId
      * @return
      */
-    ProjectVo findOrganizationProjectByProIdAndOrgId(String orgId, String proId);
+    ProjectVo findOrganizationProjectByProIdAndOrgId(String proId);
 }

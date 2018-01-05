@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.sunny.task.mapper.project.ProjectVersionMapper" >
+  <!--开启二级缓存-->
+  <cache/>
   <resultMap id="BaseResultMap" type="com.sunny.task.model.project.ProjectVersion" >
     <id column="U_ID" property="uId" jdbcType="VARCHAR" />
     <result column="PRO_ID" property="proId" jdbcType="VARCHAR" />

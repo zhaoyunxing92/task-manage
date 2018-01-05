@@ -16,12 +16,12 @@ import javax.validation.constraints.Size;
 public class ProjectUserForm extends BaseForm {
     private static final long serialVersionUID = 2210860086371950841L;
 
-    /**
-     * 组织id
-     */
-    @NotBlank(message = "请选择组织", groups = {InsertGroup.class})
-    @NotNull(message = "字段 [组织] 必填", groups = {InsertGroup.class})
-    private String orgId;
+//    /**
+//     * 组织id
+//     */
+//    @NotBlank(message = "请选择组织", groups = {InsertGroup.class})
+//    @NotNull(message = "字段 [组织] 必填", groups = {InsertGroup.class})
+//    private String orgId;
 
     /**
      * 项目id
@@ -35,14 +35,6 @@ public class ProjectUserForm extends BaseForm {
     @NotNull(message = "字段 [用户] 必填", groups = {InsertGroup.class})
     @Size(message = "至少选择一个用户", min = 1, groups = {InsertGroup.class})
     private String[] userIds;
-
-    public String getOrgId() {
-        return orgId;
-    }
-
-    public void setOrgId(String orgId) {
-        this.orgId = orgId;
-    }
 
     public String getProId() {
         return proId;

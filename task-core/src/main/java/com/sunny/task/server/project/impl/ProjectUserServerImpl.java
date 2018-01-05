@@ -73,7 +73,7 @@ public class ProjectUserServerImpl implements ProjectUserServer {
             addProjectUsers.add(projectUser);
         } else {
             //获取项目详情
-            ProjectVo projectVo = projectServer.findOrganizationProjectByProIdAndOrgId(orgId, proId);
+            ProjectVo projectVo = projectServer.findOrganizationProjectByProIdAndOrgId(proId);
             if (StringUtils.isBlank(projectVo.getuId())) {
                 return;
             }
@@ -91,7 +91,8 @@ public class ProjectUserServerImpl implements ProjectUserServer {
             if (projectVo.getUserCount() + size >= projectVo.getMemberLimit()) {
                 throw new TaskException(ResultEnum.TASK_ORG_PRO_USER_OVERFLOW);
             }
-
+            //赋值
+            orgId = projectVo.getOrgId();
             //添加到
             for (String userId : addUsers) {
                 //对userid校验
@@ -126,6 +127,6 @@ public class ProjectUserServerImpl implements ProjectUserServer {
      */
     @Override
     public void addOrgnizationProjectUsers(ProjectUserForm form) {
-        addOrgnizationProjectUsers(form.getOrgId(), form.getProId(), form.getUserIds(), false);
+        addOrgnizationProjectUsers(null, form.getProId(), form.getUserIds(), false);
     }
 }

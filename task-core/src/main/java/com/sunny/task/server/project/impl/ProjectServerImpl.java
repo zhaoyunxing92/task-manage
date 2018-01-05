@@ -66,13 +66,11 @@ public class ProjectServerImpl implements ProjectServer {
 
     /**
      * 根据组织id和项目id获取项目详情
-     *
-     * @param orgId
      * @param proId
      * @return
      */
     @Override
-    public ProjectVo findOrganizationProjectByProIdAndOrgId(String orgId, String proId) {
-        return projectMapper.selectOrganizationProjectByProIdAndOrgId(orgId, proId);
+    public ProjectVo findOrganizationProjectByProIdAndOrgId( String proId) {
+        return projectMapper.selectOrganizationProjectByProIdAndOrgId(proId);
     }
 }
