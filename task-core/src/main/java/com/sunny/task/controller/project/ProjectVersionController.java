@@ -1,11 +1,11 @@
 package com.sunny.task.controller.project;
 
-import com.sunny.task.controller.project.form.ProjectUserForm;
+import com.sunny.task.controller.project.form.ProjectVsersionForm;
 import com.sunny.task.core.common.result.BaseResult;
 import com.sunny.task.core.common.result.ResultEnum;
 import com.sunny.task.core.common.utils.ResultUtils;
 import com.sunny.task.core.common.valid.InsertGroup;
-import com.sunny.task.server.project.ProjectUserServer;
+import com.sunny.task.server.project.ProjectVersionServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/org/project/version")
 public class ProjectVersionController {
     @Autowired
-    private ProjectUserServer projectUserServer;
+    private ProjectVersionServer projectVersionServer;
 
     /**
      * 添加团队项目版本
@@ -32,8 +32,7 @@ public class ProjectVersionController {
      * @return
      */
     @PostMapping
-    BaseResult addOrganizationProject(@RequestBody @Validated({InsertGroup.class}) ProjectUserForm form) {
-        projectUserServer.addOrgnizationProjectUsers(form);
-        return ResultUtils.success(ResultEnum.TASK_INSERT_PROJECT_USER_OK);
+    BaseResult addOrganizationProject(@RequestBody @Validated({InsertGroup.class}) ProjectVsersionForm form) {
+        return ResultUtils.success(ResultEnum.TASK_INSERT_PROJECT_VERSION_OK, projectVersionServer.addProjectVersion(form));
     }
 }

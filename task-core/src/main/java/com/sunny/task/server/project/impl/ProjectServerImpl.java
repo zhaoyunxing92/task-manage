@@ -11,6 +11,7 @@ import com.sunny.task.model.project.vo.ProjectVo;
 import com.sunny.task.server.main.AppUserServer;
 import com.sunny.task.server.project.ProjectServer;
 import com.sunny.task.server.project.ProjectUserServer;
+import com.sunny.task.server.project.ProjectVersionServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,6 +31,9 @@ public class ProjectServerImpl implements ProjectServer {
     @Autowired
     private AppUserServer appUserServer;
 
+    @Autowired
+    private ProjectVersionServer projectVersionServer;
+
     /**
      * 添加团队项目
      *
@@ -47,7 +51,7 @@ public class ProjectServerImpl implements ProjectServer {
             project.setuId(uId);
             String orgId = form.getOrgId();
             String ownerId = form.getOwnerId();
-            if(!appUserServer.checkUIdIsLegal(ownerId)){
+            if (!appUserServer.checkUIdIsLegal(ownerId)) {
                 throw new TaskException(ResultEnum.SYSTEM_UID_IS_NOT_LEGAL);
             }
             project.setOrgId(orgId);
@@ -58,6 +62,8 @@ public class ProjectServerImpl implements ProjectServer {
             projectMapper.insertSelective(project);
             //添加项目成员
             projectUserServer.addOrgnizationProjectUserAuto(orgId, uId, ownerId);
+            // 添加项目版本
+            projectVersionServer.addProjectVersionAuto(uId);
         } catch (Exception e) {
             throw new TaskException(ResultEnum.TASK_INSERT_PROJECT_ERROR, e.getMessage());
         }
@@ -66,11 +72,12 @@ public class ProjectServerImpl implements ProjectServer {
 
     /**
      * 根据组织id和项目id获取项目详情
+     *
      * @param proId
      * @return
      */
     @Override
-    public ProjectVo findOrganizationProjectByProIdAndOrgId( String proId) {
+    public ProjectVo findOrganizationProjectByProIdAndOrgId(String proId) {
         return projectMapper.selectOrganizationProjectByProIdAndOrgId(proId);
     }
 }
