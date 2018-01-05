@@ -45,7 +45,7 @@ public class TaskInterceptor extends HandlerInterceptorAdapter {
 
 
         String path = req.getServletPath();
-        if (isInterceptor(path) && !setTaskAppUserContext(path, req)) {
+        if (!setTaskAppUserContext(path, req) && isInterceptor(path)) {
             //返回json形式的错误信息
             res.setCharacterEncoding("UTF-8");
             res.setContentType("application/json");
