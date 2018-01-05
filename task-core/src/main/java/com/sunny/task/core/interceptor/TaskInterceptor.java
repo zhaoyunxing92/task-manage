@@ -110,8 +110,12 @@ public class TaskInterceptor extends HandlerInterceptorAdapter {
                 JsonElement uIdJsonElement = parseToken.get(SystemUserServer.SYSTEM_USER_ID_TOKEN_KEY);
                 JsonElement nackNameJsonElement = parseToken.get(SystemUserServer.SYSTEM_USER_NACK_NAME_TOKEN_KEY);
 
-                if (uIdJsonElement.isJsonNull() || nackNameJsonElement.isJsonNull() || !appUserServer.checkUIdIsLegal(uIdJsonElement.getAsString())) {
+                if (uIdJsonElement.isJsonNull() || nackNameJsonElement.isJsonNull()) {
                     throw new TaskException(ResultEnum.TASK_TOKEN_UNSUPPORTED_ERROR);
+                }
+
+                if (!appUserServer.checkUIdIsLegal(uIdJsonElement.getAsString())) {
+                    throw new TaskException(ResultEnum.SYSTEM_UID_IS_NOT_LEGAL);
                 }
 
                 TaskAppUserContext.setuId(uIdJsonElement.getAsString());

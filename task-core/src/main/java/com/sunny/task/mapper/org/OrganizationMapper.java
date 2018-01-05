@@ -5,6 +5,8 @@ import com.sunny.task.model.org.Organization;
 import com.sunny.task.model.org.vo.OrganizationVo;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface OrganizationMapper extends BaseMapper<Organization, String> {
     /**
      * 根据组织id获取组织
@@ -14,4 +16,10 @@ public interface OrganizationMapper extends BaseMapper<Organization, String> {
      * @return
      */
     OrganizationVo selectOrganizationById(@Param("uId") String uId, @Param("userId") String userId);
+
+    /**
+     * @param userId
+     * @return
+     */
+    List<OrganizationVo> selectOrganizationByUserUId(@Param("userId") String userId);
 }

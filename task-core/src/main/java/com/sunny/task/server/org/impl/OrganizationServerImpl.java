@@ -14,6 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * @author sunny
  * @className com.sunny.task.server.org.impl.OrganizationServerImpl
@@ -35,7 +37,7 @@ public class OrganizationServerImpl implements OrganizationServer {
      */
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public String saveOrganization(OrgForm form) {
+    public String addOrganization(OrgForm form) {
         String uId;
         try {
             String userUId = TaskAppUserContext.getuId();
@@ -60,5 +62,16 @@ public class OrganizationServerImpl implements OrganizationServer {
     @Override
     public OrganizationVo findOrganizationById(String id) {
         return organizationMapper.selectOrganizationById(id, TaskAppUserContext.getuId());
+    }
+
+    /**
+     * 获取当前登录人的组织列表
+     * @return
+     */
+    @Override
+    public List<OrganizationVo> getOrganizationByUserUId() {
+
+     
+        return organizationMapper.selectOrganizationByUserUId(TaskAppUserContext.getuId());
     }
 }

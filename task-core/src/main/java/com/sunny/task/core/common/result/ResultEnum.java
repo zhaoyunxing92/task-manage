@@ -119,10 +119,7 @@ public enum ResultEnum {
      * 手机格式不正确
      */
     MOBILE_FORMAT_ERROR(10018, "手机格式不正确"),
-    /**
-     * 用户id不合法
-     */
-    SYSTEM_UID_IS_NOT_LEGAL(10019, "用户id不合法"),
+
 
     /*=======================================组织模块========================================*/
     /**
@@ -244,9 +241,13 @@ public enum ResultEnum {
      */
     DUPLICATE_KEY_EXCEPTION(2001, "重复数据："),
     /**
+     * 用户id不合法
+     */
+    SYSTEM_UID_IS_NOT_LEGAL(2002, "用户id不合法"),
+    /**
      * 数据校验异常，没有缺省值
      */
-    DATAINTEGRITY_VIOLATION_EXCEPTION(2001, "数据校验异常"),;
+    DATAINTEGRITY_VIOLATION_EXCEPTION(2003, "数据校验异常"),;
 
     private Integer code;
     private String msg;
