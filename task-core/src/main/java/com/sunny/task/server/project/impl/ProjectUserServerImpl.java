@@ -80,7 +80,7 @@ public class ProjectUserServerImpl implements ProjectUserServer {
             //已经添加的成员
             List<String> oldUsers = new ArrayList<>(Arrays.asList(projectVo.getUserIdList().split(",")));
 
-            List<String> addUsers = Arrays.asList(userIds);
+            List<String> addUsers = new ArrayList<>(Arrays.asList(userIds));
             addUsers.removeAll(oldUsers);
             //去除重复成员
             int size = addUsers.size();
@@ -107,7 +107,6 @@ public class ProjectUserServerImpl implements ProjectUserServer {
                 }
             }
         }
-
 
         if (addProjectUsers.size() <= 0) {
             return;

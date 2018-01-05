@@ -160,6 +160,10 @@ public enum ResultEnum {
      */
     TASK_INSERT_PROJECT_OK(0, "添加项目成功"),
     /**
+     *  添加项目成员成功
+     */
+    TASK_INSERT_PROJECT_USER_OK(0, "添加项目成员成功"),
+    /**
      * 添加项目异常
      */
     TASK_INSERT_PROJECT_ERROR(10200, "添加项目异常"),
