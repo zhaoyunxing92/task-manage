@@ -259,7 +259,7 @@
         and a.STATUS!=0
     </select>
 
-    <!--获取当前登录人的组织-->
+    <!--获取组织列表-->
     <select id="selectOrganizationByUserUId" resultType="com.sunny.task.model.org.vo.OrganizationVo">
            select
                 a.U_ID,

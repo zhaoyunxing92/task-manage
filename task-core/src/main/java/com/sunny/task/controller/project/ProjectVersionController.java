@@ -8,10 +8,7 @@ import com.sunny.task.core.common.valid.InsertGroup;
 import com.sunny.task.server.project.ProjectVersionServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author sunny
@@ -32,7 +29,18 @@ public class ProjectVersionController {
      * @return
      */
     @PostMapping
-    BaseResult addOrganizationProject(@RequestBody @Validated({InsertGroup.class}) ProjectVsersionForm form) {
+    BaseResult addOrganizationProjectVersion(@RequestBody @Validated({InsertGroup.class}) ProjectVsersionForm form) {
         return ResultUtils.success(ResultEnum.TASK_INSERT_PROJECT_VERSION_OK, projectVersionServer.addProjectVersion(form));
+    }
+
+    /**
+     * 获取项目的版本列表
+     *
+     * @param proId
+     * @return
+     */
+    @GetMapping("/list")
+    BaseResult getOrganizationProjectVersions(@RequestParam("proId") String proId) {
+        return ResultUtils.success(ResultEnum.TASK_SELECT_PROJECT_VERSION_OK, projectVersionServer.getOrganizationProjectVersions(proId));
     }
 }

@@ -7,11 +7,14 @@ import com.sunny.task.core.common.result.ResultEnum;
 import com.sunny.task.core.common.utils.UUIDUtills;
 import com.sunny.task.mapper.project.ProjectVersionMapper;
 import com.sunny.task.model.project.ProjectVersion;
+import com.sunny.task.model.project.vo.ProjectVersionVo;
 import com.sunny.task.server.project.ProjectVersionServer;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * @author sunny
@@ -61,5 +64,10 @@ public class ProjectVersionServerImpl implements ProjectVersionServer {
         projectVsersionForm.setIntro(name);
         projectVsersionForm.setProId(proId);
         addProjectVersion(projectVsersionForm);
+    }
+
+    @Override
+    public List<ProjectVersionVo> getOrganizationProjectVersions(String proId) {
+        return projectVersionMapper.selectOrganizationProjectVersionsByProId(proId);
     }
 }

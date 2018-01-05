@@ -165,6 +165,10 @@ public enum ResultEnum {
      */
     TASK_INSERT_PROJECT_VERSION_OK(0, "添加项目版本成功"),
     /**
+     * 获取项目版本成功
+     */
+    TASK_SELECT_PROJECT_VERSION_OK(0, "获取项目版本成功"),
+    /**
      * 添加项目异常
      */
     TASK_INSERT_PROJECT_ERROR(10200, "添加项目异常"),

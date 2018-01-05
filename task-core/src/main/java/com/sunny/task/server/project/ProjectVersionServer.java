@@ -1,6 +1,9 @@
 package com.sunny.task.server.project;
 
 import com.sunny.task.controller.project.form.ProjectVsersionForm;
+import com.sunny.task.model.project.vo.ProjectVersionVo;
+
+import java.util.List;
 
 /**
  * @author sunny
@@ -29,4 +32,12 @@ public interface ProjectVersionServer {
      * @return
      */
     void addProjectVersionAuto(String proId);
+
+    /**
+     * 获取项目版本列表
+     *
+     * @param proId
+     * @return
+     */
+    List<ProjectVersionVo> getOrganizationProjectVersions(String proId);
 }
