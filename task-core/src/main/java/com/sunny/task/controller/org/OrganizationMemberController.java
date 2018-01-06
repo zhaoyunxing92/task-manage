@@ -8,10 +8,7 @@ import com.sunny.task.core.common.valid.InsertGroup;
 import com.sunny.task.server.org.OrganizationMemberServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author sunny
@@ -35,5 +32,16 @@ public class OrganizationMemberController {
     BaseResult addOrganizationMember(@RequestBody @Validated({InsertGroup.class}) OrgUserForm form) {
 
         return ResultUtils.success(ResultEnum.TASK_ORG_ADD_USER_SUCCESS, organizationMemberServer.addOrganizationMember(form));
+    }
+
+    /**
+     * 获取组织人员
+     *
+     * @return
+     */
+    @GetMapping
+    BaseResult getOrganizationMembers(@RequestParam("orgId") String orgId) {
+
+        return ResultUtils.success(ResultEnum.TASK_INSERT_ORG_SUCCESS, organizationMemberServer.getOrganizationMembersOrgId(orgId));
     }
 }

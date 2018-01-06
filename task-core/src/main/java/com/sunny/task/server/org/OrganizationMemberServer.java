@@ -1,6 +1,9 @@
 package com.sunny.task.server.org;
 
 import com.sunny.task.controller.org.form.OrgUserForm;
+import com.sunny.task.model.org.vo.OrganizationMemberVo;
+
+import java.util.List;
 
 /**
  * @author sunny
@@ -37,4 +40,12 @@ public interface OrganizationMemberServer {
      * @return
      */
     String addOrganizationMember(OrgUserForm form);
+
+    /**
+     * 获取团队的全部成员
+     *
+     * @param orgId
+     * @return
+     */
+    List<OrganizationMemberVo> getOrganizationMembersOrgId(String orgId);
 }

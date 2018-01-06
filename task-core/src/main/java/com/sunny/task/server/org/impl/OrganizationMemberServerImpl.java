@@ -8,6 +8,7 @@ import com.sunny.task.core.common.utils.StringUtils;
 import com.sunny.task.core.common.utils.UUIDUtills;
 import com.sunny.task.mapper.org.OrganizationMemberMapper;
 import com.sunny.task.model.org.OrganizationMember;
+import com.sunny.task.model.org.vo.OrganizationMemberVo;
 import com.sunny.task.model.org.vo.OrganizationVo;
 import com.sunny.task.server.main.AppUserServer;
 import com.sunny.task.server.org.OrganizationMemberServer;
@@ -108,5 +109,16 @@ public class OrganizationMemberServerImpl implements OrganizationMemberServer {
     public String addOrganizationMember(OrgUserForm form) {
 
         return saveOrganizationMember(form.getOrgId(), form.getUserId(), false);
+    }
+
+    /**
+     * 获取团队的全部成员
+     *
+     * @param orgId
+     * @return
+     */
+    @Override
+    public List<OrganizationMemberVo> getOrganizationMembersOrgId(String orgId) {
+        return organizationMemberMapper.selectOrganizationMembersOrgId(orgId);
     }
 }

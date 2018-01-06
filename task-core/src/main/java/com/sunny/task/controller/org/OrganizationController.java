@@ -44,4 +44,38 @@ public class OrganizationController {
 
         return ResultUtils.success(ResultEnum.TASK_INSERT_ORG_SUCCESS, organizationServer.getOrganizationByUserUId());
     }
+
+    /**
+     * 获取组织信息
+     *
+     * @return
+     */
+    @GetMapping("/info")
+    BaseResult getOrganizationsInfo(@RequestParam("orgId") String orgId) {
+
+        return ResultUtils.success(ResultEnum.TASK_INSERT_ORG_SUCCESS, organizationServer.getOrganizationByUserUId());
+    }
+
+    /**
+     * 获取组织项目
+     *
+     * @return
+     */
+    @GetMapping("/projects")
+    BaseResult getOrganizationsProjects(@RequestParam("orgId") String orgId) {
+
+        return ResultUtils.success(ResultEnum.TASK_INSERT_ORG_SUCCESS, organizationServer.getOrganizationByUserUId());
+    }
+
+    /**
+     * 获取组织角色
+     *
+     * @return
+     */
+    @GetMapping("/roles")
+    BaseResult getOrganizationsRoles(@RequestParam("orgId") String orgId) {
+
+        return ResultUtils.success(ResultEnum.TASK_INSERT_ORG_SUCCESS, organizationServer.getOrganizationByUserUId());
+    }
+    
 }
