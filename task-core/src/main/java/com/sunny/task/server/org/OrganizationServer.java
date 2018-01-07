@@ -31,4 +31,12 @@ public interface OrganizationServer {
      * @return
      */
     List<OrganizationVo> getOrganizationByUserUId();
+
+    /**
+     * 获取团队信息
+     *
+     * @return
+     * @param orgId
+     */
+    OrganizationVo getOrganizationsInfoById(String orgId);
 }

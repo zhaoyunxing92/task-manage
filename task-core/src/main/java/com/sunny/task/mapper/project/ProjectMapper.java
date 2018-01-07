@@ -5,6 +5,8 @@ import com.sunny.task.model.project.Project;
 import com.sunny.task.model.project.vo.ProjectVo;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface ProjectMapper extends BaseMapper<Project, String> {
 
     /**
@@ -14,4 +16,13 @@ public interface ProjectMapper extends BaseMapper<Project, String> {
      * @return
      */
     ProjectVo selectOrganizationProjectByProIdAndOrgId(@Param("uId") String proId);
+
+    /**
+     * 获取团队项目
+     *
+     * @param orgId
+     * @param userId
+     * @return
+     */
+    List<ProjectVo> selectOrganizationsProjectsByOrgId(@Param("orgId")String orgId, @Param("userId")String userId);
 }

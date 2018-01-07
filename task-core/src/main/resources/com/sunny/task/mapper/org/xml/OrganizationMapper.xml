@@ -234,52 +234,77 @@
     where U_ID = #{uId,jdbcType=VARCHAR}
   </update>
 
-    <!--<resultMap id="OrganizationVo" extends="BaseResultMap" type="com.sunny.task.model.org.vo.OrganizationVo">-->
-    <!--<result column="is_admin" jdbcType="BIT" property="isAdmin"/>-->
-    <!--<association column="{orgId=UNIQUE_ID}" property="userCount"-->
-    <!--select="com.sunny.task.mapper.org.OrganizationMemberMapper.selectCountByOrgId"/>-->
-    <!--<association column="{orgId=UNIQUE_ID}" property="proCount"-->
-    <!--select="com.sunny.task.mapper.project.ProjectMapper.selectProjectCountByOrgId"/>-->
-    <!--</resultMap>-->
+    <resultMap id="OrganizationVo" extends="BaseResultMap" type="com.sunny.task.model.org.vo.OrganizationVo">
+        <result column="is_admin" jdbcType="BIT" property="isAdmin"/>
+        <result column="NICK_NAME" property="owner" jdbcType="VARCHAR"/>
+        <!--<association column="{orgId=UNIQUE_ID}" property="userCount"-->
+                     <!--select="com.sunny.task.mapper.org.OrganizationMemberMapper.selectCountByOrgId"/>-->
+        <!--<association column="{orgId=UNIQUE_ID}" property="proCount"-->
+                     <!--select="com.sunny.task.mapper.project.ProjectMapper.selectProjectCountByOrgId"/>-->
+    </resultMap>
 
     <!--根据id获取组织-->
-    <select id="selectOrganizationById" resultType="com.sunny.task.model.org.vo.OrganizationVo">
-         SELECT
-            A.u_id uId,
-            A.NAME,
-            a.MEMBER_LIMIT memberLimit,
-            if(a.OWNER_ID=#{userId,jdbcType=VARCHAR},'true','false') isAdmin,
-            c.NICK_NAME owner,
-            group_concat(b.USER_ID) userIdList,
-	        count(b.USER_ID) userCount
-        FROM
+    <!--<select id="selectOrganizationById" resultType="com.sunny.task.model.org.vo.OrganizationVo">-->
+         <!--SELECT-->
+            <!--A.u_id uId,-->
+            <!--A.NAME,-->
+            <!--a.MEMBER_LIMIT memberLimit,-->
+            <!--if(a.OWNER_ID=#{userId,jdbcType=VARCHAR},1,0) is_admin,-->
+            <!--c.NICK_NAME owner,-->
+            <!--group_concat(b.USER_ID) userIdList,-->
+	        <!--count(b.USER_ID) userCount-->
+        <!--FROM-->
+            <!--organization a left join organization_member b on-->
+	        <!--a.u_id = b.ORG_ID join app_user c on a.OWNER_ID=c.ID-->
+        <!--WHERE A.u_id = #{uId,jdbcType=VARCHAR}-->
+        <!--and a.STATUS!=0-->
+    <!--</select>-->
+
+    <select id="selectOrganizationById" resultMap="OrganizationVo">
+        select
+            a.U_ID,
+            a.NAME,
+            a.MEMBER_LIMIT,
+            a.CREATION_DATE,
+            if(a.OWNER_ID=#{userId,jdbcType=VARCHAR},1,0) is_admin,
+            b.NICK_NAME,
+            d.userCount,
+            d.userIdList
+        from
             organization a left join organization_member b on
-	        a.u_id = b.ORG_ID join app_user c on a.OWNER_ID=c.ID
-        WHERE A.u_id = #{uId,jdbcType=VARCHAR}
-        and a.STATUS!=0
+            a.U_ID = b.ORG_ID and a.STATUS=1 and a.OWNER_ID=b.USER_ID and b.MANAGER=1 left join(
+            select
+            count( 1 ) userCount,
+            ORG_ID,
+            group_concat(USER_ID) userIdList
+            from
+            organization_member
+            group by ORG_ID
+            ) d on A.U_ID=d.ORG_ID
+         WHERE A.u_id = #{uId,jdbcType=VARCHAR}
     </select>
 
     <!--获取组织列表-->
     <select id="selectOrganizationByUserUId" resultType="com.sunny.task.model.org.vo.OrganizationVo">
-           select
-                a.U_ID,
-                a.NAME,
-                if(a.OWNER_ID=#{userId,jdbcType=VARCHAR},'true','false') isAdmin,
-                c.NICK_NAME owner,
-                d.userCount
-            from
-                organization a left join organization_member b on
-                a.U_ID = b.ORG_ID and a.STATUS=1 left join app_user c on c.id=a.OWNER_ID left join(
-                    select
-                        count( 1 ) userCount,
-                        ORG_ID
-                    from
-                        organization_member
-                    group by ORG_ID
-                ) d on A.U_ID=d.ORG_ID
-                <if test="userId!=null &amp; ''!=userId">
-                    where b.USER_ID=#{userId,jdbcType=VARCHAR}
-                </if>
-              group by a.U_ID
+        select
+        a.U_ID,
+        a.NAME,
+        if(a.OWNER_ID=#{userId,jdbcType=VARCHAR},'true','false') isAdmin,
+        c.NICK_NAME owner,
+        d.userCount
+        from
+        organization a left join organization_member b on
+        a.U_ID = b.ORG_ID and a.STATUS=1 left join app_user c on c.id=a.OWNER_ID left join(
+        select
+        count( 1 ) userCount,
+        ORG_ID
+        from
+        organization_member
+        group by ORG_ID
+        ) d on A.U_ID=d.ORG_ID
+        <if test="userId!=null &amp; ''!=userId">
+            where b.USER_ID=#{userId,jdbcType=VARCHAR}
+        </if>
+        group by a.U_ID
     </select>
 </mapper>

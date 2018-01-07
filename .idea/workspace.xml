@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd2d0fdc-653a-48ab-a596-64c39ea36acd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/vo/OrganizationMemberVo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationController.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationMemberController.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationMemberController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMemberMapper.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMemberMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationMemberServer.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationMemberServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationMemberServerImpl.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationMemberServerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMemberMapper.xml" afterPath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMemberMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/project/ProjectController.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/project/ProjectController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/project/ProjectMapper.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/project/ProjectMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/project/vo/ProjectVo.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/project/vo/ProjectVo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationServer.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationServerImpl.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationServerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/ProjectServer.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/ProjectServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/impl/ProjectServerImpl.java" afterPath="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/impl/ProjectServerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMapper.xml" afterPath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/project/xml/ProjectMapper.xml" afterPath="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/project/xml/ProjectMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,111 +37,53 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProjectVersionController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/project/ProjectVersionController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="42" column="68" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="OrganizationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
-              <caret line="79" column="4" lean-forward="false" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+            <state relative-caret-position="-111">
+              <caret line="51" column="85" lean-forward="true" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrganizationMemberController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationMemberController.java">
+      <file leaf-file-name="OrganizationServerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationServerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="26" />
+            <state relative-caret-position="215">
+              <caret line="63" column="50" lean-forward="true" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrganizationMemberServer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationMemberServer.java">
+      <file leaf-file-name="OrganizationMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+            <state relative-caret-position="217">
+              <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrganizationMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="282" column="69" lean-forward="true" selection-start-line="282" selection-start-column="69" selection-end-line="282" selection-end-column="69" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1515317400596" expanded="true" signature="1951:2072" ph="select from organization" />
+                <marker date="1515317400596" expanded="true" signature="2161:2226" ph="delete from " />
+                <marker date="1515317400596" expanded="true" signature="2322:3114" ph="insert into organization... " />
+                <marker date="1515317400596" expanded="true" signature="6758:8726" ph="update organ... " />
+                <marker date="1515317400596" expanded="true" signature="8836:9663" ph="update organ... " />
+                <marker date="1515317400596" expanded="true" signature="10454:11019" ph="SELECT A.u_i... organization" />
+                <marker date="1515317400596" expanded="true" signature="11121:11817" ph="select a.U_I... organization" />
+                <marker date="1515317400596" expanded="true" signature="11552:11734" ph="select count... organization_member" />
+                <marker date="1515317400596" expanded="true" signature="11961:12582" ph="select a.U_I... organization" />
+                <marker date="1515317400596" expanded="true" signature="12292:12408" ph="select count... organization_member" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrganizationMemberServerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationMemberServerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="121" column="57" lean-forward="true" selection-start-line="121" selection-start-column="57" selection-end-line="121" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrganizationMemberMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMemberMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrganizationMemberMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMemberMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="240" column="52" lean-forward="true" selection-start-line="240" selection-start-column="52" selection-end-line="240" selection-end-column="52" />
-              <folding>
-                <marker date="1515259943675" expanded="true" signature="1976:2104" ph="select from organization_member" />
-                <marker date="1515259943675" expanded="true" signature="2193:2265" ph="delete from " />
-                <marker date="1515259943675" expanded="true" signature="2367:3165" ph="insert into organization_member... " />
-                <marker date="1515259943675" expanded="true" signature="6839:8819" ph="update organ... " />
-                <marker date="1515259943675" expanded="true" signature="8935:9768" ph="update organ... " />
-                <marker date="1515259943675" expanded="true" signature="9922:10157" ph="select U_ID organization_member" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrganizationMember.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/OrganizationMember.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrganizationMemberVo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/vo/OrganizationMemberVo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrganizationVo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/vo/OrganizationVo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="49" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -201,15 +146,10 @@
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/project/ProjectVersion.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/project/Project.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/vo/OrganizationVo.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/project/vo/ProjectVo.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/project/ProjectUserMapper.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/project/ProjectController.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/project/ProjectUserController.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/project/form/ProjectUserForm.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/ProjectServer.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/project/ProjectMapper.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/impl/ProjectUserServerImpl.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/project/xml/ProjectMapper.xml" />
         <option value="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/project/xml/ProjectUserMapper.xml" />
         <option value="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMemberResourceMapper.xml" />
         <option value="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationResourceMapper.xml" />
@@ -221,12 +161,8 @@
         <option value="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserMapper.xml" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/project/form/ProjectVsersion.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/project/form/ProjectVsersionForm.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/impl/ProjectServerImpl.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationServer.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMapper.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationServerImpl.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/interceptor/TaskInterceptor.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMapper.xml" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/project/vo/ProjectVersionVo.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/impl/ProjectVersionServerImpl.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/project/ProjectVersionMapper.java" />
@@ -235,13 +171,22 @@
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/common/result/ResultEnum.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/ProjectVersionServer.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/handle/TaskManageHandle.java" />
-        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationController.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationMemberController.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/vo/OrganizationMemberVo.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationMemberServer.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationMemberServerImpl.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMemberMapper.java" />
         <option value="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMemberMapper.xml" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationServer.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationController.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/project/ProjectController.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/ProjectServer.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/project/ProjectMapper.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/impl/ProjectServerImpl.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/project/vo/ProjectVo.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/project/xml/ProjectMapper.xml" />
+        <option value="$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationServerImpl.java" />
+        <option value="$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMapper.xml" />
       </list>
     </option>
   </component>
@@ -360,8 +305,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -491,42 +434,8 @@
               <option name="myItemId" value="task" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="task-manage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-manage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sunny" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -564,7 +473,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -606,7 +515,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -614,7 +523,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vo" />
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -652,7 +561,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sunny" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -694,11 +641,49 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sunny" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -740,8 +725,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sunny" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -762,6 +791,15 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.sunny.task.core.common.utils" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sunny.task.server.project.impl" />
+      <recent name="com.sunny.task.server.project" />
+      <recent name="com.sunny.task.server.org.impl" />
+      <recent name="com.sunny.task.server.main.impl" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sunny.task.model.project.vo" />
       <recent name="com.sunny.task.controller.project" />
@@ -774,15 +812,6 @@
       <recent name="F:\code\java\task-manage\task-core\src\main\resources" />
       <recent name="F:\code\java\task-manage\task-core\src\main\java\com\sunny\task\common" />
       <recent name="F:\code\java\task-manage\task-core\src\main\java\com\sunny\task\core" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.sunny.task.server.project.impl" />
-      <recent name="com.sunny.task.server.project" />
-      <recent name="com.sunny.task.server.org.impl" />
-      <recent name="com.sunny.task.server.main.impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1287,7 +1316,8 @@
       <workItem from="1515060364253" duration="1675000" />
       <workItem from="1515078490037" duration="8169000" />
       <workItem from="1515128323705" duration="19163000" />
-      <workItem from="1515233779537" duration="7632000" />
+      <workItem from="1515233779537" duration="7770000" />
+      <workItem from="1515306638780" duration="5812000" />
     </task>
     <task id="LOCAL-00001" summary="调整：项目结构，合并mven模块等等处理">
       <created>1514299012662</created>
@@ -1401,11 +1431,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515145404446</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="添加：获取团队成员方法">
+      <created>1515260146648</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1515260146648</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124789000" />
+    <option name="totallyTimeSpent" value="130739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
@@ -1422,14 +1459,14 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25331858" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4051724" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4051724" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286638" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286638" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Mybatis datasource" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1460,7 +1497,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25331858" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4051724" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4051724" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1537,65 +1574,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/project/xml/ProjectUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding>
-            <marker date="1515133749190" expanded="true" signature="1345:1466" ph="select from project_user" />
-            <marker date="1515133749190" expanded="true" signature="1555:1620" ph="delete from " />
-            <marker date="1515133749190" expanded="true" signature="1719:2194" ph="insert into project_user... " />
-            <marker date="1515133749190" expanded="true" signature="4495:5637" ph="update proje... " />
-            <marker date="1515133749190" expanded="true" signature="5750:6239" ph="update proje... " />
-            <marker date="1515133749190" expanded="true" signature="6328:6430" ph="insert into project_user... " />
-            <marker date="1515133749190" expanded="true" signature="6328:6680" ph="insert into project_user... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMemberResourceMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-          <folding>
-            <marker date="1515133771630" expanded="true" signature="793:936" ph="select from organization_member_resource" />
-            <marker date="1515133771630" expanded="true" signature="1022:1119" ph="delete from " />
-            <marker date="1515133771630" expanded="true" signature="1228:1442" ph="insert into organization_member_resource... " />
-            <marker date="1515133771630" expanded="true" signature="2372:2708" ph="update organ... " />
-            <marker date="1515133771630" expanded="true" signature="2829:3036" ph="update organ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationResourceMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-          <folding>
-            <marker date="1515133775805" expanded="true" signature="1109:1239" ph="select from organization_resource" />
-            <marker date="1515133775805" expanded="true" signature="1325:1409" ph="delete from " />
-            <marker date="1515133775805" expanded="true" signature="1512:1895" ph="insert into organization_resource... " />
-            <marker date="1515133775805" expanded="true" signature="3416:4137" ph="update organ... " />
-            <marker date="1515133775805" expanded="true" signature="4252:4642" ph="update organ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserByAccountMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding>
-            <marker date="1514909766754" expanded="true" signature="705:784" ph="delete from " />
-            <marker date="1514909766754" expanded="true" signature="891:1004" ph="insert into app_user_by_account... " />
-            <marker date="1514909766754" expanded="true" signature="1799:2008" ph="update app_u... " />
-            <marker date="1514909766754" expanded="true" signature="2129:2242" ph="update app_u... " />
-            <marker date="1514909766754" expanded="true" signature="2361:2467" ph="select U_ID app_user_by_account" />
-            <marker date="1514909766754" expanded="true" signature="2557:2674" ph="insert into app_user_by_account... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/systemUser/xml/AppUserByEmailMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1721,13 +1699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/impl/ProjectUserServerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2351">
-          <caret line="120" column="27" lean-forward="true" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.13.RELEASE/spring-aop-4.3.13.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1739,21 +1710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/impl/ProjectServerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="69" column="37" lean-forward="true" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1768,43 +1724,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationServerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="73" column="5" lean-forward="false" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/core/interceptor/TaskInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
           <caret line="44" column="70" lean-forward="true" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="282" column="13" lean-forward="true" selection-start-line="282" selection-start-column="13" selection-end-line="282" selection-end-column="13" />
-          <folding>
-            <marker date="1515142987654" expanded="true" signature="1951:2072" ph="select from organization" />
-            <marker date="1515142987654" expanded="true" signature="2161:2226" ph="delete from " />
-            <marker date="1515142987654" expanded="true" signature="2322:3114" ph="insert into organization... " />
-            <marker date="1515142987654" expanded="true" signature="6758:8726" ph="update organ... " />
-            <marker date="1515142987654" expanded="true" signature="8836:9663" ph="update organ... " />
-            <marker date="1515142987654" expanded="true" signature="10345:10836" ph="SELECT A.u_i... organization" />
-            <marker date="1515142987654" expanded="true" signature="10983:11734" ph="select a.U_I... organization" />
-            <marker date="1515142987654" expanded="true" signature="10983:11786" ph="select a.U_I... organization" />
-            <marker date="1515142987654" expanded="true" signature="11386:11574" ph="select count... organization_member" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1915,14 +1838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/project/ProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/project/ProjectUserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -1933,24 +1848,144 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/project/ProjectVersionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
+        <state relative-caret-position="918">
           <caret line="42" column="68" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="68" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationController.java">
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/OrganizationMember.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="79" column="4" lean-forward="false" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="108">
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="31" />
+          <folding>
+            <element signature="e#613#614#0" expanded="false" />
+            <element signature="e#641#642#0" expanded="false" />
+            <element signature="e#683#684#0" expanded="false" />
+            <element signature="e#747#748#0" expanded="false" />
+            <element signature="e#780#781#0" expanded="false" />
+            <element signature="e#809#810#0" expanded="false" />
+            <element signature="e#853#854#0" expanded="false" />
+            <element signature="e#920#921#0" expanded="false" />
+            <element signature="e#955#956#0" expanded="false" />
+            <element signature="e#986#987#0" expanded="false" />
+            <element signature="e#1034#1035#0" expanded="false" />
+            <element signature="e#1107#1108#0" expanded="false" />
+            <element signature="e#1142#1143#0" expanded="false" />
+            <element signature="e#1173#1174#0" expanded="false" />
+            <element signature="e#1221#1222#0" expanded="false" />
+            <element signature="e#1294#1295#0" expanded="false" />
+            <element signature="e#1329#1330#0" expanded="false" />
+            <element signature="e#1359#1360#0" expanded="false" />
+            <element signature="e#1406#1407#0" expanded="false" />
+            <element signature="e#1444#1445#0" expanded="false" />
+            <element signature="e#1477#1478#0" expanded="false" />
+            <element signature="e#1506#1507#0" expanded="false" />
+            <element signature="e#1550#1551#0" expanded="false" />
+            <element signature="e#1617#1618#0" expanded="false" />
+            <element signature="e#1648#1649#0" expanded="false" />
+            <element signature="e#1677#1678#0" expanded="false" />
+            <element signature="e#1719#1720#0" expanded="false" />
+            <element signature="e#1755#1756#0" expanded="false" />
+            <element signature="e#1792#1793#0" expanded="false" />
+            <element signature="e#1824#1825#0" expanded="false" />
+            <element signature="e#1875#1876#0" expanded="false" />
+            <element signature="e#1917#1918#0" expanded="false" />
+            <element signature="e#1955#1956#0" expanded="false" />
+            <element signature="e#1988#1989#0" expanded="false" />
+            <element signature="e#2041#2042#0" expanded="false" />
+            <element signature="e#2085#2086#0" expanded="false" />
+            <element signature="e#2123#2124#0" expanded="false" />
+            <element signature="e#2156#2157#0" expanded="false" />
+            <element signature="e#2209#2210#0" expanded="false" />
+            <element signature="e#2253#2254#0" expanded="false" />
+            <element signature="e#2295#2296#0" expanded="false" />
+            <element signature="e#2332#2333#0" expanded="false" />
+            <element signature="e#2393#2394#0" expanded="false" />
+            <element signature="e#2445#2446#0" expanded="false" />
+            <element signature="e#2480#2481#0" expanded="false" />
+            <element signature="e#2510#2511#0" expanded="false" />
+            <element signature="e#2557#2558#0" expanded="false" />
+            <element signature="e#2595#2596#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/vo/OrganizationVo.java">
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationMemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMemberMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="49" />
+          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMemberMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="230" column="44" lean-forward="false" selection-start-line="230" selection-start-column="44" selection-end-line="230" selection-end-column="44" />
+          <folding>
+            <marker date="1515259943675" expanded="true" signature="1976:2104" ph="select from organization_member" />
+            <marker date="1515259943675" expanded="true" signature="2193:2265" ph="delete from " />
+            <marker date="1515259943675" expanded="true" signature="2367:3165" ph="insert into organization_member... " />
+            <marker date="1515259943675" expanded="true" signature="6839:8819" ph="update organ... " />
+            <marker date="1515259943675" expanded="true" signature="8935:9768" ph="update organ... " />
+            <marker date="1515259943675" expanded="true" signature="9922:10157" ph="select U_ID organization_member" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationMemberServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/impl/ProjectUserServerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-427">
+          <caret line="75" column="48" lean-forward="false" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationMemberServerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="66" column="65" lean-forward="true" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/ProjectServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1963,59 +1998,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/OrganizationMember.java">
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/org/vo/OrganizationVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="31" />
+        <state relative-caret-position="405">
+          <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="31" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationMemberController.java">
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/model/project/vo/ProjectVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="26" />
+        <state relative-caret-position="405">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/OrganizationMemberServer.java">
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/project/impl/ProjectServerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        <state relative-caret-position="657">
+          <caret line="93" column="57" lean-forward="true" selection-start-line="93" selection-start-column="57" selection-end-line="93" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/project/ProjectMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="26" column="98" lean-forward="false" selection-start-line="26" selection-start-column="92" selection-end-line="26" selection-end-column="98" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationMemberServerImpl.java">
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/project/ProjectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="121" column="57" lean-forward="true" selection-start-line="121" selection-start-column="57" selection-end-line="121" selection-end-column="57" />
+        <state relative-caret-position="140">
+          <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMemberMapper.java">
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/project/xml/ProjectMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMemberMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="240" column="52" lean-forward="true" selection-start-line="240" selection-start-column="52" selection-end-line="240" selection-end-column="52" />
+        <state relative-caret-position="248">
+          <caret line="204" column="73" lean-forward="true" selection-start-line="204" selection-start-column="8" selection-end-line="204" selection-end-column="72" />
           <folding>
-            <marker date="1515259943675" expanded="true" signature="1976:2104" ph="select from organization_member" />
-            <marker date="1515259943675" expanded="true" signature="2193:2265" ph="delete from " />
-            <marker date="1515259943675" expanded="true" signature="2367:3165" ph="insert into organization_member... " />
-            <marker date="1515259943675" expanded="true" signature="6839:8819" ph="update organ... " />
-            <marker date="1515259943675" expanded="true" signature="8935:9768" ph="update organ... " />
-            <marker date="1515259943675" expanded="true" signature="9922:10157" ph="select U_ID organization_member" />
+            <marker date="1515314918767" expanded="true" signature="1744:1860" ph="select from project" />
+            <marker date="1515314918767" expanded="true" signature="1949:2009" ph="delete from " />
+            <marker date="1515314918767" expanded="true" signature="5219:6914" ph="update proje... " />
+            <marker date="1515314918767" expanded="true" signature="7023:7727" ph="update proje... " />
+            <marker date="1515314918767" expanded="true" signature="8213:8557" ph="select a.U_I... project" />
+            <marker date="1515314918767" expanded="true" signature="8682:9188" ph="select a.U_I... project" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/controller/org/OrganizationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-111">
+          <caret line="51" column="85" lean-forward="true" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/server/org/impl/OrganizationServerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="63" column="50" lean-forward="true" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/java/com/sunny/task/mapper/org/OrganizationMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-core/src/main/resources/com/sunny/task/mapper/org/xml/OrganizationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="282" column="69" lean-forward="true" selection-start-line="282" selection-start-column="69" selection-end-line="282" selection-end-column="69" />
+          <folding>
+            <marker date="1515317400596" expanded="true" signature="1951:2072" ph="select from organization" />
+            <marker date="1515317400596" expanded="true" signature="2161:2226" ph="delete from " />
+            <marker date="1515317400596" expanded="true" signature="2322:3114" ph="insert into organization... " />
+            <marker date="1515317400596" expanded="true" signature="6758:8726" ph="update organ... " />
+            <marker date="1515317400596" expanded="true" signature="8836:9663" ph="update organ... " />
+            <marker date="1515317400596" expanded="true" signature="10454:11019" ph="SELECT A.u_i... organization" />
+            <marker date="1515317400596" expanded="true" signature="11121:11817" ph="select a.U_I... organization" />
+            <marker date="1515317400596" expanded="true" signature="11552:11734" ph="select count... organization_member" />
+            <marker date="1515317400596" expanded="true" signature="11961:12582" ph="select a.U_I... organization" />
+            <marker date="1515317400596" expanded="true" signature="12292:12408" ph="select count... organization_member" />
           </folding>
         </state>
       </provider>

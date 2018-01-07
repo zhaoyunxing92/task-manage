@@ -10,7 +10,14 @@ import com.sunny.task.model.project.Project;
  */
 public class ProjectVo extends Project {
     private static final long serialVersionUID = -4696324481145809117L;
-
+    /**
+     * 是项目理员
+     */
+    private Boolean isAdmin;
+    /**
+     * 项目拥有者
+     */
+    private String owner;
     /**
      * 项目人员总数
      */
@@ -19,6 +26,22 @@ public class ProjectVo extends Project {
      * 项目人成员
      */
     private String userIdList;
+
+    public Boolean getAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(Boolean admin) {
+        isAdmin = admin;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
 
     public int getUserCount() {
         return userCount;

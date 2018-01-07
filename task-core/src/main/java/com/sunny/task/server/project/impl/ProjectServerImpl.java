@@ -16,6 +16,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * @author sunny
  * @className com.sunny.task.server.project.impl.ProjectServerImpl
@@ -79,5 +81,16 @@ public class ProjectServerImpl implements ProjectServer {
     @Override
     public ProjectVo findOrganizationProjectByProIdAndOrgId(String proId) {
         return projectMapper.selectOrganizationProjectByProIdAndOrgId(proId);
+    }
+
+    /**
+     * 获取团队项目
+     *
+     * @param orgId
+     * @return
+     */
+    @Override
+    public List<ProjectVo> getOrganizationsProjectsByOrgId(String orgId) {
+        return projectMapper.selectOrganizationsProjectsByOrgId(orgId, TaskAppUserContext.getuId());
     }
 }

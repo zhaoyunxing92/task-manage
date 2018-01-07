@@ -66,12 +66,24 @@ public class OrganizationServerImpl implements OrganizationServer {
 
     /**
      * 获取当前登录人的组织列表
+     *
      * @return
      */
     @Override
     public List<OrganizationVo> getOrganizationByUserUId() {
-
-     
         return organizationMapper.selectOrganizationByUserUId(TaskAppUserContext.getuId());
+    }
+
+    /**
+     * 获取团队信息
+     *
+     * @param orgId
+     * @return
+     */
+    @Override
+    public OrganizationVo getOrganizationsInfoById(String orgId) {
+        OrganizationVo organizationVo = findOrganizationById(orgId);
+        organizationVo.setUserIdList(null);
+        return organizationVo;
     }
 }

@@ -8,10 +8,7 @@ import com.sunny.task.core.common.valid.InsertGroup;
 import com.sunny.task.server.project.ProjectServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author sunny
@@ -35,5 +32,17 @@ public class ProjectController {
     BaseResult addOrganizationProject(@RequestBody @Validated({InsertGroup.class}) ProjectForm form) {
 
         return ResultUtils.success(ResultEnum.TASK_INSERT_PROJECT_OK, projectServer.addOrganizationProject(form));
+    }
+
+    /**
+     * 获取组织项目
+     *
+     * @param orgId 组织id
+     * @return
+     */
+    @GetMapping
+    BaseResult getOrganizationsProjects(@RequestParam("orgId") String orgId) {
+
+        return ResultUtils.success(ResultEnum.TASK_INSERT_ORG_SUCCESS, projectServer.getOrganizationsProjectsByOrgId(orgId));
     }
 }

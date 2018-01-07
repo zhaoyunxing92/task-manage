@@ -35,18 +35,7 @@
     delete from project
     where U_ID = #{uId,jdbcType=VARCHAR}
   </delete>
-    <insert id="insert" parameterType="com.sunny.task.model.project.Project">
-    insert into project (U_ID, ORG_ID, OWNER_ID, 
-      NAME, INTRO, URL, ICON_FILE_ID, 
-      MEMBER_LIMIT, STATUS, OPEN, 
-      AUTO_ADD, CREATOR, CREATION_DATE, 
-      MODIFIER, MODIFICATION_DATE)
-    values (#{uId,jdbcType=VARCHAR}, #{orgId,jdbcType=VARCHAR}, #{ownerId,jdbcType=VARCHAR}, 
-      #{name,jdbcType=VARCHAR}, #{intro,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{iconFileId,jdbcType=VARCHAR}, 
-      #{memberLimit,jdbcType=INTEGER}, #{status,jdbcType=TINYINT}, #{open,jdbcType=BIT}, 
-      #{autoAdd,jdbcType=BIT}, #{creator,jdbcType=VARCHAR}, #{creationDate,jdbcType=TIMESTAMP}, 
-      #{modifier,jdbcType=VARCHAR}, #{modificationDate,jdbcType=TIMESTAMP})
-  </insert>
+
     <insert id="insertSelective" parameterType="com.sunny.task.model.project.Project">
         insert into project
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -211,6 +200,12 @@
     where U_ID = #{uId,jdbcType=VARCHAR}
   </update>
 
+    <resultMap id="ProjectVo" type="com.sunny.task.model.project.vo.ProjectVo" extends="BaseResultMap">
+        <result column="userCount" property="userCount" jdbcType="INTEGER"/>
+        <result column="NICK_NAME" property="owner" jdbcType="VARCHAR"/>
+        <result column="isAdmin" property="isAdmin"/>
+    </resultMap>
+
     <!--根据项目id获取项目详情-->
     <select id="selectOrganizationProjectByProIdAndOrgId" resultType="com.sunny.task.model.project.vo.ProjectVo">
         select
@@ -223,5 +218,22 @@
         from
             project a left join project_user b on a.U_ID=b.PRO_ID
         where a.U_ID=#{uId,jdbcType=VARCHAR} and a.STATUS=1
+    </select>
+    
+    <!--获取团队下的全部项目-->
+    <select id="selectOrganizationsProjectsByOrgId" resultMap="ProjectVo">
+        select
+            a.U_ID,
+            a.NAME,
+            if(a.OWNER_ID=#{userId,jdbcType=VARCHAR},1,0) isAdmin,
+            a.MEMBER_LIMIT,
+            c.NICK_NAME,
+            count(b.USER_ID) userCount,
+            a.CREATION_DATE
+        from
+            project a left join project_user b on a.U_ID=b.PRO_ID
+            left join organization_member c on a.ORG_ID=c.ORG_ID and a.OWNER_ID=c.USER_ID and c.STATUS=1
+        where a.ORG_ID=#{orgId,jdbcType=VARCHAR}
+        and a.STATUS=1 group by a.U_ID
     </select>
 </mapper>

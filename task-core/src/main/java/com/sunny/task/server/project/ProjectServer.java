@@ -3,6 +3,8 @@ package com.sunny.task.server.project;
 import com.sunny.task.controller.project.form.ProjectForm;
 import com.sunny.task.model.project.vo.ProjectVo;
 
+import java.util.List;
+
 /**
  * @author sunny
  * @className com.sunny.task.server.project.ProjectServer
@@ -27,4 +29,12 @@ public interface ProjectServer {
      * @return
      */
     ProjectVo findOrganizationProjectByProIdAndOrgId(String proId);
+
+    /**
+     * 获取团队项目
+     *
+     * @param orgId
+     * @return
+     */
+    List<ProjectVo> getOrganizationsProjectsByOrgId(String orgId);
 }
