@@ -287,21 +287,21 @@
     <!--获取组织列表-->
     <select id="selectOrganizationByUserUId" resultType="com.sunny.task.model.org.vo.OrganizationVo">
         select
-        a.U_ID,
-        a.NAME,
-        if(a.OWNER_ID=#{userId,jdbcType=VARCHAR},'true','false') isAdmin,
-        c.NICK_NAME owner,
-        d.userCount
+            a.U_ID,
+            a.NAME,
+            if(a.OWNER_ID=#{userId,jdbcType=VARCHAR},'true','false') isAdmin,
+            c.NICK_NAME owner,
+            d.userCount
         from
-        organization a left join organization_member b on
-        a.U_ID = b.ORG_ID and a.STATUS=1 left join app_user c on c.id=a.OWNER_ID left join(
-        select
-        count( 1 ) userCount,
-        ORG_ID
-        from
-        organization_member
-        group by ORG_ID
-        ) d on A.U_ID=d.ORG_ID
+            organization a left join organization_member b on
+            a.U_ID = b.ORG_ID and a.STATUS=1 left join app_user c on c.id=a.OWNER_ID left join(
+                select
+                count( 1 ) userCount,
+                ORG_ID
+                from
+                organization_member
+            group by ORG_ID
+            ) d on A.U_ID=d.ORG_ID
         <if test="userId!=null &amp; ''!=userId">
             where b.USER_ID=#{userId,jdbcType=VARCHAR}
         </if>

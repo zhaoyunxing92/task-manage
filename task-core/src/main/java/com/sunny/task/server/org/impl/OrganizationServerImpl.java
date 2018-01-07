@@ -83,6 +83,9 @@ public class OrganizationServerImpl implements OrganizationServer {
     @Override
     public OrganizationVo getOrganizationsInfoById(String orgId) {
         OrganizationVo organizationVo = findOrganizationById(orgId);
+        if (null == organizationVo) {
+            return null;
+        }
         organizationVo.setUserIdList(null);
         return organizationVo;
     }
