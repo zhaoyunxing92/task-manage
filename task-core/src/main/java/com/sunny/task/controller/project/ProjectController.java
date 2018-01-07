@@ -43,6 +43,6 @@ public class ProjectController {
     @GetMapping
     BaseResult getOrganizationsProjects(@RequestParam("orgId") String orgId) {
 
-        return ResultUtils.success(ResultEnum.TASK_INSERT_ORG_SUCCESS, projectServer.getOrganizationsProjectsByOrgId(orgId));
+        return ResultUtils.success(ResultEnum.TASK_SELECT_ORG_PROJECT_OK, projectServer.getOrganizationsProjectsByOrgId(orgId));
     }
 }

@@ -53,7 +53,7 @@ public class OrganizationController {
     @GetMapping("/info")
     BaseResult getOrganizationsInfo(@RequestParam("orgId") String orgId) {
 
-        return ResultUtils.success(ResultEnum.TASK_INSERT_ORG_SUCCESS, organizationServer.getOrganizationsInfoById(orgId));
+        return ResultUtils.success(ResultEnum.TASK_SELECT_ORG_INFO_OK, organizationServer.getOrganizationsInfoById(orgId));
     }
     
     /**
@@ -64,7 +64,7 @@ public class OrganizationController {
     @GetMapping("/roles")
     BaseResult getOrganizationsRoles(@RequestParam("orgId") String orgId) {
 
-        return ResultUtils.success(ResultEnum.TASK_INSERT_ORG_SUCCESS, organizationServer.getOrganizationByUserUId());
+        return ResultUtils.success(ResultEnum.TASK_SELECT_ORG_ROLE_OK, organizationServer.getOrganizationByUserUId());
     }
     
 }

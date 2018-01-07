@@ -42,6 +42,6 @@ public class OrganizationMemberController {
     @GetMapping
     BaseResult getOrganizationMembers(@RequestParam("orgId") String orgId) {
 
-        return ResultUtils.success(ResultEnum.TASK_INSERT_ORG_SUCCESS, organizationMemberServer.getOrganizationMembersOrgId(orgId));
+        return ResultUtils.success(ResultEnum.TASK_SELECT_ORG_USER_OK, organizationMemberServer.getOrganizationMembersOrgId(orgId));
     }
 }

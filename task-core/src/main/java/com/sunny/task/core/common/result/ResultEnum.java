@@ -169,6 +169,22 @@ public enum ResultEnum {
      */
     TASK_SELECT_PROJECT_VERSION_OK(0, "获取项目版本成功"),
     /**
+     * 获取团队信息成功
+     */
+    TASK_SELECT_ORG_INFO_OK(0, "获取团队信息成功"),
+    /**
+     * 获取团队角色成功
+     */
+    TASK_SELECT_ORG_ROLE_OK(0, "获取团队角色成功"),
+    /**
+     * 获取团队项目成功
+     */
+    TASK_SELECT_ORG_PROJECT_OK(0, "获取团队项目成功"),
+    /**
+     * 获取团队成员成功
+     */
+    TASK_SELECT_ORG_USER_OK(0, "获取团队成员成功"),
+    /**
      * 添加项目异常
      */
     TASK_INSERT_PROJECT_ERROR(10200, "添加项目异常"),
